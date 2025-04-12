@@ -1,4 +1,4 @@
 \contentsline {section}{\numberline {0.1}Convolution algorithm}{2}{}%
-\contentsline {chapter}{\numberline {A}Mathematics (copied from appendices)}{4}{}%
-\contentsline {subsection}{\numberline {A.0.1}Convolution---Definition and properties}{4}{}%
-\contentsline {subsection}{\numberline {A.0.2}Green's Formula}{7}{}%
+\contentsline {chapter}{\numberline {A}Mathematics (copied from appendices)}{7}{}%
+\contentsline {subsection}{\numberline {A.0.1}Convolution---Definition and properties}{7}{}%
+\contentsline {subsection}{\numberline {A.0.2}Green's Formula}{10}{}%

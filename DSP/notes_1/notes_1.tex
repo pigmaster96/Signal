@@ -51,9 +51,55 @@ The convolution is the resulting sum of the nine scaled and translated impulse r
 \vspace{1mm}\\
 To relate this back to the math, intuitively the fourth output point depends on the fourth point of the 
 impulse response scaled by the first point of the input, and the third point of the impulse response scaled by 
-the second point of the input and so on.
-
-
+the second point of the input and so on.\\
+(next page)\newpage
+\noindent\textbf{Input side program}\\
+The program shown here convolves an 81 point input signal held in array $X$ with a 31 point impulse 
+response held in array $H$ to produce output array $Y$:
+\begin{center}
+\includegraphics[width=10cm]{a3}\\
+\end{center}
+See that the first for loop loops through the \textit{input}, so it looks at each input sample, then scales each 
+point of the impulse response (in the second for loop) by that input sample, accordingly incrementing the related
+points in the output array.\\
+\vspace{1mm}\\
+Lastly, since the convolution is commutative, we can swap the input and the impulse response and get
+the same solution:
+\begin{center}
+\includegraphics[width=8.3cm]{a4}\\
+\end{center}
+(next page)\newpage
+\noindent\textbf{Output side algorithm}\\
+Now we consider the output side algorithm---how a single output point receives contribution from multiple
+input points. First recall the discrete convolution definition:
+\begin{equation*}
+y[i]=(x*h)[i]=\sum^{M-1}_{j=0}h[j]x[i-j]
+\end{equation*}
+Where $h$ is an $M$ point signal running from 0 to $M-1$.
+(Recall this idea: intuitively the $n$th output point depends on the $n$th point of the 
+impulse response scaled by the first point of the input (meaning $h[0]\cdot x[n-0]$), and the $(n-1)$th point of the impulse response scaled by 
+the second point of the input (meaning $h[1]\cdot x[n-1]$) and so on.\\
+\vspace{1mm}\\
+Now see that this can be represented as a `convolution machine', where the inpulse response is 
+\textit{flipped left-for-right} and the dot product with the input is taken such that its output aligns 
+with the output sample being calculated:
+\begin{center}
+\includegraphics[width=10cm]{a5}\\
+\end{center}
+In this instance, $y[6]$ is being calculated from the input samples $x[3],x[4],x[5]$ and $x[6]$. 
+To calculate $y[7]$, the 
+`convolution machine' moves one sample to the right.\\
+(next page)\newpage
+\noindent\textbf{Nonexistent samples}\\
+See a complcation that arises: when the `convolution machine' is located fully to the left or right, say $y[0]$,
+it is trying to receive input from samples that don't exist:
+\begin{center}
+\includegraphics[width=5cm]{a6}
+\includegraphics[width=5cm]{a7}\\
+\end{center}
+This can be handled by inventing the nonexistent samples or zero padding.\\
+\vspace{1mm}\\
+\textbf{Output side program}\\
 
 
 
