@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.7.10)  11 APR 2025 04:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.7.10)  12 APR 2025 05:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -218,25 +218,51 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
  [1
 
-] [2] (./notes_1.aux)
+] [2]
+<./images/a1.png, id=25, 1147.28625pt x 427.5975pt>
+File: ./images/a1.png Graphic file (type png)
+<use ./images/a1.png>
+Package pdftex.def Info: ./images/a1.png  used on input line 47.
+(pdftex.def)             Requested size: 284.52756pt x 106.04439pt.
+<./images/a2.png, id=27, 1147.28625pt x 872.25874pt>
+File: ./images/a2.png Graphic file (type png)
+<use ./images/a2.png>
+Package pdftex.def Info: ./images/a2.png  used on input line 48.
+(pdftex.def)             Requested size: 284.52756pt x 216.32059pt.
+ [3 <./images/a1.png> <./images/a2.png>]
+Appendix A.
+[4
+
+] [5] [6]
+<./images/56.png, id=44, 958.58125pt x 194.7275pt>
+File: ./images/56.png Graphic file (type png)
+<use ./images/56.png>
+Package pdftex.def Info: ./images/56.png  used on input line 151.
+(pdftex.def)             Requested size: 284.52756pt x 57.79768pt.
+<./images/57.png, id=45, 1244.65pt x 417.56pt>
+File: ./images/57.png Graphic file (type png)
+<use ./images/57.png>
+Package pdftex.def Info: ./images/57.png  used on input line 162.
+(pdftex.def)             Requested size: 284.52756pt x 95.45059pt.
+ [7 <./images/56.png> <./images/57.png>] [8] (./notes_1.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3392 strings out of 474222
- 50575 string characters out of 5748733
- 1923975 words of memory out of 5000000
- 25611 multiletter control sequences out of 15000+600000
- 571449 words of font info for 85 fonts, out of 8000000 for 9000
+ 3451 strings out of 474222
+ 51659 string characters out of 5748733
+ 1929975 words of memory out of 5000000
+ 25669 multiletter control sequences out of 15000+600000
+ 572401 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,65p,236b,221s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on notes_1.pdf (3 pages, 46674 bytes).
+ 57i,9n,65p,236b,221s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on notes_1.pdf (9 pages, 390584 bytes).
 PDF statistics:
- 34 PDF objects out of 1000 (max. 8388607)
- 20 compressed objects within 1 object stream
+ 113 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
