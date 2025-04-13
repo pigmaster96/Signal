@@ -153,6 +153,10 @@ INPUT ./images/a7.png
 INPUT ./images/a7.png
 INPUT ./images/a7.png
 INPUT ./images/a7.png
+INPUT ./images/a8.png
+INPUT ./images/a8.png
+INPUT ./images/a8.png
+INPUT ./images/a8.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT ./images/56.png

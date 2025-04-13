@@ -97,13 +97,22 @@ it is trying to receive input from samples that don't exist:
 \includegraphics[width=5cm]{a6}
 \includegraphics[width=5cm]{a7}\\
 \end{center}
+We say that the impulse response is not fully \textit{immersed} in the input signal. 
 This can be handled by inventing the nonexistent samples or zero padding.\\
 \vspace{1mm}\\
 \textbf{Output side program}\\
+The output side program loops through each \textit{output sample}:
+\begin{center}
+\includegraphics[width=10cm]{a8}\\
+\end{center}
+See that this algorithm essentially just follows the definition of the convolution. Note that lines 210 and 220
+preventing indexing into $X$ outside of array bounds. This means that the program only
+calculates the samples in the output signal where the impulse response is \textit{fully immersed} in
+the input signal. A way around this would be to define the input signal's array from 
+$X[-30]$ to $X[110]$, maybe with 30 zeros padded on each side of the true data.
+\newpage
 
-
-
-
+\section{}
 
 
 
