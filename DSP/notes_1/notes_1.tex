@@ -15,7 +15,8 @@
 \tableofcontents
 
 \newpage
-\section{Convolution algorithm}
+\section{Convolution}
+\subsection{Convolution algorithm}
 We consider two algorithms, the first \textit{input} algorithm considers convolution from the 
 viewpont of the input signal---how each input sample contributes to
 multiple points. The second considers \textit{output} algorithm does the same but for the output signal---how 
@@ -112,7 +113,85 @@ the input signal. A way around this would be to define the input signal's array 
 $X[-30]$ to $X[110]$, maybe with 30 zeros padded on each side of the true data.
 \newpage
 
-\section{}
+\subsection{Delta function}
+\textbf{Identity operator for convolution}\\
+See
+that the delta function is the the \textit{identity} for convolution:
+\begin{equation*}
+x[n]*\delta[n]=x[n]
+\end{equation*}
+Think of a system where an impulse on the input produces an identical impulse on the output---all signals are
+passed through the system without change; so convolution with the impulse response gives an output which is the
+same as the input.\\
+\vspace{1mm}\\
+\textbf{Scaling and shifting}\\
+See that the delta function impulse response can be scaled to \textit{amplify} or \textit{attenuate} it. 
+(This comes from the linearity of the integral):
+\begin{equation*}
+x[n]*k\delta[n]=kx[n]
+\end{equation*}
+Also see that an impulse response represented by delta function with a \textit{shift} introduces an identical shift between the input and output signals:
+\begin{equation*}
+x[n]*\delta[n*s]=x[n+s]
+\end{equation*}
+This could be described as a signal \textit{delay} or \textit{advance}.
+\begin{center}
+\includegraphics[width=10cm]{a9}\\
+\end{center}
+\newpage
+
+\subsection{Calculus-like operations}
+Convolution can change discrete signals in ways that resemble integration and differentiation. 
+The terms `derivative' and `integral' refer to operations on continuous systems; their discrete counterparts are
+named differently. For instance the discrete analogue of
+the first derivative is called the \textit{first difference}, and that of the integral the \textit{running sum}.\\
+\vspace{1mm}\\
+Just as with the derivative, the amplitude of each point in the difference signal 
+(discrete version of the derivative) is equal to the slope at the corresponding point in the original signal:
+\begin{equation*}
+y[n]=x[n]-x[n-1]
+\end{equation*}
+Where $x[n]$ is the original signal and $y[n]$ the first difference.
+The running sum is the inverse operation of the first difference. In the perspective of a convolution, see that
+the impulse responses are as follows
+\begin{center}
+\includegraphics[width=10cm]{a10}\\
+\end{center}
+These impulse responses are simple enough that a full convolution program is usually not needed for implementation;
+we can calculate the first difference directly.\\
+\vspace{1mm}\\
+Note that this is not the only way to define a \textit{discrete derivative}. Another common definition might be
+\begin{equation*}
+y[n]=(x[n+1]-x[n-1])/2
+\end{equation*}
+(next page)\newpage
+\noindent Illustrated:
+\begin{center}
+\includegraphics[width=10cm]{a11}\\
+\end{center}
+Each sample in the running sum is can be calculated by summing all the points in the original sum to the 
+\textit{left} of the sample's location (see how this is present in the impulse response):
+\begin{equation*}
+y[n]=x[n]+y[n-1]
+\end{equation*}
+The key takeaway here is that these relations are \textit{identical} to convolution using the impulse response 
+corresponding to each operation. As mentioned before 
+implementation of such operations are simple enough to calculate directly instead of using a convolution program:
+\begin{center}
+\includegraphics[width=10cm]{a12}\\
+\end{center}
+\newpage
+
+\subsection{}
+
+
+
+
+
+
+
+
+
 
 
 

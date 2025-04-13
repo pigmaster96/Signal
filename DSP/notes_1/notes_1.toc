@@ -1,4 +1,8 @@
-\contentsline {section}{\numberline {0.1}Convolution algorithm}{2}{}%
-\contentsline {chapter}{\numberline {A}Mathematics (copied from appendices)}{7}{}%
-\contentsline {subsection}{\numberline {A.0.1}Convolution---Definition and properties}{7}{}%
-\contentsline {subsection}{\numberline {A.0.2}Green's Formula}{10}{}%
+\contentsline {section}{\numberline {0.1}Convolution}{2}{}%
+\contentsline {subsection}{\numberline {0.1.1}Convolution algorithm}{2}{}%
+\contentsline {subsection}{\numberline {0.1.2}Delta function}{7}{}%
+\contentsline {subsection}{\numberline {0.1.3}Calculus-like operations}{8}{}%
+\contentsline {subsection}{\numberline {0.1.4}}{10}{}%
+\contentsline {chapter}{\numberline {A}Mathematics (copied from appendices)}{11}{}%
+\contentsline {subsection}{\numberline {A.0.1}Convolution---Definition and properties}{11}{}%
+\contentsline {subsection}{\numberline {A.0.2}Green's Formula}{14}{}%
