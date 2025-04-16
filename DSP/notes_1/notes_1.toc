@@ -2,7 +2,7 @@
 \contentsline {subsection}{\numberline {0.1.1}Convolution algorithm}{2}{}%
 \contentsline {subsection}{\numberline {0.1.2}Delta function}{7}{}%
 \contentsline {subsection}{\numberline {0.1.3}Calculus-like operations}{8}{}%
-\contentsline {subsection}{\numberline {0.1.4}}{10}{}%
-\contentsline {chapter}{\numberline {A}Mathematics (copied from appendices)}{11}{}%
-\contentsline {subsection}{\numberline {A.0.1}Convolution---Definition and properties}{11}{}%
-\contentsline {subsection}{\numberline {A.0.2}Green's Formula}{14}{}%
+\contentsline {subsection}{\numberline {0.1.4}DFT notation}{10}{}%
+\contentsline {chapter}{\numberline {A}Mathematics (copied from appendices)}{12}{}%
+\contentsline {subsection}{\numberline {A.0.1}Convolution---Definition and properties}{12}{}%
+\contentsline {subsection}{\numberline {A.0.2}Green's Formula}{15}{}%

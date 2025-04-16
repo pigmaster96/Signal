@@ -182,7 +182,34 @@ implementation of such operations are simple enough to calculate directly instea
 \end{center}
 \newpage
 
-\subsection{}
+\subsection{DFT notation}
+\textbf{Conventional array notation}\\
+In the DFT, lower case letters $x[\quad],y[\quad],\ldots$ represent time domain signals; upper case letters
+$X[\quad],Y[\quad],Z[\quad]$ 
+represent their frequency domains.\\
+\vspace{1mm}\\
+The time domain signal contained in a $N$ length array $x[0]$ to $x[127]$ produces two frequency domain 
+signals of length $N/2+1$ points, one for each of the sine and cosine \textit{amplitudes}, denoted 
+$REX[\quad]$ and $IMX[\quad]$
+for cosine and sine respectively. (RE comes from \textit{real} and IM \textit{imaginary}, originating from the
+complex DFT. For the real DFT, these essentially mean
+cosine and sine wave amplitudes respectively.)\\
+\vspace{1mm}\\
+The $N/2$ part comes from the nyquist frequency---frequencies above half the sampling rate aren't detectable. 
+The $N$ point sample produces $N+2$ cosine and sine frequencies in total;
+the additional 2 frequencies come from $IMX[0]$ and $IMX[N/2]$ always having amplitudes of 0. This is illustrated
+below.\\
+\vspace{1mm}\\
+\textbf{Conventional frequency domain notation}\\
+Illustrated is a DFT with $N=128$, so 128 samples per second. The time domain signal is contained in a array $x[0]$ 
+to $x[127]$. The frequency domain signals are contained
+in the arrays $ReX[0]$ to $ReX[64]$ and $ImX[0]$ to $Im[64]$, 65 points each in length:
+\begin{center}
+\includegraphics[width=10cm]{a13}\\
+\end{center}
+(next page)\newpage
+\noindent\textbf{Conventional frequency domain notation cont.}\\
+There
 
 
 
