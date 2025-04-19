@@ -15,7 +15,69 @@
 \tableofcontents
 
 \newpage
-\section{}
+\section{Introduction}
+\subsection{Signal Energy and Power}
+\textbf{Motivation and definition}\\
+In many but not all, applications, the signals considered directly related to physical quantities capturing
+power and energy in a physical system. (for instance $v^2/R$ for the power across a resistor)\\
+\vspace{1mm}\\
+As such it is a common and worthwhile convention to use similar terminology for power and energy for \textit{any} 
+continuous-time signal, denoted $x(t)$, or any discrete-time signal $x[n]$. 
+In this case, the total energy over the time interval $t_1\leq t\leq t_2$ in a continuous signal $x(t)$ is defined
+as
+\begin{equation*}
+\int^{t_2}_{t_1}|x(t)|^2dt
+\end{equation*}
+where $|x|$ denotes the magnitude of the (possibly complex) number $x$; see that the time-averaged signal 
+can be obtained by dividing by $(t_2-t_1)$. Similarly for a discrete signal $x[n]$ over the interval $n_1\leq n\leq n_2$ the total energy is
+\begin{equation*}
+\sum^{n_2}_{n=n_1}|x[n]|^2
+\end{equation*}
+with the average power calculated by dividing by $(n_2-n_1+1)$.\\
+\vspace{1mm}\\
+It is important to remember that the terms `power' and `energy' are used here \textit{independently} of their 
+relation to physical energy (they clearly don't correlate since their units or scalings would differ). Nevertheless
+we will find it convenient to use these terms in a general fashion.\\
+\vspace{1mm}\\
+\textbf{Power and energy over infinite intervals}\\
+Considering signals over an infinite time interval, meaning for $-\infty<t<+\infty$ or $-\infty<n<+\infty$. 
+Here we define the total energy as the limits of the aforementioned equations increase without bound; in continuous
+time,
+\begin{equation*}
+E_\infty\triangleq\lim_{T\to\infty}\int^T_{-T}|x(t)|^2dt
+=\int^{+\infty}_{-\infty}|x(t)|^2dt
+\end{equation*}
+and in discrete time,
+\begin{equation*}
+E_\infty\triangleq\lim_{N\to\infty}\sum^{+N}_{n=-N}|x[n]|^2=\sum^{+\infty}_{n=-\infty}|x[n]|^2
+\end{equation*}
+Note that these expressions may not converge; for instance say $x(t)$ or $x[n]$ equal some nonzero constant for 
+all time: such signals have infinite energy, while signals with $E_\infty<\infty$ have finite energy.\\
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+Analagously, we can define the time-averaged power over an infinite interval as
+\begin{equation*}
+P_\infty\triangleq\lim_{T\to\infty}\frac{1}{2T}\int^T_{-T}|x(t)|^2dt
+\end{equation*}
+and
+\begin{equation*}
+P_\infty\triangleq\lim_{N\to\infty}\frac{1}{2N+1}\sum^{+N}_{n=-N}|x[n]|^2
+\end{equation*}
+In continuous and discrete time respectively. \\
+\vspace{1mm}\\
+\textbf{Intuition}\\
+See that with these definitions, we can identify three classes of signals: first those with finite total energy,
+meaning $E_\infty<\infty$. See that such a signal would have zero average power:
+\begin{equation*}
+P_\infty=\lim_{T\to\infty}\frac{E_\infty}{2T}=0
+\end{equation*}
+Second would be signals with finite average power $P_\infty$; see from the above expression that for $P_\infty>0$,
+this requires that $E_\infty=\infty$.\\
+\vspace{1mm}\\
+Last would be signals for which neither $P_\infty$ nor $E_\infty$ are finite. An example of this might be $x(t)=t$.
+
+
+
 
 
 
