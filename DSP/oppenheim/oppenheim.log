@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.7.10)  19 APR 2025 06:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.7.10)  20 APR 2025 17:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -218,25 +218,31 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
  [1
 
-] [2] [3] (./oppenheim.aux)
+] [2] [3]
+<./images/a1.png, id=29, 1160.335pt x 921.4425pt>
+File: ./images/a1.png Graphic file (type png)
+<use ./images/a1.png>
+Package pdftex.def Info: ./images/a1.png  used on input line 110.
+(pdftex.def)             Requested size: 256.0748pt x 203.35068pt.
+ [4 <./images/a1.png>] [5] (./oppenheim.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3396 strings out of 474222
- 50692 string characters out of 5748733
+ 3410 strings out of 474222
+ 50959 string characters out of 5748733
  1930975 words of memory out of 5000000
- 25614 multiletter control sequences out of 15000+600000
+ 25628 multiletter control sequences out of 15000+600000
  571795 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,65p,238b,221s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,8n,65p,238b,221s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on oppenheim.pdf (4 pages, 154617 bytes).
+Output written on oppenheim.pdf (6 pages, 207987 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 96 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

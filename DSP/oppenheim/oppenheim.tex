@@ -75,6 +75,55 @@ Second would be signals with finite average power $P_\infty$; see from the above
 this requires that $E_\infty=\infty$.\\
 \vspace{1mm}\\
 Last would be signals for which neither $P_\infty$ nor $E_\infty$ are finite. An example of this might be $x(t)=t$.
+\newpage
+
+\subsection{Even and Odd signals}
+\textbf{Definition}\\
+A continuous-time signal is \textit{even} if
+\begin{equation*}
+x(-t)=x(t)
+\end{equation*}
+while a discrete-time signal is \textit{even} if
+\begin{equation*}
+x[-n]=x[n]
+\end{equation*}
+These signals are referred to as \textit{odd} if
+\begin{align*}
+x(-t)&=-x(t)\\
+x[-n]&=-x[n]
+\end{align*}
+Note that an odd signal must be 0 at $t=0$ or $n=0$ since the equations require that $x(0)=-x(0)$ and $x[0]=-x[0]$.
+\\
+\vspace{1mm}\\
+\textbf{Decomposition}\\
+An important fact is that any signal can be broken into a sum of two signals, where one is even and the other odd.
+To see this, consider
+\begin{equation*}
+\text{Ev}\{x(t)\}=\frac{1}{2}[x(t)+x(-t)]
+\end{equation*}
+which is referred to as the \textit{even part} of $x(t)$. Similarly, the \textit{odd part} of $x(t)$ is given by
+\begin{equation*}
+\text{Od}\{x(t)\}=\frac{1}{2}[x(t)-x(-t)]
+\end{equation*}
+See that $x(t)$ is the sum of the two. Exactly analagous definitions hold in the discrete time case.
+\begin{center}
+\includegraphics[width=9cm]{a1}
+\end{center}
+\newpage
+
+\subsection{More on Complex Exponential and\\Sinusoidal Signals}
+\textbf{Periodic Complex Exponential and Sinusoidal Signals}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
