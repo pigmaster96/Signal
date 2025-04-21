@@ -74,7 +74,11 @@ P_\infty=\lim_{T\to\infty}\frac{E_\infty}{2T}=0
 Second would be signals with finite average power $P_\infty$; see from the above expression that for $P_\infty>0$,
 this requires that $E_\infty=\infty$.\\
 \vspace{1mm}\\
-Last would be signals for which neither $P_\infty$ nor $E_\infty$ are finite. An example of this might be $x(t)=t$.
+Last would be signals for which neither $P_\infty$ nor $E_\infty$ are finite. An example of this might be $x(t)=t$.\\
+\vspace{1mm}\\
+\textbf{Note on discrete signals}\\
+It is omportant to note that the discrete-time signal $x[n]$ is defined \textit{only} for \textit{integer} 
+values of the independent variable.
 \newpage
 
 \subsection{Even and Odd signals}
@@ -112,17 +116,73 @@ See that $x(t)$ is the sum of the two. Exactly analagous definitions hold in the
 \newpage
 
 \subsection{More on Complex Exponential and\\Sinusoidal Signals}
-\textbf{Periodic Complex Exponential and Sinusoidal Signals}
-
-
-
-
-
-
-
-
-
-
+The continuous-time \textit{complex exponential signal} is of the form
+\begin{equation*}
+x(t)=Ce^{at}
+\end{equation*}
+where $C$ and $a$ are, in general, complex numbers. An important class of complex exponentials is obtained by constraining $a$ to be purely imaginary:
+\begin{equation*}
+x(t)=e^{i\omega_0t}
+\end{equation*}
+\textbf{Periodicity and harmonic relations (purely imaginary power)}\\
+An important property of this signal is that it is periodic; recall that $x(t)$ will be periodic with period $T$ if
+\begin{equation*}
+e^{i\omega_0t}=e^{i\omega_0(t+T)}
+\end{equation*}
+this means
+\begin{equation*}
+e^{i\omega_0(t+T)}=e^{i\omega_0t}e^{i\omega_0T}\implies
+e^{i\omega_0T}=1
+\end{equation*}
+If $w_0=0$ then this is satisfied for any $T$. If $w_0\neq0$, see that the \textit{fundamental period} 
+$T_0$ of $x(t)$---that is, the smallest positive value of $T$ for which this holds---is
+\begin{equation*}
+T_0=\frac{2\pi}{|\omega_0|}
+\end{equation*}
+(the signals $e^{i\omega_0t}$ and $e^{-i\omega_0t}$ have the same fundamental period)
+Naturally, there is a set of exponentials periodic to a common period $T_0$. These are said to be
+\textit{harmonically related} complex exponentials; the necessary condition they satisfy is
+\begin{equation*}
+e^{i\omega T_0}=1
+\end{equation*}
+which implies that
+\begin{equation*}
+\omega T_0=2\pi k,\quad k=0,\pm1,\pm2,\ldots
+\end{equation*}
+if we define 
+\begin{equation*}
+\omega_0=\frac{2\pi}{T_0}
+\end{equation*}
+this means that the harmonic frequencies $\omega$ must be integer multiples of $\omega_0$:
+\begin{equation*}
+\phi_k(t)=e^{ik\omega_0t},\quad k=0,\pm1,\pm2,\ldots
+\end{equation*}
+For $k=0$, $\phi_k(t)$ is a constant, while for any other value of $k$, $\phi_k(t)$ is periodic with fundamenal 
+frequency $|k|\omega_0$ and fundamental period
+\begin{equation*}
+\frac{2\pi}{|k|\omega_0}=\frac{T_0}{|k|}
+\end{equation*}
+Note that the $k$th harmonic $\phi_k(t)$ is still periodic with $T_0$; it goes through exactly $|k|$ of its 
+fundamental periods during any time interval of length $T_0$. (the term `harmonic' is consistent with its use in
+music, where it refers to tones resulting from variations in acoustic pressure at frequencies that are integer
+multiples of a fundamental frequency)\\
+(next page)\newpage
+\noindent\textbf{Discrete case}\\
+As in continuous time, an important signal in discrete time is the \textit{complex exponential signal}, defined as
+\begin{equation*}
+x[n]=C\alpha^n
+\end{equation*}
+where $C$ and $\alpha$ are, in general, complex numbers. See that this could also be expressed as
+\begin{equation*}
+x[n]=Ce^{\beta n}
+\end{equation*}
+where $\alpha=e^\beta$. See that we can constrain $\beta$ to be purely imaginary:
+\begin{equation*}
+x[n]=e^{i\omega_0n}
+\end{equation*}
+\textbf{Periodicity properties of Discrete-time complex exponentials}\\
+While there are many similarities between continuous and discrete-time signals, there are a number of important
+differences. 
 
 
 
