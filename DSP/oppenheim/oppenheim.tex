@@ -115,7 +115,7 @@ See that $x(t)$ is the sum of the two. Exactly analagous definitions hold in the
 \end{center}
 \newpage
 
-\subsection{More on Complex Exponential and\\Sinusoidal Signals}
+\subsection{Differences between continuous and\\discrete periodic complex exponentials}
 The continuous-time \textit{complex exponential signal} is of the form
 \begin{equation*}
 x(t)=Ce^{at}
@@ -182,7 +182,41 @@ x[n]=e^{i\omega_0n}
 \end{equation*}
 \textbf{Periodicity properties of Discrete-time complex exponentials}\\
 While there are many similarities between continuous and discrete-time signals, there are a number of important
-differences. 
+differences. For the continuous time signal $e^{i\omega_0t}$, we know that
+\begin{itemize}
+\item The larger the magnitude of $\omega_0$, the higher the rate of oscillation of the signal
+\item $e^{i\omega_0t}$ is periodic for any value of $\omega_0$
+\end{itemize}
+These properties are different in the discrete-time case.\\
+\vspace{1mm}\\
+Given the first property, consider the discrete-time complex exponential with frequency $\omega_0+2\pi$:
+\begin{equation*}
+e^{i(\omega_0+2\pi)n}=e^{i2\pi n}e^{i\omega_0n}=e^{i\omega_0n}
+\end{equation*}
+(see that this is a direct result of the fact that we iterate through discrete time as integers) 
+The exponential at frequency $\omega_0+2\pi$ is the \textit{same} as that at frequency $\omega_0$. 
+This is unlike the continuous-time case where each distinct $\omega_0$ represents a distinct signal.\\
+\vspace{1mm}\\
+In discrete time, the signal with frequency $\omega_0$ is identical to the signals with frequencies 
+$\omega_0\pm2\pi,\omega_0\pm4\pi$, and so on. Therefore when considering discrete time complex exponentials, 
+see that we need only consider a frequency interval of length $2\pi$ in which to choose $\omega_0$, such as 
+$0\leq\omega_0<2\pi$ or $-\pi\leq\omega_0<\pi$.\\
+\vspace{1mm}\\
+Also see that because of this the discrete exponential 
+$e^{i\omega_0n}$ does \textit{not} have a continually 
+increasing rate of oscillation as $\omega_0$ increases in magnitude; the signals will oscillate faster until we 
+reach $\omega_0=\pi$, after which the rate of oscillation decreases until we reach $\omega_0=2\pi$, at which 
+the same constant sequence as $\omega_0=0$ is produced.\\
+(next page)\newpage
+\noindent\textbf{Periodicity properties of Discrete-time complex exponentials cont.}\\
+The second
+
+
+
+
+
+
+
 
 
 
