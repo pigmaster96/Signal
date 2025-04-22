@@ -122,24 +122,24 @@ x(t)=Ce^{at}
 \end{equation*}
 where $C$ and $a$ are, in general, complex numbers. An important class of complex exponentials is obtained by constraining $a$ to be purely imaginary:
 \begin{equation*}
-x(t)=e^{i\omega_0t}
+x(t)=e^{i\omega t}
 \end{equation*}
 \textbf{Periodicity and harmonic relations (purely imaginary power)}\\
 An important property of this signal is that it is periodic; recall that $x(t)$ will be periodic with period $T$ if
 \begin{equation*}
-e^{i\omega_0t}=e^{i\omega_0(t+T)}
+e^{i\omega t}=e^{i\omega(t+T)}
 \end{equation*}
 this means
 \begin{equation*}
-e^{i\omega_0(t+T)}=e^{i\omega_0t}e^{i\omega_0T}\implies
-e^{i\omega_0T}=1
+e^{i\omega(t+T)}=e^{i\omega t}e^{i\omega T}\implies
+e^{i\omega T}=1
 \end{equation*}
-If $w_0=0$ then this is satisfied for any $T$. If $w_0\neq0$, see that the \textit{fundamental period} 
+If $\omega=0$ then this is satisfied for any $T$. If $\omega\neq0$, see that the \textit{fundamental period} 
 $T_0$ of $x(t)$---that is, the smallest positive value of $T$ for which this holds---is
 \begin{equation*}
-T_0=\frac{2\pi}{|\omega_0|}
+T_0=\frac{2\pi}{|\omega|}
 \end{equation*}
-(the signals $e^{i\omega_0t}$ and $e^{-i\omega_0t}$ have the same fundamental period)
+(the signals $e^{i\omega 0t}$ and $e^{-i\omega t}$ have the same fundamental period)
 Naturally, there is a set of exponentials periodic to a common period $T_0$. These are said to be
 \textit{harmonically related} complex exponentials; the necessary condition they satisfy is
 \begin{equation*}
@@ -149,7 +149,13 @@ which implies that
 \begin{equation*}
 \omega T_0=2\pi k,\quad k=0,\pm1,\pm2,\ldots
 \end{equation*}
-if we define 
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+We had
+\begin{equation*}
+\omega T_0=2\pi k,\quad k=0,\pm1,\pm2,\ldots
+\end{equation*}
+if we define
 \begin{equation*}
 \omega_0=\frac{2\pi}{T_0}
 \end{equation*}
@@ -157,11 +163,15 @@ this means that the harmonic frequencies $\omega$ must be integer multiples of $
 \begin{equation*}
 \phi_k(t)=e^{ik\omega_0t},\quad k=0,\pm1,\pm2,\ldots
 \end{equation*}
-For $k=0$, $\phi_k(t)$ is a constant, while for any other value of $k$, $\phi_k(t)$ is periodic with fundamenal 
+For $k=0$, $\phi_k(t)$ is a constant, while for any other value of $k$, $\phi_k(t)$ is periodic with fundamental 
 frequency $|k|\omega_0$ and fundamental period
 \begin{equation*}
 \frac{2\pi}{|k|\omega_0}=\frac{T_0}{|k|}
 \end{equation*}
+Each $\phi_k(t)$ itself defines a fundamental frequency and a corresponding fundamental period. 
+(see that $|k|\omega_0\cdot T_0/|k|=2\pi$, so this scaled down period is the corresponding period
+for this scaled up frequency)\\
+\vspace{1mm}\\
 Note that the $k$th harmonic $\phi_k(t)$ is still periodic with $T_0$; it goes through exactly $|k|$ of its 
 fundamental periods during any time interval of length $T_0$. (the term `harmonic' is consistent with its use in
 music, where it refers to tones resulting from variations in acoustic pressure at frequencies that are integer
@@ -208,10 +218,42 @@ increasing rate of oscillation as $\omega_0$ increases in magnitude; the signals
 reach $\omega_0=\pi$, after which the rate of oscillation decreases until we reach $\omega_0=2\pi$, at which 
 the same constant sequence as $\omega_0=0$ is produced.\\
 (next page)\newpage
-\noindent\textbf{Periodicity properties of Discrete-time complex exponentials cont.}\\
-The second
-
-
+\noindent\textbf{Cont.}\\
+The second property we wish to consider concerns the periodicity of the discrete time complex exponential. In
+order for the signal $e^{i\omega_0n}$ to be periodic with
+period $N>0$ we must have
+\begin{equation*}
+e^{i\omega_0(n+N)}=e^{i\omega_0n}
+\end{equation*}
+or equivalently 
+\begin{equation*}
+e^{i\omega_0N}=1
+\end{equation*}
+For this to hold, $\omega_0N$ must be a multiple of $2\pi$. That is, there must be an integer $m$ such that
+\begin{equation*}
+\omega_0N=2\pi m
+\end{equation*}
+or equivalently
+\begin{equation*}
+\frac{\omega_0}{2\pi}=\frac{m}{N}
+\end{equation*}
+The signal $e^{i\omega_0n}$ is periodic if $\omega_0/2\pi$ is a rational number and is not periodic otherwise.\\
+\vspace{1mm}\\
+\textbf{Fundamental period}\\
+Recall the idea of a \textit{fundamental period}; in this case it would mean the smallest $N$ such that 
+$\omega_0N=2\pi m$ holds (this is unlike the continuous case where there is always some $T$ where $\omega_0T=2\pi$); see that this occurs when $m$ and $N$ do not have any factors in common.\\
+\vspace{1mm}\\
+See that from this we can derive a \textit{fundamental frequency} as
+\begin{equation*}
+\frac{2\pi}{N}=\frac{\omega_0}{m}
+\end{equation*}
+(see that this frequency is always equal or lower---intuitively, to have a different wave that completes one
+oscillation in $N$ time, its frequency will either be equal or lower)\\
+\vspace{1mm}\\
+To summarize
+\begin{center}
+\includegraphics[width=10cm]{a2}
+\end{center}
 
 
 
