@@ -135,6 +135,14 @@ INPUT ./images/a2.png
 INPUT ./images/a2.png
 INPUT ./images/a2.png
 INPUT ./images/a2.png
+INPUT ./images/a3.png
+INPUT ./images/a3.png
+INPUT ./images/a3.png
+INPUT ./images/a3.png
+INPUT ./images/a4.png
+INPUT ./images/a4.png
+INPUT ./images/a4.png
+INPUT ./images/a4.png
 INPUT oppenheim.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb

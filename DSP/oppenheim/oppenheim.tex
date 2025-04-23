@@ -256,8 +256,38 @@ To summarize
 \end{center}
 \newpage
 \subsection{Intuition for discrete-time periodicity}
+Consider the sequence $x[n]=\cos(2\pi n/12)$:
+\begin{center}
+\includegraphics[width=10cm]{a3}
+\end{center}
+we can think of this as a set of samples of the continuous-time sinusoid $x(t)=\cos(2\pi t/12)$ at integer time
+points. In this case, see that both $x(t)$ and $x[n]$ are periodic with fundamental period 12.
+That is, the values of $x[n]$ repeat every 12 points, exactly in step with the fundamental period of $x(t)$.\\
+\vspace{1mm}\\
+Now consider the signal $x[n]=\cos(8\pi n/31)$:
+\begin{center}
+\includegraphics[width=10cm]{a4}
+\end{center}
+This can also be viewed as a set of samples of $x(t)=\cos(8\pi t/31)$ at integer points in time. 
+But now see that in this case $x(t)$ is periodic with fundamental period $31/4$, while $x[n]$ is periodic with 
+fundamental period 31.\\
+\vspace{1mm}\\
+This difference stems from the fact that the discrete-time signal is defined only for integer values of the 
+independent variable---there is no sample at time
+$t=31/4$, when $x(t)$ completes one period, or at $t=2\cdot31/4$ or $t=3\cdot31/4$, when $x(t)$ has completed two
+or three periods. Only at sample $t=4\cdot31/4=31$, when
+$x(t)$ has completed \textit{four} periods is the discrete sequence defined.\\
+\vspace{1mm}\\
+This manifests as the pattern of $x[n]$ not repeating with each cycle of positive and negative values, but rather
+only after four of such cycles, specifically 31 points.
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+Finally consider
+
+
 
 \newpage
+
 \subsection{Difference in harmonic relations in discrete and\\continuous periodic exponentials}
 
 
