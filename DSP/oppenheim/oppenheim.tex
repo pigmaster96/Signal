@@ -115,6 +115,10 @@ See that $x(t)$ is the sum of the two. Exactly analagous definitions hold in the
 \end{center}
 \newpage
 
+\subsection{Complex exponential and sinusoidal signals}
+
+\newpage
+
 \subsection{Differences between continuous and\\discrete periodic complex exponentials}
 The continuous-time \textit{complex exponential signal} is of the form
 \begin{equation*}
@@ -170,7 +174,8 @@ frequency $|k|\omega_0$ and fundamental period
 \end{equation*}
 Each $\phi_k(t)$ itself defines a fundamental frequency and a corresponding fundamental period. 
 (see that $|k|\omega_0\cdot T_0/|k|=2\pi$, so this scaled down period is the corresponding period
-for this scaled up frequency. Each frequency is unique, point here is that they are also periodic with $T_0$)\\
+for this scaled up frequency. Each frequency is unique, point here is that they are also periodic with $T_0$, 
+but with fundamental periods getting proportionally smaller.)\\
 \vspace{1mm}\\
 Note that the $k$th harmonic $\phi_k(t)$ is still periodic with $T_0$; it goes through exactly $|k|$ of its 
 fundamental periods during any time interval of length $T_0$. (the term `harmonic' is consistent with its use in
@@ -255,6 +260,7 @@ To summarize
 \includegraphics[width=10cm]{a2}
 \end{center}
 \newpage
+
 \subsection{Intuition for discrete-time periodicity}
 Consider the sequence $x[n]=\cos(2\pi n/12)$:
 \begin{center}
@@ -279,16 +285,51 @@ or three periods. Only at sample $t=4\cdot31/4=31$, when
 $x(t)$ has completed \textit{four} periods is the discrete sequence defined.\\
 \vspace{1mm}\\
 This manifests as the pattern of $x[n]$ not repeating with each cycle of positive and negative values, but rather
-only after four of such cycles, specifically 31 points.
+only after four of such cycles, specifically 31 points.\\
 (next page)\newpage
 \noindent\textbf{Cont.}\\
-Finally consider
-
-
-
+Finally consider the signal $x[n]=\cos(n/6)$:
+\begin{center}
+\includegraphics[width=10cm]{a5}
+\end{center}
+In this case, the values of $x(t)$ at integer sample points \textit{never repeat}, as these sample points never
+span an interval that is an exact multiple of the period,
+$12\pi$, of $x(t)$.\\
+\vspace{1mm}\\
+Thus, $x[n]$ \textit{is not periodic}, although the eye visually interpolates between the sample points,
+suggesting \textit{the envelope} $x(t)$ which is periodic.
 \newpage
 
 \subsection{Difference in harmonic relations in discrete and\\continuous periodic exponentials}
+As in continuous time, it is also of considerable value in discrete-time to consider sets of harmonically related
+periodic exponentials---that is, \textit{periodic exponentials with a common period $N$}.\\
+\vspace{1mm}\\
+We know that these are precisely the signals which are at frequencies which are multiples of $2\pi/N$; that is
+\begin{equation*}
+\phi_k[n]=e^{ik(2\pi/N)n},\quad k=0,\pm1,\ldots
+\end{equation*}
+In the continuous-time case, all the harmonically related complex exponentials 
+$e^{ik(2\pi/T_0)t},\,k=0,\pm1,\pm2,\ldots$ are distinct.
+However, recall that for discrete signals we have
+\begin{equation*}
+e^{i(\omega_0+2\pi)n}=e^{i2\pi n}e^{i\omega_0n}=e^{i\omega_0n}
+\end{equation*}
+(this is a direct result of the fact that we iterate through discrete time as integers) As such the harmonically
+related complex exponentials \textit{are not all unique in discrete time}; specifically,
+\begin{align*}
+\phi_{k+N}[n]&=e^{i(k+N)(2\pi/N)n}\\
+&=e^{ik(2\pi/N)n}e^{i2\pi n}=\phi_k[n]
+\end{align*}
+See that this implies that there are only $N$ distinct 
+periodic exponentials in the set of $\phi_k[n]$; meaning
+\begin{equation*}
+\phi_0[n]=1,\,\phi_1[n]=e^{i(2\pi/N)n},\,
+\phi_2[n]=e^{i2(2\pi/N)n},\ldots,\,
+\phi_{N-1}[n]=e^{i(N-1)(2\pi/N)n}
+\end{equation*}
+are all distinct, but any other $\phi_k[n]$ would just be identical to one of them. (for instance $\phi_N[n]=\phi_0[n]$ or $\phi_{-1}[n]=\phi_{N-1}[n]$.)
+
+
 
 
 
