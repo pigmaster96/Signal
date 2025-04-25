@@ -77,7 +77,7 @@ this requires that $E_\infty=\infty$.\\
 Last would be signals for which neither $P_\infty$ nor $E_\infty$ are finite. An example of this might be $x(t)=t$.\\
 \vspace{1mm}\\
 \textbf{Note on discrete signals}\\
-It is omportant to note that the discrete-time signal $x[n]$ is defined \textit{only} for \textit{integer} 
+It is important to note that the discrete-time signal $x[n]$ is defined \textit{only} for \textit{integer} 
 values of the independent variable.
 \newpage
 
@@ -113,10 +113,6 @@ See that $x(t)$ is the sum of the two. Exactly analagous definitions hold in the
 \begin{center}
 \includegraphics[width=9cm]{a1}
 \end{center}
-\newpage
-
-\subsection{Complex exponential and sinusoidal signals}
-
 \newpage
 
 \subsection{Differences between continuous and\\discrete periodic complex exponentials}
@@ -328,9 +324,59 @@ periodic exponentials in the set of $\phi_k[n]$; meaning
 \phi_{N-1}[n]=e^{i(N-1)(2\pi/N)n}
 \end{equation*}
 are all distinct, but any other $\phi_k[n]$ would just be identical to one of them. (for instance $\phi_N[n]=\phi_0[n]$ or $\phi_{-1}[n]=\phi_{N-1}[n]$.)
+\newpage
 
-
-
+\subsection{More on complex exponential and sinusoidal signals}
+\textbf{Continuous}\\
+A continuous-time \textit{complex exponential signal} is of the form 
+\begin{equation*}
+x(t)=Ce^{at}
+\end{equation*}
+where $C$ and $a$ are, in general, complex numbers.\\
+\vspace{1mm}\\
+\textbf{Euler identity and `combined' sinusoidal form}\\
+Recall euler's identity:
+\begin{equation*}
+e^{i\omega_0t}=\cos(\omega_0t)+i\sin(\omega_0t)
+\end{equation*}
+See that the scaled and phase-delayed sinusoid can be written in terms of these periodic complex exponentials
+with the same fundamental period:
+\begin{equation*}
+A\cos(\omega_0t+\phi)=\frac{A}{2}e^{i\phi}e^{i\omega_0t}
++\frac{A}{2}e^{-i\phi}e^{-i\omega_0t}
+\end{equation*}
+We can also express
+\begin{equation*}
+A\cos(\omega_0t+\phi)=A\text{Re}\{e^{i(\omega_0t+\phi)}\}
+\end{equation*}
+and
+\begin{equation*}
+A\sin(\omega_0t+\phi)=A\text{Im}\{e^{i(\omega_0t+\phi)}\}
+\end{equation*}
+\textbf{Energy and power}\\
+Periodic signals---and in particular, the complex periodic exponential signal---are examples of signals
+with infinite total energy but finite average power. 
+Calculating the total energy and of the periodic exponential signal over one period:
+\begin{align*}
+E_{\text{period}}&=\int^{T_0}_0|e^{i\omega_0t}|^2dt\\
+&=\int^{T_0}_01\,dt=T_0
+\end{align*}
+(The absolute value of a complex number is its magnitude. Think of the absolute value as the 
+(possibly multidimensional) distance from zero.) Calculating the average power:
+\begin{equation*}
+P_{\text{period}}=\frac{1}{T_0}E_{\text{period}}=1
+\end{equation*}
+Since there are an infinite number of periods as $t$ ranges from $-\infty$ to $+\infty$, the total energy 
+integrated over all time is infinite.
+However, since the average power over each period is 1, averaging over multiple periods always yields an average
+power of 1. That is, the complex periodic exponential
+signal has finite average power equal to
+\begin{equation*}
+P_\infty=\lim_{T\to\infty}\frac{1}{2T}\int^T_{-T}|e^{i\omega_0t}|^2dt=1
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Discrete}\\
+As in continuous time,
 
 
 
