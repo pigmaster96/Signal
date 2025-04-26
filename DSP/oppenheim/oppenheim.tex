@@ -327,7 +327,7 @@ are all distinct, but any other $\phi_k[n]$ would just be identical to one of th
 \newpage
 
 \subsection{More on complex exponential and sinusoidal signals}
-\textbf{Continuous}\\
+\textbf{Continuous case}\\
 A continuous-time \textit{complex exponential signal} is of the form 
 \begin{equation*}
 x(t)=Ce^{at}
@@ -375,11 +375,51 @@ signal has finite average power equal to
 P_\infty=\lim_{T\to\infty}\frac{1}{2T}\int^T_{-T}|e^{i\omega_0t}|^2dt=1
 \end{equation*}
 (next page)\newpage
-\noindent\textbf{Discrete}\\
-As in continuous time,
-
-
-
+\noindent\textbf{General continuous complex exponential signals}\\
+In the most general case $Ce^{at}$ where both $C$ and $a$ are complex, see that since $C$ and $a$ can are just
+\begin{equation*}
+C=|C|e^{i\theta},\quad a=r+i\omega_0
+\end{equation*}
+we can express the general complex signal as
+\begin{equation*}
+Ce^{at}=|C|e^{i\theta}e^{(r+i\omega_0)t}=|C|e^{rt}e^{i(\omega_0t+\theta)}
+\end{equation*}
+we can expand this further as
+\begin{equation*}
+Ce^{at}=|C|e^{rt}\cos(\omega_0t+\theta)+i|C|e^{rt}\sin(\omega_0t+\theta)
+\end{equation*}
+\textbf{Discrete case}\\
+As in continuous time, the discrete time \textit{complex exponential signal} is defined by
+\begin{equation*}
+x[n]=C\alpha^n
+\end{equation*}
+where $C$ and $\alpha$ are, in general, complex numbers. This could alternatively be expressed in the form
+\begin{equation*}
+x[n]=Ce^{\beta n}
+\end{equation*}
+where $\alpha=e^{\beta}$.\\
+\vspace{1mm}\\
+\textbf{Euler identity and `combined' sinusoidal form}\\
+As with the continuous case, constraining $\beta$ to be
+purely imaginary, we have euler's identity
+\begin{equation*}
+e^{i\omega_0n}=\cos\omega_0n+i\sin\omega_0n
+\end{equation*}
+and 
+\begin{equation*}
+A\cos(\omega_0n+\phi)=\frac{A}{2}e^{i\phi}e^{i\omega_0n}+
+\frac{A}{2}e^{-i\phi}e^{-i\omega_0n}
+\end{equation*}
+\textbf{General discrete complex exponential signals}\\
+As with the continuous case, for complex $C$ and $\alpha$, we have
+\begin{equation*}
+C=|C|e^{i\theta},\quad\alpha=|\alpha|e^{i\omega_0}
+\end{equation*}
+so the general complex exponential signal can be expressed as
+\begin{equation*}
+C\alpha^n=|C||\alpha|^n\cos(\omega_0n+\theta)
++i|C||\alpha|^n\sin(\omega_0n+\theta)
+\end{equation*}
 
 
 
