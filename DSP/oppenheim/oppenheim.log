@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.4.26)  29 APR 2025 17:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.4.26)  1 MAY 2025 06:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -281,27 +281,39 @@ File: ./images/a6.png Graphic file (type png)
 <use ./images/a6.png>
 Package pdftex.def Info: ./images/a6.png  used on input line 433.
 (pdftex.def)             Requested size: 284.52756pt x 45.08386pt.
+<./images/a7.png, id=74, 565.25464pt x 91.36993pt>
+File: ./images/a7.png Graphic file (type png)
+<use ./images/a7.png>
+Package pdftex.def Info: ./images/a7.png  used on input line 442.
+(pdftex.def)             Requested size: 284.52756pt x 45.99156pt.
+<./images/a8.png, id=75, 422.26329pt x 207.00192pt>
+File: ./images/a8.png Graphic file (type png)
+<use ./images/a8.png>
+Package pdftex.def Info: ./images/a8.png  used on input line 453.
+(pdftex.def)             Requested size: 284.52756pt x 139.48335pt.
 
 
-[14 <./images/a6.png (PNG copy)>] (./oppenheim.aux)
+[14 <./images/a6.png (PNG copy)> <./images/a7.png (PNG copy)> <./images/a8.png (PNG copy)>]
+
+[15] (./oppenheim.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3489 strings out of 475171
- 51802 string characters out of 5767095
+ 3513 strings out of 475171
+ 52224 string characters out of 5767095
  439986 words of memory out of 5000000
- 26448 multiletter control sequences out of 15000+600000
+ 26472 multiletter control sequences out of 15000+600000
  572898 words of font info for 87 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  57i,11n,65p,238b,221s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on oppenheim.pdf (15 pages, 373208 bytes).
+Output written on oppenheim.pdf (16 pages, 417010 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
+ 146 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

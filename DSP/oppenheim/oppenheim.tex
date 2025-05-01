@@ -432,7 +432,43 @@ One of the simplest discrete-time signals is the \textit{unit impulse}/\textit{u
 \begin{center}
 \includegraphics[width=10cm]{a6}
 \end{center}
-Another 
+Another basic discrete-time signal is the discrete-time \textit{unit step}, denoted by $u[n]$ and defined by
+\begin{equation*}
+u[n]=\begin{cases}
+0,&n<0\\
+1,&n\geq0\end{cases}
+\end{equation*}
+\begin{center}
+\includegraphics[width=10cm]{a7}
+\end{center}
+See that the discrete-time unit impulse is the \textit{first difference} of the discrete-time step:
+\begin{equation*}
+\delta[n]=u[n]-u[n-1]
+\end{equation*}
+Conversely, the discrete-time unit step is the \textit{running sum} of the unit sample:
+\begin{equation*}
+u[n]=\sum^n_{m=-\infty}\delta[m]
+\end{equation*}
+\begin{center}
+\includegraphics[width=10cm]{a8}
+\end{center}
+Since the only nonzero value of the unit sample is at 0, the running sum is 0 for $n<0$ and 1 for $n\geq0$.\\
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+we had the discrete-time unit step as the running sum of the unit sample:
+\begin{equation*}
+u[n]=\sum^n_{m=-\infty}\delta[m]
+\end{equation*}
+See that by changing the variable of summation from $m$ to $k=n-m$, we can rewrite this as
+\begin{equation*}
+u[n]=\sum^0_{k=\infty}\delta[n-k]
+\end{equation*}
+and equivalently
+\begin{equation*}
+u[n]=\sum^\infty_{k=0}\delta[n-k]
+\end{equation*}
+
+
 
 
 
