@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1746082782.9632 "oppenheim.tex" "oppenheim.pdf" "oppenheim" 1746082783.39578 0
+["pdflatex"] 1746312631.4438 "oppenheim.tex" "oppenheim.pdf" "oppenheim" 1746312631.89228 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1742685315 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1742685315 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1742685315 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -91,9 +91,10 @@
   "images/a6.png" 1745946386.04462 19572 3daa0e4687103758bb4a429dde6c0b17 ""
   "images/a7.png" 1746058915.25779 21240 dbb5b84474fb1448477313ccfc03258e ""
   "images/a8.png" 1746081412.1619 19571 50f05db36ae80e9d1b9ccc3ad9476033 ""
-  "oppenheim.aux" 1746082783.35986 1127 058b19efc917f0501e73c4bb8dc2f18a "pdflatex"
-  "oppenheim.tex" 1746082773.77583 20254 4028a313f8312593e93db364e3adad2c ""
-  "oppenheim.toc" 1746082783.36086 766 a18796f1c202840350a050e619006d77 "pdflatex"
+  "images/a9.png" 1746312249.19598 7568 21bbfb32f3e8158c0e2282813ad2e2e4 ""
+  "oppenheim.aux" 1746312631.85891 1127 3ad33b8d1de9ed014e241823d6b4bef3 "pdflatex"
+  "oppenheim.tex" 1746312630.8609 21792 4332512bdb831d5619495d7bb57e70cf ""
+  "oppenheim.toc" 1746312631.85891 766 a18796f1c202840350a050e619006d77 "pdflatex"
   (generated)
   "oppenheim.aux"
   "oppenheim.log"

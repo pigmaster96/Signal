@@ -467,6 +467,44 @@ and equivalently
 \begin{equation*}
 u[n]=\sum^\infty_{k=0}\delta[n-k]
 \end{equation*}
+An interpretation of this is a superposition of delayed impulses; we can view the unit step as the sum of unit impulses $\delta[n]$
+(nonzero at $n=0$), $\delta[n-1]$ (nonzero at $n=1$), and all other $\delta[n-k]$ for integer $k$ extending to infinity.\\
+\vspace{1mm}\\
+See that the unit impulse can also be used to sample the value of a signal at $n=0$; since $\delta[n]$ is nonzero (and equal to 1)
+only for $n=0$, it follows that
+\begin{equation*}
+x[n]\delta[n]=x[0]\delta[n]
+\end{equation*}
+More generally, if we consider a unit impulse $\delta[n-n_0]$ at $n=n_0$, then
+\begin{equation*}
+x[n]\delta[n-n_0]=x[n_0]\delta[n-n_0]
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Continuous-Time}\\
+The continuous-time \textit{unit step function} $u(t)$ is defined in a similar manner to its discrete-time counterpart:
+\begin{equation*}
+u(t)=\begin{cases}0,&t<0\\
+1,&t>0\end{cases}
+\end{equation*}
+\begin{center}
+\includegraphics[width=10cm]{a9}
+\end{center}
+Note that the unit step is \textit{discontinuous} at $t=0$. The continuous-time \textit{unit inpulse} $\delta(t)$ is related to the
+unit step in a manner analagous to that of their discrete counterparts; in particular, the continuous-time unit step is the
+\textit{running integral} of the unit impulse:
+\begin{equation*}
+u(t)=\int^t_{-\infty}\delta(\tau)d\tau
+\end{equation*}
+It also follows that the continuous-time unit impulse can be thought of as the \textit{first derivative} of the continuous-time unit step:
+\begin{equation*}
+\delta(t)=\frac{du(t)}{dt}
+\end{equation*}
+In contrast
+
+
+
+
+
 
 
 
