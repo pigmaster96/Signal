@@ -499,10 +499,43 @@ It also follows that the continuous-time unit impulse can be thought of as the \
 \begin{equation*}
 \delta(t)=\frac{du(t)}{dt}
 \end{equation*}
-In contrast
-
-
-
+In contrast to discrete-time, there is some formal difficulty with this equation as a representation of the unit impulse---since $u(t)$ is 
+discontinuous at $t=0$ and consequently is not formally differentiable.\\
+(next page)\newpage 
+\noindent\textbf{Cont.}\\
+We get around this by considering an approximation to the unit step
+$u_\Delta(t)$, rising from the value 0 to 1 in a short time interval of
+length $\Delta$:
+\begin{center}
+\includegraphics[width=10cm]{a10}
+\end{center}
+Also considering the derivative:
+\begin{equation*}
+\delta_\Delta(t)=\frac{du_\Delta(t)}{dt}
+\end{equation*}
+The unit step changes from value 0 to 1 instantaneously and can be thought of an idealisation of $u_\Delta(t)$ for $\Delta$ so short
+that its duration doesn't matter for any practical purpose.
+Formally, $u(t)$ is the limit of $u_\Delta(t)$ as $\Delta\to0$.\\
+\vspace{1mm}\\
+Consider the derivative again; $\delta_\Delta(t)$ is a short pulse, of duration $\Delta$ and unit area for any value of $\Delta$.
+As $\Delta\to0$, $\delta_\Delta(t)$ becomes narrower and higher while mantaining its unit area. Its limiting form
+\begin{equation*}
+\delta(t)=\lim_{\Delta\to0}\delta_\Delta(t)
+\end{equation*}
+can then be thought of as an idealisation of the short pulse $\delta_\Delta(t)$ as the duration $\Delta$ becomes insignificant:
+\begin{center}
+\includegraphics[width=10cm]{a11}
+\end{center}
+$\delta(t)$ has, in effect, no duration but unit area. The arrow at $t=0$ indicates the area of the pulse is concentrated
+at $t=0$ and the height of the arrow and the `1' next to the arrow is used to represent the \textit{area} of the impulse. More generally, 
+a scaled impulse $k\delta(t)$ will have an area $k$, and thus
+\begin{equation*}
+ku(t)=\int^t_{-\infty}k\delta(\tau)d\tau
+\end{equation*}
+A scaled impulse, where the height of the arrow is chosen to be proportional to the area of the impulse.
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+As with discrete time
 
 
 
