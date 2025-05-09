@@ -454,7 +454,7 @@ u[n]=\sum^n_{m=-\infty}\delta[m]
 \end{center}
 Since the only nonzero value of the unit sample is at 0, the running sum is 0 for $n<0$ and 1 for $n\geq0$.\\
 (next page)\newpage
-\noindent\textbf{Cont.}\\
+\noindent\textbf{Alternative form}\\
 we had the discrete-time unit step as the running sum of the unit sample:
 \begin{equation*}
 u[n]=\sum^n_{m=-\infty}\delta[m]
@@ -470,6 +470,7 @@ u[n]=\sum^\infty_{k=0}\delta[n-k]
 An interpretation of this is a superposition of delayed impulses; we can view the unit step as the sum of unit impulses $\delta[n]$
 (nonzero at $n=0$), $\delta[n-1]$ (nonzero at $n=1$), and all other $\delta[n-k]$ for integer $k$ extending to infinity.\\
 \vspace{1mm}\\
+\textbf{Sampling property}\\
 See that the unit impulse can also be used to sample the value of a signal at $n=0$; since $\delta[n]$ is nonzero (and equal to 1)
 only for $n=0$, it follows that
 \begin{equation*}
@@ -534,7 +535,7 @@ ku(t)=\int^t_{-\infty}k\delta(\tau)d\tau
 \end{equation*}
 A scaled impulse, where the height of the arrow is chosen to be proportional to the area of the impulse.\\
 (next page)\newpage
-\noindent\textbf{Cont.}\\
+\noindent\textbf{Alternative form}\\
 As with discrete time, the relationship between the continuous time unit step and impulse can be rewritten in a different form, 
 by changing the variable of integration from $\tau$ to $\sigma=t-\tau$:
 \begin{equation*}
@@ -553,6 +554,7 @@ Considering the $d\tau$, or respectively $d\sigma$, as the width of the step bet
 direction in which we integrate, the step also changes its sign.
 In the discrete sum, the summands are not multiplied by this step.)\\
 \vspace{1mm}\\
+\textbf{Sampling property}\\
 As with discrete-time, the continuous-time impulse has a very important sampling property; consider 
 \begin{equation*}
 x_1(t)=x(t)\delta_\Delta(t)
@@ -583,6 +585,10 @@ x(t)\delta(t-t_0)=x(t_0)\delta(t-t_0)
 \newpage
 
 \subsection{}
+
+
+
+
 
 
 
