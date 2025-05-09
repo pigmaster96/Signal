@@ -532,10 +532,31 @@ a scaled impulse $k\delta(t)$ will have an area $k$, and thus
 \begin{equation*}
 ku(t)=\int^t_{-\infty}k\delta(\tau)d\tau
 \end{equation*}
-A scaled impulse, where the height of the arrow is chosen to be proportional to the area of the impulse.
+A scaled impulse, where the height of the arrow is chosen to be proportional to the area of the impulse.\\
 (next page)\newpage
 \noindent\textbf{Cont.}\\
-As with discrete time
+As with discrete time, the relationship between the continuous time unit step and impulse can be rewritten in a different form, 
+by changing the variable of integration from $\tau$ to $\sigma=t-\tau$:
+\begin{equation*}
+u(t)=\int_{-\infty}^t\delta(\tau)d\tau=\int^0_\infty\delta(t-\sigma)(-d\sigma)
+\end{equation*}
+or equivalently
+\begin{equation*}
+u(t)=\int_0^\infty\delta(t-\sigma)\,d\sigma
+\end{equation*}
+(This negation after inverstion of the limits of the integral can be derived from the first fundamental theorem. For a 
+more intuitive understanding, consult the definition of the Riemann sum:
+\begin{equation*}
+\sum^{n-1}_{i=0}f(t_i)(x_{i+1}-x_{i})
+\end{equation*}
+Considering the $d\tau$, or respectively $d\sigma$, as the width of the step between two argumentsof the sum, if we change the
+direction in which we integrate, the step also changes its sign.
+In the discrete sum, the summands are not multiplied by this step.)\\
+\vspace{1mm}\\
+As with discrete-time, the continuous-time impulse has a very important sampling property. 
+
+
+
 
 
 
