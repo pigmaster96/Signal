@@ -553,12 +553,36 @@ Considering the $d\tau$, or respectively $d\sigma$, as the width of the step bet
 direction in which we integrate, the step also changes its sign.
 In the discrete sum, the summands are not multiplied by this step.)\\
 \vspace{1mm}\\
-As with discrete-time, the continuous-time impulse has a very important sampling property. 
+As with discrete-time, the continuous-time impulse has a very important sampling property; consider 
+\begin{equation*}
+x_1(t)=x(t)\delta_\Delta(t)
+\end{equation*}
+By construction, $x_1(t)$ is zero outside the interval $0\leq t\leq\Delta$. See that for $\Delta$ sufficiently small so that
+$x(t)$ is approximately constant over this integral:
+\begin{center}
+\includegraphics[width=10cm]{a12}
+\end{center}
+so we have
+\begin{equation*}
+x(t)\delta_\Delta(t)\approx x(0)\delta_\Delta(t)
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+We had, for small $\Delta$,
+\begin{equation*}
+x(t)\delta_\Delta(t)\approx x(0)\delta_\Delta(t)
+\end{equation*}
+since $\delta(t)$ is the limit as $\Delta\to0$ of $\delta_\Delta(t)$, it follows that
+\begin{equation*}
+x(t)\delta(t)=x(0)\delta(t)
+\end{equation*}
+By the same argument, we have an analagous expression for an impulse concentrated at an arbritrary point, say $t_0$. That is,
+\begin{equation*}
+x(t)\delta(t-t_0)=x(t_0)\delta(t-t_0)
+\end{equation*}
+\newpage
 
-
-
-
-
+\subsection{}
 
 
 
