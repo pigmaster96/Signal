@@ -648,10 +648,58 @@ y[n]=x[n-1]
 \end{equation*}
 While the concept of memory in a system would typically suggest storing \textit{past} input and output values, our formal
 definition also leads to our referring to a system as having
-memory if the current output is dependent on \textit{future} values of the input and output (causality should be considered).\\
+memory if the current output is dependent on \textit{future} values of the input and output (noncausal systems).\\
 (next page)\newpage
 \noindent\textbf{Causality}\\
-A system is
+A system is \textit{causal} if the output at any time depends only on values of the input at the present time and in the past.
+Such a system is often referred to as being \textit{nonanticipative}, as the system output does not `anticipate' future values
+of the input.\\
+\vspace{1mm}\\
+Consequently, if two inputs to a causal system are identical up to some point in time $t_0$ or $n_0$, the corresponding outputs
+must also be equal up to this same time. For instance the capacitor:
+\begin{equation*}
+y(t)=\frac{1}{C}\int^t_{-\infty}x(\tau)d\tau
+\end{equation*}
+is a causal system, with input taken to be current, output voltage, and $C$ capacitance. The capacitor voltage responds
+only to the present and past values of the input.\\
+\vspace{1mm}\\
+Examples of \textit{noncausal} systems might be
+\begin{equation*}
+y[n]=x[n]-x[n+1]
+\end{equation*}
+or
+\begin{equation*}
+y(t)=x(t+1)
+\end{equation*}
+See that all memoryless systems are causal, since the output responds only to the current value of the input in such systems.\\
+\vspace{1mm}\\
+An example of a noncausal system might be when averaging data over an interval to smooth out fluctuations and keep only the trend.
+Such an averaging system might look like
+\begin{equation*}
+y[n]=\frac{1}{2M+1}\sum^{+M}_{k=-M}x[n-k]
+\end{equation*}
+\textbf{More examples}\\
+Consider
+\begin{equation*}
+y[n]=x[-n]
+\end{equation*}
+see that for $n<0$ the output depends on a future value of the input, and hence the system is not causal. Another example: consider
+\begin{equation*}
+y(t)=x(t)\cos(t+1)
+\end{equation*}
+This can be rewritten as 
+\begin{equation*}
+y(t)=x(t)g(t)
+\end{equation*}
+Thus only the current value of the input $x(t)$ influences the current value of the output $y(t)$. This system is causal (and,
+in fact, memoryless).\\
+(next page)\newpage
+\noindent\textbf{Invertibility and inverse systems}
+
+
+
+
+
 
 
 
