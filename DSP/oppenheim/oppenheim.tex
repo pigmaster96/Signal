@@ -616,7 +616,44 @@ which is in the general form as described above.\\
 \noindent\textbf{Basic system properties}\\
 \vspace{1mm}\\
 \textbf{Memory}\\
-A
+A system is said to be \textit{memoryless} if its output for each value of the independent variable is dependent
+only on the \textit{input at that same time}.\\
+\vspace{1mm}\\
+For instance, the system 
+\begin{equation*}
+y[n]=(2x[n]-x^2[n])^2
+\end{equation*}
+is memoryless, since the value of $y[n]$ at any particular time $n_0$ depends only on the value of $x[n]$ at that time. 
+Other examples of memoryless systems include the input-output relationship of a resistor, with input $x(t)$ taken to be 
+current and output $y(t)$ voltage:
+\begin{equation*}
+y(t)=Rx(t)
+\end{equation*}
+where $R$ is the resistance. The \textit{identity system}, whose output is identical to its input, is also memoryless
+\begin{equation*}
+y(t)=x(t)
+\end{equation*}
+Written in discrete time:
+\begin{equation*}
+y[n]=x[n]
+\end{equation*}
+An example of a discrete-time system \textit{with memory} is an \textit{accumulator} or \textit{summer}
+\begin{equation*}
+y[n]=\sum^n_{k=-\infty}x[k]
+\end{equation*}
+see that the accumulator must store or `remember' information about the past inputs up to current time. Another example
+of a system with memory is a \textit{delay}
+\begin{equation*}
+y[n]=x[n-1]
+\end{equation*}
+While the concept of memory in a system would typically suggest storing \textit{past} input and output values, our formal
+definition also leads to our referring to a system as having
+memory if the current output is dependent on \textit{future} values of the input and output (causality should be considered).\\
+(next page)\newpage
+\noindent\textbf{Causality}\\
+A system is
+
+
 
 
 
