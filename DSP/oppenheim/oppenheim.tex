@@ -584,14 +584,39 @@ x(t)\delta(t-t_0)=x(t_0)\delta(t-t_0)
 \end{equation*}
 \newpage
 
-\subsection{}
-
-
-
-
-
-
-
+\subsection{Basic system properties}
+\textbf{General form}\\
+A general formula for a continuous first-order linear differential equation is
+\begin{equation*}
+\frac{dy(t)}{dt}+ay(t)=bx(t)
+\end{equation*}
+where $x(t)$ is the input, $y(t)$ the output, and $a,b$ constants. An example of this might be
+\begin{equation*}
+\frac{dv(t)}{dt}+\frac{\rho}{m}v(t)=\frac{1}{m}f(t)
+\end{equation*}
+Discrete cases have general first-order linear difference equations of the form
+\begin{equation*}
+y[n]+ay[n-1]=bx[n]
+\end{equation*}
+Considering the earlier example, if we let $v[n]=v(n\Delta)$ and $f[n]=f(n\Delta)$ and approximate $dv(t)/dt$ at $t=n\Delta$ by
+the first backward difference:
+\begin{equation*}
+\frac{v(n\Delta)-v((n-1)\Delta)}{\Delta}
+\end{equation*}
+we can obtain
+\begin{align*}
+\frac{v[n]-v[n-1]}{\Delta}+\frac{\rho}{m}v[n]&=\frac{1}{m}f[n]\\
+v[n]-v[n-1]+\frac{\rho\Delta}{m}v[n]&=\frac{\Delta}{m}f[n]\\
+v[n]\left(1+\frac{\rho\Delta}{m}\right)-v[n-1]&=\frac{\Delta}{m}f[n]\\
+v[n]\frac{m+\rho\Delta}{m}-v[n-1]&=\frac{\Delta}{m}f[n]\\
+v[n]-\frac{m}{m+\rho\Delta}v[n-1]&=\frac{\Delta}{m+\rho\Delta}f[n]
+\end{align*}
+which is in the general form as described above.\\
+(next page)\newpage
+\noindent\textbf{Basic system properties}\\
+\vspace{1mm}\\
+\textbf{Memory}\\
+A
 
 
 
