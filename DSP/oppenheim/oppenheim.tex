@@ -811,7 +811,36 @@ Since $y_2$, the output of the shifted input, is the same as $y_1(t-t_0)$, which
 system is time invariant.\\
 (next page)\newpage
 \noindent\textbf{More examples}\\
-As a second
+As a second example, consider
+\begin{equation*}
+y[n]=nx[n]
+\end{equation*}
+See that time shifting the input doesn't correspond with an equivalent shift in the output---this is a time-varying system. 
+This system represents one with a time-varying gain, even if we know the input value, we cannot determine the output value 
+without knowing the current time.\\
+\vspace{1mm}\\
+For a counterexample, consider having input $x_1[n]=\delta[n]$, which yields an output $y_1[n]=0$ (since $n\delta[n]=0$). 
+However, the input $x_2[n]=\delta[n-1]$ yields the output $y_2[n]=n\delta[n-1]=\delta[n-1]$---while $x_2[n]$ is a shifted 
+version of $x_1[n]$, $y_2[n]$ is \textit{not} a shifted version of $y_1[n]$.\\
+\vspace{1mm}\\
+For a final example, consider the system
+\begin{equation*}
+y(t)=x(2t)
+\end{equation*}
+This system represents a time scaling. That is, $y(t)$ is a time-compressed (by a factor of 2) version of $x(t)$.
+Intuitively then, any time shift in the input will also be compressed by a factor of 2, and it is for this reason that the system 
+is not time invariant. Consider a counterexample: 
+\begin{center}
+\includegraphics[width=8.5cm]{a14}
+\end{center}
+see that
+if we shift the input signal by 2, the resulting output is not the same as if we had shifted the output signal by 2.\\
+(next page)\newpage
+\noindent\textbf{Linearity}\\
+A
+
+
+
 
 
 
