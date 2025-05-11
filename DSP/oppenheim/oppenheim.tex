@@ -694,8 +694,44 @@ y(t)=x(t)g(t)
 Thus only the current value of the input $x(t)$ influences the current value of the output $y(t)$. This system is causal (and,
 in fact, memoryless).\\
 (next page)\newpage
-\noindent\textbf{Invertibility and inverse systems}
-
+\noindent\textbf{Invertibility and inverse systems}\\
+A system is said to be \textit{invertible} if distinct inputs lead to distinct outputs. If a system is invertible, then an
+\textit{inverse} system exists that, when cascaded with the original system, yields an output $w[n]$ equal to the input
+$x[n]$ in the first system:
+\begin{center}
+\includegraphics[width=10cm]{a13}
+\end{center}
+See that the series interconnection between the invertible system and its inverse system has an overall input-output relationship
+same as that for the identity system.
+As illustrated in the second graph, an example of an invertible
+continuous-time system is 
+\begin{equation*}
+y(t)=2x(t)
+\end{equation*}
+for which the inverse system is
+\begin{equation*}
+w(t)=\frac{1}{2}y(t)
+\end{equation*}
+Another example is illustrated in the third block diagram, see that the accumulator is an invertible system:
+\begin{equation*}
+y[n]=\sum^n_{k=-\infty}x[k]
+\end{equation*}
+with inverse system
+\begin{equation*}
+w[n]=y[n]-y[n-1]
+\end{equation*}
+Examples of noninvertible systems include
+\begin{equation*}
+y[n]=0
+\end{equation*}
+or
+\begin{equation*}
+y(t)=x^2(t)
+\end{equation*}
+where a single output can correspond to different inputs.\\
+(next page)\newpage
+\noindent\textbf{Stability}\\
+Another important system property is \textit{stability}
 
 
 
