@@ -731,9 +731,23 @@ y(t)=x^2(t)
 where a single output can correspond to different inputs.\\
 (next page)\newpage
 \noindent\textbf{Stability}\\
-Another important system property is \textit{stability}
-
-
+Another important system property is \textit{stability}. Informally, a stable system is one in which small inputs lead to
+responses that do not diverge (grow uncontrollably).\\
+\vspace{1mm}\\
+More formally, if the input to a stable system is bounded (if its magnitude of the input does not grow without bound), then the
+output must also be bounded and therefore cannot diverge. (this is the definition to take note of)\\
+\vspace{1mm}\\
+For instance consider the averaging system brought up earlier
+\begin{equation*}
+y[n]=\frac{1}{2M+1}\sum^{+M}_{k=-M}x[n-k]
+\end{equation*}
+Suppose that the input $x[n]$ is bounded in magnitude by some number, say $B$ for all values of $n$. Then the largest possible 
+magnitude for $y[n]$ is also $B$ since it is the average. Therefore, $y[n]$ is bounded and the system is stable.\\
+\vspace{1mm}\\
+On the other hand, the accumulator sums all of the past values of the input, so the output will grow continually even if $x[n]$
+is bounded---it is an unstable system.\\
+\vspace{1mm}\\
+A useful strategy to verify that a system is unstable is to look for
 
 
 
