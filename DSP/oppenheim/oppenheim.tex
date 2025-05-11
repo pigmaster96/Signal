@@ -584,7 +584,7 @@ x(t)\delta(t-t_0)=x(t_0)\delta(t-t_0)
 \end{equation*}
 \newpage
 
-\subsection{Basic system properties}
+\subsection{Basic system properties 1}
 \textbf{General form}\\
 A general formula for a continuous first-order linear differential equation is
 \begin{equation*}
@@ -747,9 +747,71 @@ magnitude for $y[n]$ is also $B$ since it is the average. Therefore, $y[n]$ is b
 On the other hand, the accumulator sums all of the past values of the input, so the output will grow continually even if $x[n]$
 is bounded---it is an unstable system.\\
 \vspace{1mm}\\
-A useful strategy to verify that a system is unstable is to look for
+A useful strategy to verify that a system is unstable is to look for a specific bounded input that leads to an unbounded
+output. For instance consider 
+\begin{equation*}
+y(t)=tx(t)
+\end{equation*}
+See that a constant input $x(t)=1$ yields $y(t)=t$, which is unbounded. Since for any finite constant bound, $|y(t)|$ will exceed 
+that bound at some $t$, this system is unstable.\\
+\vspace{1mm}\\
+Now consider a different system
+\begin{equation*}
+y(t)=e^{x(t)}
+\end{equation*}
+See that for an arbitrary positive number $B$, if $x(t)$ is bound by $B$, that is
+\begin{equation*}
+|x(t)|<B
+\end{equation*}
+or
+\begin{equation*}
+-B<x(t)<B
+\end{equation*}
+for all $t$, then $y(t)$ must satisfy
+\begin{equation*}
+e^{-B}<|y(t)|<e^B
+\end{equation*}
+Any input to this system bounded by an arbitrary positive number $B$ has a output guaranteed to be bounded by $e^B$---this system
+is stable.
+\newpage
 
-
+\subsection{Basic system properties 2}
+\textbf{Time invariance}\\
+A system it \textit{time invariant} if a time shift in the input signal results in an identical time shift in the output
+signal.\\
+\vspace{1mm}\\
+That is, if $y[n]$ is the output of a discrete-time, time-invariant system with input $x[n]$, then $y[n-n_0]$ is the output
+when $x[n-n_0]$ is applied. In continuous time with $y(t)$ the output corresponding to the input $x(t)$, a time-invariant system
+will have $y(t-t_0)$ as the output when $x(t-t_0)$ is the input.\\
+\vspace{1mm}\\
+\textbf{Examples}\\
+Consider the continuous-time system
+\begin{equation*}
+y(t)=\sin[x(t)]
+\end{equation*}
+To check that this system is time invariant, we must determine whether the time-invariance property holds for \textit{any} input
+and \textit{any} time shift $t_0$. Thus, letting $x_1(t)$ be an
+arbitrary input to the system, with corresponding output
+\begin{equation*}
+y_1(t)=\sin[x_1(t)]
+\end{equation*}
+Now consider a second input $x_2$ obtained by shifting $x_1(t)$ in time
+\begin{equation*}
+x_2(t)=x_1(t-t_0)
+\end{equation*}
+The output corresponding to this input is
+\begin{equation*}
+y_2(t)=\sin[x_2(t)]=\sin[x_1(t-t_0)]
+\end{equation*}
+Now consider translating the output $y_1$, see that
+\begin{equation*}
+y_1(t-t_0)=\sin[x_1(t-t_0)]
+\end{equation*}
+Since $y_2$, the output of the shifted input, is the same as $y_1(t-t_0)$, which is if we had shifted the output instead, this
+system is time invariant.\\
+(next page)\newpage
+\noindent\textbf{More examples}\\
+As a second
 
 
 
