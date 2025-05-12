@@ -876,10 +876,121 @@ results in an output which is zero for all time; if $x[n]\to y[n]$, then by the 
 \end{equation*}
 (next page)\newpage
 \noindent\textbf{Examples}\\
-Consider
+Consider the system
+\begin{equation*}
+y(t)=tx(t)
+\end{equation*}
+To determine whether or not it is linear, we consider two arbitrary inputs $x_1(t)$ and $x_2(t)$.
+\begin{align*}
+x_1(t)&\to y_1(t)=tx_1(t)\\
+x_2(t)&\to y_2(t)=tx_2(t)
+\end{align*}
+Now consider $x_3(t)$, a linear combination of $x_1(t)$ and $x_2(t)$:
+\begin{equation*}
+x_3(t)=ax_1(t)+bx_2(t)
+\end{equation*}
+where $a$ and $b$ are arbitrary scalars. See that for input $x_3(t)$, we have the output
+\begin{align*}
+y_3(t)&=tx_3(t)\\
+&=t(ax_1(t)+bx_2(t))\\
+&=atx_1(t)+btx_2(t)\\
+&=ay_1(t)+by_2(t)
+\end{align*}
+So we conclude that the system is linear (also see that it is not time invariant).\\
+\vspace{1mm}\\
+For another example, consider the system
+\begin{equation*}
+y(t)=x^2(t)
+\end{equation*}
+as defining $x_1(t),x_2(t)$, and $x_3(t)$ as in the previous example, we have
+\begin{align*}
+x_1(t)\to y_1(t)=x^2_1(t)\\
+x_2(t)\to y_2(t)=x^2_2(t)
+\end{align*}
+and 
+\begin{align*}
+x_3(t)\to y_3(t)&=x^2_3(t)\\
+&=(ax_1(t)+bx_2(t))^2\\
+&=a^2x^2_1(t)+b^2x^2_2(t)+2abx_1(t)x_2(t)\\
+&=a^2y_1(t)+b^2y_2(t)+2abx_1(t)x_2(t)
+\end{align*}
+which isn't a superposition of the inputs, thus the system is not linear.\\
+(next page)\newpage
+\noindent\textbf{More examples}\\
+It is important to remember that the scaling constants of the superposition criteria are allowed to be complex. Consider
+the system
+\begin{equation*}
+y[n]=\text{Re}\{x[n]\}
+\end{equation*}
+This system is additive, but does not satisfy the homogeneity property, consider input
+\begin{equation*}
+x_1[n]=r[n]+is[n]
+\end{equation*}
+the corresponding output is 
+\begin{equation*}
+y_1[n]=r[n]
+\end{equation*}
+Now consider scaling $x_1[n]$ by a complex number, for instance $a=i$; defined as $x_2$:
+\begin{align*}
+x_2[n]&=ix_1[n]=i(r[n]+is[n])\\
+&=-s[n]+ir[n]
+\end{align*}
+The corresponding output then is
+\begin{equation*}
+y_2[n]=\text{Re}\{x_2[n]\}=-s[n]
+\end{equation*}
+which is not equal to the scaled version of $y_1[n]$:
+\begin{equation*}
+ay_1[n]=ir[n]
+\end{equation*}
+thus the system violates the homogeneity property and is not linear.\\
+(next page)\newpage
+\noindent\textbf{Example---incrementally linear system}\\
+Consider the system
+\begin{equation*}
+y[n]=2x[n]+3
+\end{equation*}
+This system is not linear, see that it violates the additivity property:
+\begin{align*}
+x_1[n]\to y_1[n]=2x_1[n]+3\\
+x_2[n]\to y_2[n]=2x_2[n]+3
+\end{align*}
+where the response to $x_3[n]=x_1[n]+x_2[n]$ is
+\begin{equation*}
+y_3[n]=2(x_1[n]+x_2[n])+3
+\end{equation*}
+while 
+\begin{equation*}
+y_1[n]+y_2[n]=2(x_1[n]+x_2[n])+6
+\end{equation*}
+See that this system violates the property of linear systems where zero input yields zero output.\\
+\vspace{1mm}\\
+It may be surprising that the system here is nonlinear since it describes a linear equation. Intuitively, see that the output
+of this system can be represented as the sum of the output of a linear system
+\begin{equation*}
+x[n]\to2x[n]
+\end{equation*}
+and another signal equal to the \textit{zero-input
+response} of the system (when the input is zero), 
+\begin{equation*}
+y_0[n]=3
+\end{equation*}
+\begin{center}
+\includegraphics[width=10cm]{a15}
+\end{center}
+There are large classes of systems that can be represented like this, for which the overall system output
+consists of the superposition of the response of a linear system with a zero-input response; these systems correspond to the class
+of \textit{incrementally linear systems}.\\
+\vspace{1mm}\\
+The \textit{difference} between the resposnes to any two inputs to an incrementally system is a 
+linear (additive and homogeneous) function of the \textit{difference} between the two inputs. For example, for inputs $x_1[n]$, 
+$x_2[n]$ and corresponding outputs $y_1[n]$, $y_2[n]$ we have
+\begin{equation*}
+y_1[n]-y_2[n]=2x_1[n]+3-(2x_2[n]+3)=2[x_1[n]-x_2[n]]
+\end{equation*}
+\newpage
 
-
-
+\section{Linear Time-Invariant Systems}
 
 
 

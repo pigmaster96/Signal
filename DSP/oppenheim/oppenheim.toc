@@ -8,3 +8,4 @@
 \contentsline {subsection}{\numberline {0.1.7}Unit impulse and Unit step functions}{14}{}%
 \contentsline {subsection}{\numberline {0.1.8}Basic system properties 1}{20}{}%
 \contentsline {subsection}{\numberline {0.1.9}Basic system properties 2}{25}{}%
+\contentsline {section}{\numberline {0.2}Linear Time-Invariant Systems}{31}{}%
