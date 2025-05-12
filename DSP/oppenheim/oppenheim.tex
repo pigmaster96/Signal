@@ -837,8 +837,46 @@ see that
 if we shift the input signal by 2, the resulting output is not the same as if we had shifted the output signal by 2.\\
 (next page)\newpage
 \noindent\textbf{Linearity}\\
-A
-
+A \textit{linear system}, in continuous or discrete time, is a system that possesses the important property of superposition: If
+an input consists of the weighted sum of several signals, then the output is the superposition---that is, the weighted sum---of
+the responses of the system to each of those signals.\\
+\vspace{1mm}\\
+More precisely, letting $y_1(t)$ be the response of a continuous-time system to an input $x_1(t)$, 
+and $y_2(t)$ the response to $x_2(t)$, the system is linear if:
+\begin{enumerate}
+\item The response to $x_1(t)+x_2(t)$ is $y_1(t)+y_2(t)$.
+\item The response to $ax_1(t)$ is $ay(1)$, where $a$ is any complex constant.
+\end{enumerate}
+The first property is known as the \textit{additivity} propery, while the second the \textit{scaling} or \textit{homogeneity} 
+property; the same definition holds for continuous time.
+Note that a system can be linear without being time invariant, and it can be time invariant without being linear.\\
+\vspace{1mm}\\
+The two properties defining a linear system can be combined into a single statement:
+\begin{align*}
+\text{continuous time: }ax_1(t)+bx_2(t)&\to ay_1(t)+by_2(t)\\
+\text{discrete time: }ax_1[n]+bx_2[n]&\to ay_1[n]+by_2[n]
+\end{align*}
+where $a$ and $b$ are any complex constants.\\
+\vspace{1mm}\\
+From this see that for a set of inputs $x_k[n],k=1,2,3,\ldots$ to a discrete-time linear system with corresponding outputs 
+$y_k[n],k=1,2,3,\ldots$, then the response to a linear combination of these inputs given by 
+\begin{equation*}
+x[n]=\sum_ka_kx_k[n]=a_1x_1[n]+a_2x_2[n]+a_3x_3[n]+\ldots
+\end{equation*}
+is
+\begin{equation*}
+y[n]=\sum_ka_ky_k[n]=a_1y_1[n]+a_2y_2[n]+a_3y_3[n]+\ldots
+\end{equation*}
+This is known as the \textit{superposition property}, which holds for linear systems in both continuous and discrete time.\\
+\vspace{1mm}\\
+See that a direct consequence of the superposition property is that, for linear systems, an input which is zero for all time
+results in an output which is zero for all time; if $x[n]\to y[n]$, then by the homogeneity property 
+\begin{equation*}
+0=0\cdot x[n]\to0\cdot y[n]=0
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Examples}\\
+Consider
 
 
 
