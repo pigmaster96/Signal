@@ -992,9 +992,100 @@ y_1[n]-y_2[n]=2x_1[n]+3-(2x_2[n]+3)=2[x_1[n]-x_2[n]]
 
 \section{Linear Time-Invariant Systems}
 \subsection{Discrete-time convolution sum}
+\textbf{Representing a discrete signal in terms of impulses}\\
+The key idea in visualising how the discrete-time unit impulse can be used to construct any discrete-time signal is to think of a discrete-time signal as a sequence of individual impulses:
+\begin{center}
+\includegraphics[width=3.5cm]{a16}
+\includegraphics[width=6.5cm]{a17}\\
+\end{center}
+See that we can express express each value of $x[n]$ as an individual scaled, shifted impulse; for instance
+\begin{align*}
+x[-1]\delta[n+1]&=\begin{cases}x[-1],&n=-1\\
+0,&n\neq-1\end{cases}\\
+x[0]\delta[n]&=\begin{cases}x[0],&n=0\\
+0,&n\neq0\end{cases}\\
+x[1]\delta[n-1]&=\begin{cases}x[1],&n=1\\
+0,&n\neq1\end{cases}
+\end{align*}
+More generally, see that we can write
+\begin{align*}
+x[n]=\ldots&+x[-3]\delta[n+3]+x[-2]\delta[n+2]+x[-1]\delta[n+1]
++x[0]\delta[n]\\
+&+x[1]\delta[n-1]+x[2]\delta[n-2]+x[3]\delta[n-3]+\ldots
+\end{align*}
+For any value of $n$, only one of the terms on the right-hand side of the equation is nonzero, and the scaling associated
+with that term is precisely $x[n]$. Writing this summation in a more compact form, we have
+\begin{equation*}
+x[n]=\sum^{+\infty}_{k=-\infty}x[k]\delta[n-k]
+\end{equation*}
+This equation is called the \textit{sifting property} of the discrete-time unit impulse; the summation `sifts' through
+$x[k]$ and preserves only the value corresponding to $k=n$.\\
+(next page)\newpage
+\noindent\textbf{Convolution-sum representation of LTI systems}\\
+The fact that $x[n]$ can be represented as a superposition of scaled versions of (time shifted) impulses, means that the response
+of a linear system to $x[n]$ will be a \textit{superposition of the scaled responses of the system} to each of these shifted 
+impulses.\\
+\vspace{1mm}\\
+Moreover, the property ot time invariance tells us that that the \textit{responses of a time-invariant system to the 
+time-shifted unit 
+impulses are simply time-shifted versions of one another}. The convolution-sum representation for discrete-time systems that 
+are both linear and time invariant results from putting these two basic facts together.\\
+\vspace{1mm}\\
+\textbf{Linear, not necessarily time invariant response}\\
+Consider the response of a linear (but possibly time-varying) system to an arbitrary input $x[n]$. We can represent
+$x[n]$ as a linear combination of shifted impulses.\\
+\vspace{1mm}\\
+Letting $h_k[n]$ denote the response of the linear system to the shifted unit
+impulse $\delta[n-k]$, see that the superposition property of linear systems means that the response $y[n]$ 
+of a linear system to the input $x[n]$ is simply the weighted
+linear combination of these basic responses:
+\begin{equation*}
+y[n]=\sum^{+\infty}_{k=-\infty}x[k]h_k[n]
+\end{equation*}
+The response value at a specific time $n$ of a linear system is the superposition of the `contributions' to that point from each impulse response (from all points in time).\\
+(next page)\newpage
+\noindent\textbf{Illustrated}\\
+For instance, given the input signal $x[n]$ to a linear (non-time invariant) system with the responses $h_{-1}[n],h_{0}[n]$, and 
+$h_{1}[n]$ to the signals $\delta[n+1],\delta[n]$, and $\delta[n-1]$:
+\begin{center}
+\includegraphics[width=10cm]{a18}
+\end{center}
+Since $x[n]$ can be written as a linear combination of the shifted impulses.
+The system \textit{responses} to these time shifted impulses, $h$, scaled accordingly by their respective input value, sum to produce 
+$y[n]$.
+\begin{center}
+\includegraphics[width=7.8cm]{a19}
+\end{center}
+(This illustration only considers three points, but see that the summation on the previous page accounts for the possibility
+that every impulse response could contribute to a particular output point in time, thus the limits $-\infty$ to $\infty$)\\
+(next page)\newpage
+\noindent\textbf{LTI response---convolution sum}\\
+In the previous case, the responses $h_k[n]$ need not be related to each other for different values of $k$. However,
+if the linear system is also \textit{time invariant}, then these responses to time-shifted unit impulses are all 
+\textit{time-shifted versions of each other}, meaning
+\begin{equation*}
+h_k[n]=h_0[n-k]
+\end{equation*}
+For notational convenience, we dr the subscript on $h_0[n]$ and define the \textit{unit impulse (sample) response} as 
+\begin{equation*}
+h[n]=h_0[n]
+\end{equation*}
+That is, when $h[n]$ is the output of the LTI system when $\delta[n]$ is the input, we have
+\begin{equation*}
+y[n]=\sum^{+\infty}_{k=-\infty}x[k]h[n-k]
+\end{equation*}
+This result is referred to as the \textit{convolution sum} or \textit{superposition sum}, and the operation on the right-hand
+side is known as the \textit{convolution} of the sequences
+$x[n]$ and $h[n]$, represented symbolically as
+\begin{equation*}
+y[n]=x[n]*h[n]
+\end{equation*}
+See that an LTI system is completely characterised by its response to a single signal, the unit impulse. As before, the actual
+output is a superposition of the responses, but due to time invariance this time 
+every response is just a time shift of each other.
+\newpage
 
-
-
+\subsection{Discrete-time convolution sum---examples}
 
 
 
