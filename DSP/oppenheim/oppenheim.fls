@@ -201,6 +201,14 @@ INPUT ./images/a19.png
 INPUT ./images/a19.png
 INPUT ./images/a19.png
 INPUT ./images/a19.png
+INPUT ./images/a20.png
+INPUT ./images/a20.png
+INPUT ./images/a20.png
+INPUT ./images/a20.png
+INPUT ./images/a21.png
+INPUT ./images/a21.png
+INPUT ./images/a21.png
+INPUT ./images/a21.png
 INPUT oppenheim.aux
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb

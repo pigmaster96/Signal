@@ -1042,7 +1042,7 @@ linear combination of these basic responses:
 \begin{equation*}
 y[n]=\sum^{+\infty}_{k=-\infty}x[k]h_k[n]
 \end{equation*}
-The response value at a specific time $n$ of a linear system is the superposition of the `contributions' to that point from each impulse response (from all points in time).\\
+The response value at a specific time $n$ of a linear system is the superposition of the `contributions' to that output point from each input (from all points in time).\\
 (next page)\newpage
 \noindent\textbf{Illustrated}\\
 For instance, given the input signal $x[n]$ to a linear (non-time invariant) system with the responses $h_{-1}[n],h_{0}[n]$, and 
@@ -1057,7 +1057,7 @@ $y[n]$.
 \includegraphics[width=7.8cm]{a19}
 \end{center}
 (This illustration only considers three points, but see that the summation on the previous page accounts for the possibility
-that every impulse response could contribute to a particular output point in time, thus the limits $-\infty$ to $\infty$)\\
+that every input could contribute to a particular output point in time, thus the limits $-\infty$ to $\infty$)\\
 (next page)\newpage
 \noindent\textbf{LTI response---convolution sum}\\
 In the previous case, the responses $h_k[n]$ need not be related to each other for different values of $k$. However,
@@ -1086,6 +1086,48 @@ every response is just a time shift of each other.
 \newpage
 
 \subsection{Discrete-time convolution sum---examples}
+These examples are crucial for a deeper understanding of the discrete convolution. For reference, the definition of the 
+convolution sum: When $h[n]$ is the output of the LTI system when $\delta[n]$ is the input, we have output $y[n]$
+\begin{equation*}
+y[n]=\sum^{+\infty}_{k=-\infty}x[k]h[n-k]
+\end{equation*}
+\textbf{Example 1}\\
+Consider an LTI system with impulse response $h[n]$ and input $x[n]$, as illustrated
+\begin{center}
+\includegraphics[width=10cm]{a20}
+\end{center}
+In this case, since only $x[0]$ and $x[1]$ are nonzero, the output (via convolution), simplifies to the expression
+\begin{equation*}
+y[n]=x[0]h[n-0]+x[1]h[n-1]=0.5h[n]+2h[n-1]
+\end{equation*}
+The sequences $0.5h[n]$ and $2h[n-1]$ are two `echoes' of the impulse response needed for the superposition involved in generating
+$y[n]$, obtained by summing up each echo for each value of $n$.\\
+(next page)\newpage
+\textbf{Example 1 illustrated}
+\begin{center}
+\includegraphics[width=10cm]{a21}\\
+\end{center}
+The output for point 0 depends on only on the first point of the impulse response at point 0, $x[0]h[0]$ 
+(in this case there aren't any inputs before this point to produce other impulse responses to affect this). In contrast, the
+output for point 1 depends on both the \textit{second} point of the impulse response at point 0, $x[0]h[1-0]$ and the 
+\textit{first} point of the impulse response at point 1, $x[1]h[1-1]$. (see how this relates to the structure of the convolution sum)\\
+\vspace{1mm}\\
+\textbf{Alternative view of the convolution}\\
+Consider the evaluation of the output value at a specific time $n$, a particularly convenient way of displaying this calculation
+graphically begins with the two signals $x[k]$ and
+$h[n-k]$ viewed as functions of $k$.\\
+\vspace{1mm}\\
+Multiplying these two functions, we obtain a sequence $g[k]=x[k]h[n-k]$, which, at each time $k$, can be seen as representing
+the contribution of $x[k]$ to the output at time $n$. 
+Summing all the samples in the sequence of $g[k]$ yields the output value at the selected time $n$.\\
+\vspace{1mm}\\
+Thus, to calculate $y[n]$ for all values of $n$ requires repeating this procedure for each value of $n$. Fortunately, changing
+the value of $n$ has a very simple graphical interpretation for
+the two signals $x[k]$ and $h[n-k]$, viewed as functions of $k$.
+The following examples illustrate this.\\
+(next page)\newpage
+\noindent\textbf{Example 2}\\
+Let us
 
 
 
