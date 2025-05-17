@@ -15,8 +15,8 @@
 \tableofcontents
 
 \newpage
-\section{Introduction}
-\subsection{Signal Energy and Power}
+\chapter{Introduction}
+\section{Signal Energy and Power}
 \textbf{Motivation and definition}\\
 In many but not all, applications, the signals considered directly related to physical quantities capturing
 power and energy in a physical system. (for instance $v^2/R$ for the power across a resistor)\\
@@ -81,7 +81,7 @@ It is important to note that the discrete-time signal $x[n]$ is defined \textit{
 values of the independent variable.
 \newpage
 
-\subsection{Even and Odd signals}
+\section{Even and Odd signals}
 \textbf{Definition}\\
 A continuous-time signal is \textit{even} if
 \begin{equation*}
@@ -115,7 +115,7 @@ See that $x(t)$ is the sum of the two. Exactly analagous definitions hold in the
 \end{center}
 \newpage
 
-\subsection{Differences between continuous and\\discrete periodic complex exponentials}
+\section{Differences between continuous and\\discrete periodic complex exponentials}
 The continuous-time \textit{complex exponential signal} is of the form
 \begin{equation*}
 x(t)=Ce^{at}
@@ -257,7 +257,7 @@ To summarize
 \end{center}
 \newpage
 
-\subsection{Intuition for discrete-time periodicity}
+\section{Intuition for discrete-time periodicity}
 Consider the sequence $x[n]=\cos(2\pi n/12)$:
 \begin{center}
 \includegraphics[width=10cm]{a3}
@@ -296,7 +296,7 @@ Thus, $x[n]$ \textit{is not periodic}, although the eye visually interpolates be
 suggesting \textit{the envelope} $x(t)$ which is periodic.
 \newpage
 
-\subsection{Difference in harmonic relations in discrete and\\continuous periodic exponentials}
+\section{Difference in harmonic relations in discrete and\\continuous periodic exponentials}
 As in continuous time, it is also of considerable value in discrete-time to consider sets of harmonically related
 periodic exponentials---that is, \textit{periodic exponentials with a common period $N$}.\\
 \vspace{1mm}\\
@@ -326,7 +326,7 @@ periodic exponentials in the set of $\phi_k[n]$; meaning
 are all distinct, but any other $\phi_k[n]$ would just be identical to one of them. (for instance $\phi_N[n]=\phi_0[n]$ or $\phi_{-1}[n]=\phi_{N-1}[n]$.)
 \newpage
 
-\subsection{More on complex exponential and sinusoidal signals}
+\section{More on complex exponential and sinusoidal signals}
 \textbf{Continuous case}\\
 A continuous-time \textit{complex exponential signal} is of the form 
 \begin{equation*}
@@ -422,7 +422,7 @@ C\alpha^n=|C||\alpha|^n\cos(\omega_0n+\theta)
 \end{equation*}
 \newpage
 
-\subsection{Unit impulse and Unit step functions}
+\section{Unit impulse and Unit step functions}
 \textbf{Discrete-Time}\\
 One of the simplest discrete-time signals is the \textit{unit impulse}/\textit{unit sample}, defined as
 \begin{equation*}
@@ -584,7 +584,7 @@ x(t)\delta(t-t_0)=x(t_0)\delta(t-t_0)
 \end{equation*}
 \newpage
 
-\subsection{Basic system properties 1}
+\section{Basic system properties 1}
 \textbf{General form}\\
 A general formula for a continuous first-order linear differential equation is
 \begin{equation*}
@@ -775,7 +775,7 @@ Any input to this system bounded by an arbitrary positive number $B$ has a outpu
 is stable.
 \newpage
 
-\subsection{Basic system properties 2}
+\section{Basic system properties 2}
 \textbf{Time invariance}\\
 A system it \textit{time invariant} if a time shift in the input signal results in an identical time shift in the output
 signal.\\
@@ -990,8 +990,8 @@ y_1[n]-y_2[n]=2x_1[n]+3-(2x_2[n]+3)=2[x_1[n]-x_2[n]]
 \end{equation*}
 \newpage
 
-\section{Linear Time-Invariant Systems}
-\subsection{Discrete-time convolution sum}
+\chapter{Linear Time-Invariant Systems}
+\section{Discrete-time convolution sum}
 \textbf{Representing a discrete signal in terms of impulses}\\
 The key idea in visualising how the discrete-time unit impulse can be used to construct any discrete-time signal is to think of a discrete-time signal as a sequence of individual impulses:
 \begin{center}
@@ -1085,7 +1085,7 @@ output is a superposition of the responses, but due to time invariance this time
 every response is just a time shift of each other.
 \newpage
 
-\subsection{Discrete-time convolution sum---examples}
+\section{Discrete-time convolution sum---examples}
 These examples are crucial for a deeper understanding of the discrete convolution. For reference, the definition of the 
 convolution sum: When $h[n]$ is the output of the LTI system when $\delta[n]$ is the input, we have output $y[n]$
 \begin{equation*}
@@ -1155,6 +1155,63 @@ y[3]&=\sum^\infty_{k=-\infty}x[k]h[3-k]=2.0
 \end{align*}
 (next page)\newpage
 \noindent\textbf{Example 3}\\
+Consider input $x[n]$ and unit impulse $h[n]$ given by
+\begin{align*}
+x[n]&=\alpha^nu[n]\\
+h[n]&=u[n]
+\end{align*}
+where $0<a<1$:
+\begin{center}
+\includegraphics[width=9cm]{a23}\\
+\end{center}
+As before, consider $x[k]$ and $h[n-k]$ for different $n$:
+\begin{center}
+\includegraphics[width=5cm]{a24}
+\includegraphics[width=5cm]{a25}
+\end{center}
+For $n<0$ there is no overlap between nonzero points in $x[k]$ and $h[n-k]$, so $y[n]=0$ for $n<0$. See that for $n\geq0$,
+\begin{equation*}
+x[k]h[n-k]=\begin{cases}
+\alpha^k,&0\leq k\leq n\\
+0,&\text{otherwise}
+\end{cases}
+\end{equation*}
+Thus for $n\geq0$, the usual infinite limits are superfluous, and we can write 
+\begin{equation*}
+y[n]=\sum^n_{k=0}\alpha^k
+\end{equation*}
+this is a geometric series, we can write
+\begin{equation*}
+y[n]=\sum^n_{k=0}\alpha^k=\frac{1-\alpha^{n+1}}{1-\alpha}\quad
+\text{for }n\geq0
+\end{equation*}
+(see appendix for geometric series formula)\\
+(next page)\newpage
+\noindent\textbf{cont. example 3}\\
+We had
+\begin{equation*}
+y[n]=\sum^n_{k=0}\alpha^k=\frac{1-\alpha^{n+1}}{1-\alpha}\quad
+\text{for }n\geq0
+\end{equation*}
+which can be rewritten as
+\begin{equation*}
+y[n]=\left(\frac{1-\alpha^{n+1}}{1-\alpha}\right)u[n]
+\end{equation*}
+Illustrated:
+\begin{center}
+\includegraphics[width=10cm]{a26}\\
+\end{center}
+See that the convolution operation can be described as a `sliding' of the sequence $h[n-k]$ past $x[k]$ 
+(as we increase $n$ the $h[n-k]$ graph just gets shifted to the right).\\
+\vspace{1mm}\\
+For example, suppose we have evaluated $y[n]$ for some particular value of $n$, say $n=n_0$, meaning we have sketched $h[n_0-k]$, 
+multiplied it by $x[k]$, and summed the results over all $k$.
+To evaluate $y[n]$ at the next value of $n$, so $n=n_0+1$, we sketch $h[(n_0+1)-k]$; 
+however, we can do this by simply translating $h[n_0-k]$ to the right by one point.\\
+\vspace{1mm}\\
+Repeating this for each successive $n$ demonstrates this `sliding' idea.\\
+(next page)\newpage
+\noindent\textbf{Example 4}\\
 Consider 
 
 
@@ -1162,6 +1219,11 @@ Consider
 
 
 
+
+
+\appendix
+\chapter{Other proofs}
+\section{Geometric series formula}
 
 
 
