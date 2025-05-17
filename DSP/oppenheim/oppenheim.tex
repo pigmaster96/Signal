@@ -1126,8 +1126,37 @@ the value of $n$ has a very simple graphical interpretation for
 the two signals $x[k]$ and $h[n-k]$, viewed as functions of $k$.
 The following examples illustrate this.\\
 (next page)\newpage
-\noindent\textbf{Example 2}\\
-Let us
+\noindent\textbf{Example 2---view as a function of $k$}\\
+Let us consider again the convolution problem encountered in the previous example. Now we have the sequences $x[k]$ and 
+$h[n-k]$, for $n$ fixed and viewed as a function of $k$; see that
+the graph of $h[n-k]$ is a time reversal and shift---to the \textit{right} if $n$ is positive and \textit{left} if $n$ 
+is negative:
+\begin{center}
+\includegraphics[width=9cm]{a22}\\
+\end{center}
+Having sketched $x[k]$ and $h[n-k]$ for a given $n$, we multiply the two signal and sum over all values of $k$ 
+(like a dot product) to get $y[n]$. (We multiply and sum up the points where the graphs `overlap')\\
+\vspace{1mm}\\
+(Intuit that the view in the first example is the same as `reversing' the impulse response and moving it along the input like a 
+sliding window, which is essentially what is happening here.)\\
+\vspace{1mm}\\
+For $n<0$, neither of the graphs overlap at points where both are nonzero, so $y[n]=0$ for $n<0$. For $n=0$, since the product
+of the sequence $x[k]$ and the sequence $h[0-k]$ has only one nonzero sample (at $k=0$), we have
+\begin{equation*}
+y[0]=\sum^\infty_{k=-\infty}x[k]h[0-k]=x[0]h[0]=0.5
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{cont. from example 2}\\
+The other examples have more `overlapping' points:
+\begin{align*}
+y[1]&=\sum^\infty_{k=-\infty}x[k]h[1-k]=0.5+2.0=2.5\\
+y[2]&=\sum^\infty_{k=-\infty}x[k]h[2-k]=0.5+2.0=2.5\\
+y[3]&=\sum^\infty_{k=-\infty}x[k]h[3-k]=2.0
+\end{align*}
+(next page)\newpage
+\noindent\textbf{Example 3}\\
+Consider 
+
 
 
 
