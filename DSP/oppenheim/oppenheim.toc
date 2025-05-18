@@ -12,4 +12,4 @@
 \contentsline {section}{\numberline {2.1}Discrete-time convolution sum}{32}{}%
 \contentsline {section}{\numberline {2.2}Discrete-time convolution sum---examples}{37}{}%
 \contentsline {chapter}{\numberline {A}Other proofs}{44}{}%
-\contentsline {section}{\numberline {A.1}Geometric series formula}{44}{}%
+\contentsline {section}{\numberline {A.1}Sum of geometric series}{44}{}%
