@@ -11,5 +11,6 @@
 \contentsline {chapter}{\numberline {2}Linear Time-Invariant Systems}{32}{}%
 \contentsline {section}{\numberline {2.1}Discrete-time convolution sum}{32}{}%
 \contentsline {section}{\numberline {2.2}Discrete-time convolution sum---examples}{37}{}%
-\contentsline {chapter}{\numberline {A}Other proofs}{44}{}%
-\contentsline {section}{\numberline {A.1}Sum of geometric series}{44}{}%
+\contentsline {section}{\numberline {2.3}Continuous-time---the convolution integral}{45}{}%
+\contentsline {chapter}{\numberline {A}Other proofs}{46}{}%
+\contentsline {section}{\numberline {A.1}Sum of geometric series}{46}{}%

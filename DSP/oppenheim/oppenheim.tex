@@ -1212,7 +1212,49 @@ however, we can do this by simply translating $h[n_0-k]$ to the right by one poi
 Repeating this for each successive $n$ demonstrates this `sliding' idea.\\
 (next page)\newpage
 \noindent\textbf{Example 4}\\
-Consider 
+Consider an LTI system with input $x[n]$ and unit impulse response $h[n]$ specified as
+\begin{align*}
+x[n]&=2^nu[-n]\\
+h[n]&=u[n]
+\end{align*}
+\begin{center}
+\includegraphics[width=10cm]{a27}\\
+\end{center}
+See that $x[k]$ is zero for $k>0$ and $h[n-k]$ is zero for $k>n$.
+Also see that regardless of $n$, the sequence $x[k]h[n-k]$ always has nonzero samples along the $k$-axis, and when $n\geq0$, 
+$x[k]h[n-k]$ has nonzero samples in the interval $k\leq0$. As such we can write, for $n\geq0$
+\begin{equation*}
+y[n]=\sum^0_{k=-\infty} x[k]h[n-k]=\sum^0_{k=-\infty}2^k
+\end{equation*}
+and for $n<0$, $x[k]h[n-k]$ has nonzero samples for $k\leq n$. It follows that, for $n<0$
+\begin{equation*}
+y[n]=\sum^n_{k=-\infty} x[k]h[n-k]=\sum^n_{k=-\infty}2^k
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{cont. example 4}\\
+In both cases we can simplify using the the formula for summing geometric series (see appendix)
+\begin{equation*}
+\sum^\infty_{k=0}\alpha^k=\frac{1}{1-\alpha}
+\end{equation*}
+Where for the $n\geq0$ case, by performing a change of variable 
+$r=-k$,
+\begin{equation*}
+y[n]=\sum^0_{k=-\infty}2^k=\sum^{\infty}_{r=0}\left(\frac{1}{2}\right)^r=\frac{1}{1-(1/2)}=2
+\end{equation*}
+For the $n<0$ case, by performing a change of variable $l=-k$, and then $m=l+n$,
+\begin{align*}
+y[n]=\sum^n_{k=-\infty}2^k&=\sum^{\infty}_{l=-n}\left(\frac{1}{2}\right)^l=\sum^{\infty}_{m=0}\left(\frac{1}{2}\right)^{m-n}
+\\
+&=\left(\frac{1}{2}\right)^{-n}\sum^{\infty}_{m=0}\left(\frac{1}{2}\right)^{m}=2^n\cdot2=2^{n+1}
+\end{align*}
+\begin{center}
+\includegraphics[width=10cm]{a28}\\
+\end{center}
+\newpage
+
+\section{Continuous-time---the convolution integral}
+
+
 
 
 
