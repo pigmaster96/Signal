@@ -1253,6 +1253,42 @@ y[n]=\sum^n_{k=-\infty}2^k&=\sum^{\infty}_{l=-n}\left(\frac{1}{2}\right)^l=\sum^
 \newpage
 
 \section{Continuous-time---the convolution integral}
+\textbf{Representating a continuous signal in terms of impulses}\\
+We develop a continuous-time conterpart of the discrete-time `sifting' property. Consider a riemann-sum like approximation, $\hat{x}(t)$, to a continuous-time signal $x(t)$:
+\begin{center}
+\includegraphics[width=10cm]{a29}\\
+\end{center}
+This approximation can be expressed as a linear combination of delayed rectangular pulses. If we define
+\begin{equation*}
+\delta_\Delta(t)=\begin{cases}
+\frac{1}{\Delta},&0\leq t<\Delta\\
+0,&\text{otherwise}
+\end{cases}
+\end{equation*}
+then since $\Delta\delta_\Delta(t)$ has unit amplitude, we have the expression
+\begin{equation*}
+\hat{x}(t)=\sum^{+\infty}_{k=-\infty}x(k\Delta)\delta_\Delta(t-k\Delta)\Delta
+\end{equation*}
+($\delta_\Delta$ `turns on' a specific rectangle, $x$ specifies its height, and $\Delta$ the base length) See that for any $t$,
+only one term in the summation on the right is nonzero.\\
+\vspace{1mm}\\
+As we let $\Delta$ approach 0, the approximation $\hat{x}(t)$ becomes better, and in the limit equals $x(t)$, therefore we write
+\begin{equation*}
+x(t)=\lim_{\Delta\to0}\sum^{+\infty}_{k=-\infty}x(k\Delta)\delta_\Delta(t-k\Delta)\Delta
+\end{equation*}
+Also, as $\Delta\to0$, the summation approaches an integral; see that since the limit of $\delta\to0$ of $\delta_\Delta(t)$ is
+the unit impulse function $\delta(t)$, we have
+\begin{equation*}
+x(t)=\int^{+\infty}_{-\infty}x(\tau)\delta(t-\tau)d\tau
+\end{equation*}
+This should be viewed as an idealisation in the sense that, for any $\Delta$ `small enough', the approximation by this summation
+is essentially exact for any practical purpose. The
+integral then represents an idealisation of the summation by
+taking $\Delta$ to be vanishingly small.\\
+(next page)\newpage
+\noindent\textbf{cont.}\\
+See that
+
 
 
 
