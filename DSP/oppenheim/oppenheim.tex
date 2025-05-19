@@ -1286,10 +1286,58 @@ is essentially exact for any practical purpose. The
 integral then represents an idealisation of the summation by
 taking $\Delta$ to be vanishingly small.\\
 (next page)\newpage
+\noindent\textbf{Viewed as a function of $\tau$}\\
+See that when the signal $\delta(t-\tau)$ is viewed as a function of $\tau$ with $t$ fixed, it is still a unit impulse located at 
+$\tau=t$:
+\begin{center}
+\includegraphics[width=10cm]{a30}\\
+\end{center}
+As such, we have
+\begin{equation*}
+x(\tau)\delta(t-\tau)=x(t)\delta(t-\tau)
+\end{equation*}
+which is just a scaled impulse at $\tau=t$ with area equal to $x(t)$. See that this can be used to show the statement on the
+previous page
+\begin{equation*}
+\int^{+\infty}_{-\infty}x(\tau)\delta(t-\tau)d\tau=
+\int^{+\infty}_{-\infty}x(t)\delta(t-\tau)d\tau=
+x(t)\int^{+\infty}_{-\infty}\delta(t-\tau)d\tau=x(t)
+\end{equation*}
+Emphasising the interpretation of the $x(t)$ being represented as a sum (or more precisely, an integral) of weighted, shifted
+impulses.\\
+(next page)\newpage
+\noindent\textbf{Continuous-time impulse response---the convolution integral}\\
+We could represent $\hat{x}(t)$ as a sum of scaled and shifted versions of the basic pulse signal $\delta_\Delta(t)$.
+\begin{equation*}
+\hat{x}(t)=\sum^{+\infty}_{k=-\infty}x(k\Delta)\delta_\Delta(t-k\Delta)\Delta
+\end{equation*}
+Consequently, the response $\hat{y}(t)$ of a linear system to this signal will be the superposition of the responses to the scaled
+and shifted versions of $\delta_\Delta(t)$.\\
+\vspace{1mm}\\
+Specifically, let us define $\hat{h}_{k\Delta}(t)$ as the response of an LTI system to the input $\delta_\Delta(t-k\Delta)$, then 
+by superposition we have
+\begin{equation*}
+\hat{y}(t)=\sum^{+\infty}_{k=-\infty}x(k\Delta)\hat{h}_{k\Delta}(t)\Delta
+\end{equation*}
+Now consider what happens as $\Delta$ becomes vanishingly small, meaning $\Delta\to0$. $\hat{x}(t)$ becomes an increasingly good 
+approximation to $x(t)$, and in fact, the two coincide as $\Delta\to0$.\\
+\vspace{1mm}\\
+Consequently, the response to $\hat{x}(t)$, namely, $\hat{y}(t)$, must converge to $y(t)$, the response to the actual input 
+$x(t)$. Either way, we say that for $\Delta$ `small enough', the duration of the pulse $\delta_\Delta(t-k\Delta)$ is of no 
+significance, in that, as far as the system is concerned, the 
+response to this pulse is essentially the same as the response to a unit impulse as $\Delta\to0$:
+\begin{center}
+\includegraphics[width=9cm]{a31}\\
+\end{center}
+Since the pulse $\delta_\Delta(t-k\Delta)$ corresponds to a shifted unit impulse as $\Delta\to0$, the response 
+$\hat{h}_{k\Delta}(t)$ to this input also becomes the impulse response in the limit. As such we have
+\begin{equation*}
+y(t)=\lim_{\Delta\to0}\sum^{+\infty}_{k=-\infty}x(k\Delta)
+\hat{h}_{k\Delta}(t)\Delta
+\end{equation*}
+(next page)\newpage
 \noindent\textbf{cont.}\\
-See that
-
-
+We had
 
 
 
