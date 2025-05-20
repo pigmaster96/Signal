@@ -289,6 +289,14 @@ INPUT ./images/a40.png
 INPUT ./images/a40.png
 INPUT ./images/a40.png
 INPUT ./images/a40.png
+INPUT ./images/a41.png
+INPUT ./images/a41.png
+INPUT ./images/a41.png
+INPUT ./images/a41.png
+INPUT ./images/a42.png
+INPUT ./images/a42.png
+INPUT ./images/a42.png
+INPUT ./images/a42.png
 INPUT oppenheim.aux
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb

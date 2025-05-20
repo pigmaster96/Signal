@@ -1472,11 +1472,28 @@ Tt-\frac{1}{2}T^2,&T<t<2T\\
 (next page)\newpage
 \noindent\textbf{Example 3}\\
 Consider the convolution between the two signals
+\begin{align*}
+x(t)&=e^{2t}u(-t)\\
+h(t)&=u(t-3)
+\end{align*}
+\begin{center}
+\includegraphics[width=7cm]{a41}
+\end{center}
+Observe that $x(\tau)$ and $h(t-\tau)$ have regions of nonzero overlap regardless of the value of $t$. 
+When $t-3\leq0$, the product of $x(\tau)$ and $h(t-\tau)$ is nonzero for $-\infty<\tau<t-3$; the convolution integral becomes
+\begin{equation*}
+y(t)=\int^{t-3}_{-\infty}e^{2\tau}d\tau=\frac{1}{2}e^{2(t-3)}
+\end{equation*}
+For $t-3\geq0$, the product $x(\tau)h(t-\tau)$ is only nonzero for $-\infty<\tau<0$, so the convolution integral is
+\begin{equation*}
+y(t)=\int^0_{-\infty}e^{2\tau}d\tau=\frac{1}{2}
+\end{equation*}
+\begin{center}
+\includegraphics[width=9cm]{a42}
+\end{center}
+\newpage
 
-
-
-
-
+\section{Properties of LTI systems}
 
 
 
