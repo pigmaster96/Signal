@@ -1382,6 +1382,96 @@ $t$ if $t>0$ or left if $t<0$. Next multiply $x(\tau)$ and $h(t-\tau)$ and integ
 \newpage
 
 \section{Convolution integral---examples}
+\textbf{Example 1}\\
+Consider letting $x(t)$ be the input to an LTI system with unit impulse response $h(t)$, where
+\begin{equation*}
+x(t)=e^{-at}u(t),\quad a>0
+\end{equation*}
+and 
+\begin{equation*}
+h(t)=u(t)
+\end{equation*}
+\begin{center}
+\includegraphics[width=9cm]{a32}\\
+\end{center}
+See that plotting $h(t-\tau)$ with $\tau$ as the horizontal axis:
+\begin{center}
+\includegraphics[width=9cm]{a33}\\
+\end{center}
+See that for $t<0$, the product of $x(\tau)$ and $h(t-\tau)$ is zero, and consequently, $y(t)$ is zero. While for
+$t>0$,
+\begin{equation*}
+x(\tau)h(t-\tau)=\begin{cases}
+e^{-a\tau},&0<\tau<t\\
+0,&\text{otherwise}
+\end{cases}
+\end{equation*}
+As such, the convolution integral to compute $y(t)$ for $t>0$ looks like
+\begin{align*}
+y(t)=\int^t_0e^{-a\tau}d\tau&=
+\left.-\frac{1}{a}e^{-a\tau}\right|^t_0\\
+&=\frac{1}{a}(1-e^{-at})
+\end{align*}
+(next page)\newpage
+\noindent\textbf{cont. example 1}\\
+We had $y(t)=0$ for $t<0$, and for $t>0$ we had
+\begin{equation*}
+y(t)=\frac{1}{a}(1-e^{-at})
+\end{equation*}
+for all $t$, we can write
+\begin{equation*}
+y(t)=\frac{1}{a}(1-e^{-at})u(t)
+\end{equation*}
+\begin{center}
+\includegraphics[width=9cm]{a34}\\
+\end{center}
+(next page)\newpage
+\noindent\textbf{Example 2}\\
+Consider the convolution of the following two signals
+\begin{align*}
+x(t)&=\begin{cases}1,&0<t<T\\
+0,&\text{otherwise}\end{cases}\\
+h(t)&=\begin{cases}t,&0<t<2T\\
+0,&\text{otherwise}\end{cases}
+\end{align*}
+Now consider the graphs of $x(\tau)$ and $h(t-\tau)$ plotted for different values of $t$:
+\begin{center}
+\includegraphics[width=5cm]{a35}
+\includegraphics[width=5cm]{a36}
+\end{center}
+See that the convolution integral is different depending on the value of $t$:
+\begin{equation*}
+y(t)=\begin{cases}
+0,&t<0\\
+\int^t_0-\tau+t\,d\tau,&0<t<T\\
+\int^T_0-\tau+t\,d\tau,&T<t<2T\\
+\int^T_{t-2T}-\tau+t\,d\tau,&2T<t<3T\\
+0,&3T<t
+\end{cases}
+\end{equation*}
+\begin{center}
+\includegraphics[width=5cm]{a37}
+\includegraphics[width=5cm]{a38}\\
+\includegraphics[width=6cm]{a39}\\
+\end{center}
+(next page)\newpage
+\noindent\textbf{cont. example 2}\\
+Each convolution integral evaluates to
+\begin{equation*}
+y(t)=\begin{cases}
+0,&t<0\\
+\frac{1}{2}t^2,&0<t<T\\
+Tt-\frac{1}{2}T^2,&T<t<2T\\
+-\frac{1}{2}t^2+Tt+\frac{3}{2}T^2,&2T<t<3T\\
+0,&3T<t
+\end{cases}
+\end{equation*}
+\begin{center}
+\includegraphics[width=9cm]{a40}
+\end{center}
+(next page)\newpage
+\noindent\textbf{Example 3}\\
+Consider the convolution between the two signals
 
 
 
