@@ -12,5 +12,6 @@
 \contentsline {section}{\numberline {2.1}Discrete-time convolution sum}{32}{}%
 \contentsline {section}{\numberline {2.2}Discrete-time convolution sum---examples}{37}{}%
 \contentsline {section}{\numberline {2.3}Continuous-time---the convolution integral}{45}{}%
-\contentsline {chapter}{\numberline {A}Other proofs}{49}{}%
-\contentsline {section}{\numberline {A.1}Sum of geometric series}{49}{}%
+\contentsline {section}{\numberline {2.4}Convolution integral---examples}{49}{}%
+\contentsline {chapter}{\numberline {A}Other proofs}{50}{}%
+\contentsline {section}{\numberline {A.1}Sum of geometric series}{50}{}%

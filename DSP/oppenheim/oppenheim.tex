@@ -1306,7 +1306,7 @@ x(t)\int^{+\infty}_{-\infty}\delta(t-\tau)d\tau=x(t)
 Emphasising the interpretation of the $x(t)$ being represented as a sum (or more precisely, an integral) of weighted, shifted
 impulses.\\
 (next page)\newpage
-\noindent\textbf{Continuous-time impulse response---the convolution integral}\\
+\noindent\textbf{Continuous-time impulse response}\\
 We could represent $\hat{x}(t)$ as a sum of scaled and shifted versions of the basic pulse signal $\delta_\Delta(t)$.
 \begin{equation*}
 \hat{x}(t)=\sum^{+\infty}_{k=-\infty}x(k\Delta)\delta_\Delta(t-k\Delta)\Delta
@@ -1338,6 +1338,50 @@ y(t)=\lim_{\Delta\to0}\sum^{+\infty}_{k=-\infty}x(k\Delta)
 (next page)\newpage
 \noindent\textbf{cont.}\\
 We had
+\begin{equation*}
+y(t)=\lim_{\Delta\to0}\sum^{+\infty}_{k=-\infty}x(k\Delta)
+\hat{h}_{k\Delta}(t)\Delta
+\end{equation*}
+As $\Delta\to0$, the summation on the right-hand side becomes an integral:
+\begin{equation*}
+y(t)=\int^{+\infty}_{-\infty}x(\tau)h_\tau(t)d\tau
+\end{equation*}
+This interpretation is analagous to the one earlier, where any input $x(t)$ can be represented as 
+\begin{equation*}
+x(t)=\int^{+\infty}_{-\infty}x(\tau)\delta(t-\tau)d\tau
+\end{equation*}
+$x(t)$ is essentially represented as a `sum', which, by linearity, leads to $y(t)$ being represented as a superposition of 
+responses to each impulse in the `sum'.\\
+\vspace{1mm}\\
+\textbf{Convolution integral}\\
+$y(t)$ as decribed above represents the general form of the response of a linear system in continuous time. 
+If, in addition to being linear, the system is also time invariant, then the response to the impulse $\delta(t-\tau)$ is 
+just the response to $\delta(t)$ shifted by $\tau$ from the origin, meaning $h_\tau(t)=h_0(t-\tau)$.\\
+\vspace{1mm}\\
+For notational convenience,
+we can then drop the subscript and define the unit impulse response $h(t)$ (the response to $\delta(t)$) as
+\begin{equation*}
+h(t)=h_0(t)
+\end{equation*}
+In this case, the expression for the $y(t)$ above becomes
+\begin{equation*}
+y(t)=\int^{+\infty}_{-\infty}x(\tau)h(t-\tau)d\tau
+\end{equation*}
+This is referred to as the \textit{convolution integral} or the \textit{superposition integral}, the continuous-time counterpart
+of the convolution sum, representing a continuous-time LTI system in terms of its response to a unit impulse, written symbolically
+as
+\begin{equation*}
+y(t)=x(t)*h(t)
+\end{equation*}
+See that a continuous-time LTI system is completely characterised by its impulse response---a single elementary signal.\\
+\vspace{1mm}\\
+\textbf{Evaluation by visualisation in terms of $\tau$}\\
+The procedure for evaluating the convolution integral is similar to the discrete-time counterpart: we first obtain the signal
+$h(t-\tau)$ regarded as a function of $\tau$ with $t$ fixed; this is a reflection about the origin, shifted to the right by 
+$t$ if $t>0$ or left if $t<0$. Next multiply $x(\tau)$ and $h(t-\tau)$ and integrate the product over infinity. (see examples)
+\newpage
+
+\section{Convolution integral---examples}
 
 
 
