@@ -1567,7 +1567,48 @@ this means that the response of an LTI system to the sum of two inputs must equa
 individually.\\
 (next page)\newpage
 \noindent\textbf{Associativity}\\
-Convolution is \textit{associative}
+Convolution is \textit{associative}; that is, in discrete time
+\begin{equation*}
+x[n]*(h_1[n]*h_2[n])=(x[n]*h_1[n])*h_2[n]
+\end{equation*}
+and in continuous time
+\begin{equation*}
+x(t)*[h_1(t)*h_2(t)]=[x(t)*h_1(t)]*h_2(t)
+\end{equation*}
+This property can be proven by straigntforward manipulation of the summations and integrals. In discrete time (the infinite limit
+case obscures understanding, so assuming the convolution product is nonzero only for $0<k<n$ (or $t$)),
+\begin{align*}
+((f*g)*h)[n]&=\sum^{n}_{k=0}(f*g)[k]h[n-k]\\
+&=\sum^{n}_{k=0}\left(\sum^k_{l=0}f[l]g[k-l]\right)h[n-k]\\
+&=\sum_{0\leq l\leq k\leq n}f[l]g[k-l]h[n-k]\\
+&=\sum^n_{l=0}\sum^n_{k=l}f[l]g[k-l]h[n-k]\\
+&=\sum^n_{l=0}f[l]\left(\sum^{n-l}_{r=0}g[r]h[n-r-l]\right)\\
+&=\sum^n_{l=0}f[l](g*h)[n-l]\\
+&=(f*(g*h))[n]
+\end{align*}
+In the third last step we subsitute $r=k-l$. The continuous case is analagously:
+\begin{align*}
+((f*g)*h)(t)&=\int^t_{0}(f*g)(\tau)h(t-\tau)d\tau\\
+&=\int^t_{\tau=0}\left(\int^\tau_{s=0}f(s)g(\tau-s)ds\right)h(t-\tau)d\tau\\
+&=\iint_{0\leq s\leq\tau\leq t}f(s)g(\tau-s)h(t-\tau)ds\,d\tau\\
+&=\int^t_{s=0}f(s)\left(\int^t_{\tau=s}g(\tau-s)h(t-\tau)d\tau\right)ds\\
+&=\int^t_{s=0}f(s)\left(\int^{t-s}_{r=0}g(r)h(t-r-s)dr\right)ds\\
+&=\int^t_{s=0}f(s)(g*h)(t-s)ds=(f*(g*h))(t)
+\end{align*}
+(next page)\newpage
+\noindent\textbf{Associativity cont.}\\
+See that as a consequence of associativity, the expressions
+\begin{equation*}
+y[n]=x[n]*h_1[n]*h_2[n]
+\end{equation*}
+and 
+\begin{equation*}
+y(t)=x(t)*h_1(t)*h_2(t)
+\end{equation*}
+are unambiguous, since it doesn't matter in what order we convolve the signals.
+
+
+
 
 
 
