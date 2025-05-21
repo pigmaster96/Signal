@@ -1493,7 +1493,82 @@ y(t)=\int^0_{-\infty}e^{2\tau}d\tau=\frac{1}{2}
 \end{center}
 \newpage
 
-\section{Properties of LTI systems}
+\section{Properties of LTI systems 1}
+For reference, we can represent continuous and discrete-time LTI systems in terms of their unit impulse responses; in
+discrete-time this takes the form of the convolution sum, while its continuous-time counterpart is the convolution integral:
+\begin{align*}
+y[n]&=\sum^{+\infty}_{k=-\infty}x[k]h[n-k]=x[n]*h[n]\\
+y(t)&=\int^{+\infty}_{-\infty}x(\tau)h(t-\tau)d\tau=x(t)*h(t)
+\end{align*}
+It is important to emphasise that this property holds in general \textit{only} for LTI systems (since the entire derivation
+is based on this).\\
+\vspace{1mm}\\
+\textbf{Commutativity}\\
+Convolution in both continuous and discrete time is \textit{commutative}. That is, in discrete time
+\begin{equation*}
+x[n]*h[n]=h[n]*x[n]=\sum^{+\infty}_{k=-\infty}h[k]x[n-k]
+\end{equation*}
+and in continuous time
+\begin{equation*}
+x(t)*h(t)=h(t)*x(t)=\int^{+\infty}_{-\infty}h(\tau)x(t-\tau)d\tau
+\end{equation*}
+These expressions can verified by means of a substitution of variables. In the discrete-time case, 
+substituting $r=n-k$:
+\begin{align*}
+x[n]*h[n]&=\sum^{+\infty}_{k=-\infty}x[k]h[n-k]=
+\sum^{-\infty}_{r=\infty}x[n-r]h[r]\\
+&=\sum^{\infty}_{r=-\infty}x[n-r]h[r]=h[n]*x[n]
+\end{align*}
+and in the continuous case, substituting $r=t-\tau$:
+\begin{align*}
+x(t)*h(t)&=\int^{+\infty}_{-\infty}x(\tau)h(t-\tau)d\tau
+=\int_{+\infty}^{-\infty}-x(t-r)h(r)dr\\
+&=\int^{+\infty}_{-\infty}x(t-r)h(r)dr=h(t)*x(t)
+\end{align*}
+In the context of computing the convolution, this means that the step where a signal is reflected and shifted according to $n$ 
+or $t$ can be done with either $x$ or $h$ in both discrete and continuous time.
+One form may be easier to visualise, but both forms always result in the same answer.\\
+(next page)\newpage
+\noindent\textbf{Distributivity}\\
+Convolution is also \textit{distributive}. Specifically, convolution distributes over addition, meaning in discrete time
+\begin{equation*}
+x[n]*(h_1[n]+h_2[n])=x[n]*h_1[n]+x[n]*h_2[n]
+\end{equation*}
+and in continuous time
+\begin{equation*}
+x(t)*[h_1(t)+h_2(t)]=x(t)*h_1(t)+x(t)*h_2(t)
+\end{equation*}
+This can be verified by direct subsitution into the convolution sum/integral.\\
+\vspace{1mm}\\
+See this means that the system
+\begin{equation*}
+y(t)=x(t)*h_1(t)+x(t)*h_2(t)
+\end{equation*}
+and the system
+\begin{equation*}
+y(t)=x(t)*[h_1(t)+h_2(t)]
+\end{equation*}
+are identical. There is an analagous interpretation in discrete time.\\
+\vspace{1mm}\\
+Illustrated using block diagrams, the two are identical:
+\begin{center}
+\includegraphics[width=5cm]{a43}
+\includegraphics[width=5cm]{a44}
+\end{center}
+See also that as a consequence of bothe the commutative and distributive properties, we have
+\begin{equation*}
+[x_1[n]+x_2[n]]*h[n]=x_1[n]*h[n]+x_2[n]*h[n]
+\end{equation*}
+and
+\begin{equation*}
+[x_1(t)+x_2(t)]*h(t)=x_1(t)*h(t)+x_2(t)*h(t)
+\end{equation*}
+this means that the response of an LTI system to the sum of two inputs must equal the sum of the responses to each input 
+individually.\\
+(next page)\newpage
+\noindent\textbf{Associativity}\\
+Convolution is \textit{associative}
+
 
 
 
