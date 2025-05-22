@@ -1605,8 +1605,33 @@ and
 \begin{equation*}
 y(t)=x(t)*h_1(t)*h_2(t)
 \end{equation*}
-are unambiguous, since it doesn't matter in what order we convolve the signals.
+are unambiguous, since it doesn't matter in what order we convolve the signals. It also follows that that the signals
+\begin{align*}
+y[n]&=w[n]*h_2[n]\\
+&=(x[n]*h_1[n])*h_2[n]
+\end{align*}
+and 
+\begin{align*}
+y[n]&=x[n]*h[n]\\
+&=x[n]*(h_1[n]*h_2[n])
+\end{align*}
+are equivalent. This can be generalised to an arbitrary number of LTI systems in cascade, and the analagous interpretation and
+conclusion also hold in continuous time.\\
+\vspace{1mm}\\
+Further, consider these block diagrams
+\begin{center}
+\includegraphics[width=5cm]{a45}
+\includegraphics[width=5cm]{a46}
+\end{center}
+Using the associative property, we can show (a)=(b); using the commutative property we know (b)=(c), and finally 
+again the associative property shows (c)=(d).\\
+\vspace{1mm}\\
+Consequently, the unit impulse response of a cascade of an arbitrary number of
+LTI systems does not depend on the order in which they are cascaded. The same conclusions hold in continuous time.
+\newpage
 
+\section{Properties of LTI systems 2}
+\textbf{Memory}
 
 
 
