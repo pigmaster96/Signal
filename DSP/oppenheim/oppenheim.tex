@@ -1631,7 +1631,42 @@ LTI systems does not depend on the order in which they are cascaded. The same co
 \newpage
 
 \section{Properties of LTI systems 2}
-\textbf{Memory}
+\textbf{Memory}\\
+Recall that a system is \textit{memoryless} if its output at any time depends only on the value of the input at that same time.\\
+\vspace{1mm}\\
+See that the only way this can be true for a discrete-time LTI system is if $h[n]=0$ for $n\neq0$. The impulse response would be
+of the form
+\begin{equation*}
+h[n]=K\delta[n]
+\end{equation*}
+Where $K=h[0]$ is a constant. (the response to each input only affects the input itself---the response at a single point is not influenced by any other points.)\\
+\vspace{1mm}\\
+See that the convolution sum reduces to the relation
+\begin{equation*}
+y[n]=Kx[n]
+\end{equation*}
+If a discrete-time LTI system has an impulse response $h[n]$ that is not identically zero for $n\neq0$, then the system has memory.\\
+\vspace{1mm}\\
+Similar properties hold for continuous-time LTI systems, which are memoryless if $h(t)=0$ for $t\neq0$. Such a memoryless LTI system has
+the form
+\begin{equation*}
+y(t)=Kx(t)
+\end{equation*}
+for some constant $K$; it has the impulse response
+\begin{equation*}
+h(t)=K\delta(t)
+\end{equation*}
+Note that if $K=1$, then these systems become \textit{identity systems}, with output equal to the input and with unit response 
+equal to the unit impulse. In this case, the convolution sum and integral imply that
+\begin{align*}
+x[n]&=x[n]*\delta[n]\\
+x(t)&=x(t)*\delta(t)
+\end{align*}
+(next page)\newpage
+\noindent\textbf{Invertibility}\\
+A system is \textit{invertible} only if an \textit{inverse system} exists that, when cascaded in series with the original system, produces
+an output equal to the input to the first system.
+
 
 
 
