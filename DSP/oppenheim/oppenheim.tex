@@ -1665,8 +1665,70 @@ x(t)&=x(t)*\delta(t)
 (next page)\newpage
 \noindent\textbf{Invertibility}\\
 A system is \textit{invertible} only if an \textit{inverse system} exists that, when cascaded in series with the original system, produces
-an output equal to the input to the first system.
-
+an output equal to the input to the first system. Consider the following block diagrams
+\begin{center}
+\includegraphics[width=10cm]{a47}
+\end{center}
+Given a system with impulse response $h(t)$, the inverse system, with impulse response $h_1(t)$, results in $w(t)=x(t)$---such that the
+series interconnection is essentially identical to the identity system.\\
+\vspace{1mm}\\
+See (by considering associativity) that the overall impulse response
+convolved with $x(t)$ is $(h(t)*h_1(t))$. As such we have a condition
+that $h_1(t)$ must satisfy for it to be the impulse response of the inverse system, namely,
+\begin{equation*}
+h(t)*h_1(t)=\delta(t)
+\end{equation*}
+Similarly in discrete time, the impulse response $h_1[n]$ of the inverse system for an LTI system with impulse response $h[n]$ must
+satisfy
+\begin{equation*}
+h[n]*h_1[n]=\delta[n]
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Invertibility example}\\
+Consider the LTI system consisting of a pure time shift
+\begin{equation*}
+y(t)=x(t-t_0)
+\end{equation*}
+Such a system is a \textit{delay} if $t_0>0$ and an \textit{advance} if $t_0<0$. If $t_0=0$, the system is the identity system and thus
+is memoryless; for any other value of $t_0$, this system has memory, (since it responds to an input value at a time other than the current time).\\
+\vspace{1mm}\\
+By taking input equal to the $\delta(t)$ we get the impulse response
+\begin{equation*}
+h(t)=\delta(t-t_0)
+\end{equation*}
+See that as per the definition of the convolution (or by visualising the convolution)
+\begin{equation*}
+y(t)=x(t-t_0)=x(t)*\delta(t-t_0)
+\end{equation*}
+See that to invert the system, all that is required is to shift the output back. If we consider another system
+\begin{equation*}
+y(t)=x(t+t_0)
+\end{equation*}
+(see that this is just another time shift in the opposite direction) That would have the impulse response
+\begin{equation*}
+h_1(t)=\delta(t+t_0)
+\end{equation*}
+then 
+\begin{equation*}
+h(t)*h_1(t)=\delta(t-t_0)*\delta(t+t_0)=\delta(t)
+\end{equation*}
+Similarly in discrete time, a pure time shift with impulse response
+$\delta[n-n_0]$ would have an inverse consisting of a time shift in the opposite direction by the same amount---another LTI system with
+the impulse response $\delta[n-n_0]$.\\
+(next page)\newpage
+\noindent\textbf{Causality}\\
+Recall the \textit{causality} property: the output of a causal system depends only on the present and past values of the input to the
+system.\\
+\vspace{1mm}\\
+In the context of convolution, see that for a discrete-time LTI system to be causal, $y[n]$ must not depend on $x[k]$ for $k>n$, and that
+in order for this to be true we must have
+\begin{equation*}
+h[n]=0\quad\text{for }n<0
+\end{equation*}
+(try to visualise the convolution to see this) This means that the impulse response of a causal LTI system must be zero before
+the impulse occurs, which is consistent with the intuitive concept of causality.\\
+\vspace{1mm}\\
+More generally,
 
 
 
