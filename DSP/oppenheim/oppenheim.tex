@@ -1728,9 +1728,37 @@ h[n]=0\quad\text{for }n<0
 (try to visualise the convolution to see this) This means that the impulse response of a causal LTI system must be zero before
 the impulse occurs, which is consistent with the intuitive concept of causality.\\
 \vspace{1mm}\\
-More generally,
-
-
+More generally, causality for a linear system is equivalent to the condition of \textit{initial rest}: if the input to a causal system is 
+0 up to some point in time, then the output must also be 0 up to that time. It is important to emphasise that the equivalence of causality
+and the condition of initial rest applies only to linear systems.\\
+\vspace{1mm}\\
+(For example, the system $y[n]=2x[n]+3$ is not linear but is causal. However if $x[n]=0$, $y[n]=3\neq0$, so it does not satisfy
+the condition of initial rest.)\\
+\vspace{1mm}\\
+Once again visualising the convolution sum, see that for a causal discrete-time LTI system, the $h[n]=0$ for $n<0$ implies that
+it can be simplified to
+\begin{equation*}
+y[n]=\sum^n_{k=-\infty}x[k]h[n-k]
+\end{equation*}
+and the alternative equivalent form (by commutativity) becomes
+(visualise as reflecting the input signal in time instead)
+\begin{equation*}
+y[n]=\sum^\infty_{k=0}h[k]x[n-k]
+\end{equation*}
+Similarly, a continuous-time LTI system is causal if
+\begin{equation*}
+h(t)=0\quad\text{for }t<0
+\end{equation*}
+where the convolution integral is given by
+\begin{equation*}
+y(t)=\int^t_{-\infty}x(\tau)h(t-\tau)d\tau=\int^\infty_0h(\tau)x(t-\tau)d\tau
+\end{equation*}
+While causality is a property of systems, it is common terminology to refer to a signal as being causal if it is zero for $n<0$ or $t<0$. 
+The motivation for this comes from the conditions for causality as defined above: Causality for an LTI system is equivalent to its
+impulse response being a `causal' signal.\\
+(next page)\newpage
+\noindent\textbf{Stability}\\
+Recall
 
 
 
