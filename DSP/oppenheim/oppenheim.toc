@@ -15,5 +15,5 @@
 \contentsline {section}{\numberline {2.4}Convolution integral---examples}{49}{}%
 \contentsline {section}{\numberline {2.5}Properties of LTI systems 1}{54}{}%
 \contentsline {section}{\numberline {2.6}Properties of LTI systems 2}{58}{}%
-\contentsline {chapter}{\numberline {A}Other proofs}{63}{}%
-\contentsline {section}{\numberline {A.1}Sum of geometric series}{63}{}%
+\contentsline {chapter}{\numberline {A}Other proofs}{64}{}%
+\contentsline {section}{\numberline {A.1}Sum of geometric series}{64}{}%

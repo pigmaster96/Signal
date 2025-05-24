@@ -1758,9 +1758,62 @@ The motivation for this comes from the conditions for causality as defined above
 impulse response being a `causal' signal.\\
 (next page)\newpage
 \noindent\textbf{Stability}\\
-Recall
-
-
+Recall that a system is \textit{stable} if every bounded input produces a bounded output. We want to derive a condition to determine
+whether a candidate LTI system is stable; consider an input $x[n]$ that is bounded in magnitude:
+\begin{equation*}
+x[n]<B\quad\text{for all }n
+\end{equation*}
+Suppose we apply this input to an LTI system with unit impulse response $h[n]$. Then, using the convolution sum, we obtain an expression
+for the \textit{magnitude} of the output as
+\begin{equation*}
+|y[n]|=\left|\sum^{+\infty}_{k=-\infty}h[k]x[n-k]\right|
+\end{equation*}
+Since the magnitude of the sum of a set of numbers is no larger than the sum of the magnitudes of the numbers, it follows that
+\begin{equation*}
+|y[n]|\leq\sum^{+\infty}_{k=-\infty}|h[k]||x[n-k]|
+\end{equation*}
+We know that $|x[n-k]|<B$ for all values of $k$ and $n$. This implies that
+\begin{equation*}
+|y[n]|\leq B\sum^{+\infty}_{k=-\infty}|h[k]|\quad\text{for all }n
+\end{equation*}
+We conclude that the impulse response is \textit{absolutely summable} if
+\begin{equation*}
+\sum^{+\infty}_{k=-\infty}|h[k]|<\infty
+\end{equation*}
+See that if the impulse response is absolutely summable, $y[n]$ will be bounded in magnitude, and hence the system is stable. This means
+that the above is a sufficient condition to gaurantee the stability of a discrete-time LTI system. (see that this condition 
+is also necessary, as if it were not satisfied then there would be unbounded outputs)\\
+(next page)\newpage
+\noindent\textbf{Stability cont.}\\
+In continuous time we have an analagous characterisation of stabilityin terms of the impulse response of an LTI system; 
+if $|x(t)|<B$ for all $t$, then it follows that
+\begin{align*}
+|y(t)|&=\left|\int^{+\infty}_{-\infty}h(\tau)x(t-\tau)d\tau\right|\\
+&\leq\int^{+\infty}_{-\infty}|h(\tau)||x(t-\tau)|d\tau\\
+&\leq B\int^{+\infty}_{-\infty}|h(\tau)|d\tau
+\end{align*}
+Therefore, the system is stable if it is \textit{absolutely integrable}:
+\begin{equation*}
+\int^{+\infty}_{-\infty}|h(\tau)|d\tau<\infty
+\end{equation*}
+As with the discrete case this is actually a necessary condition for stability, as if it were unsatisfied, it would lead to unbounded 
+outputs.\\
+\vspace{1mm}\\
+\textbf{Stability examples}\\
+Consider a system that is a pure time shift in either continuous or discrete time. Then in discrete time 
+\begin{equation*}
+\sum^{+\infty}_{n=-\infty}|h[n]|=
+\sum^{+\infty}_{n=-\infty}|\delta[n-n_0]|=1
+\end{equation*}
+while in continuous time
+\begin{equation*}
+\int^{+\infty}_{-\infty}|h(\tau)|d\tau=
+\int^{+\infty}_{-\infty}|\delta(\tau-t_0)|d\tau=1
+\end{equation*}
+and we can conclude both systems are stable.\\
+\vspace{1mm}\\
+Consider now the accumulator, with an impulse response equal to $u[n]$; see that the impulse response in this case is not absolutely
+summable:
 
 
 
