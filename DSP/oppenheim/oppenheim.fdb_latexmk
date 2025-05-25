@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1748197543.30649 "oppenheim.tex" "oppenheim.pdf" "oppenheim" 1748197543.88152 0
+["pdflatex"] 1748210236.76191 "oppenheim.tex" "oppenheim.pdf" "oppenheim" 1748210237.37418 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1742685315 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1742685315 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1742685315 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -126,14 +126,20 @@
   "images/a45.png" 1747873127.31139 8216 62df901b397daaaa09028887c033bf52 ""
   "images/a46.png" 1747873161.5714 7824 a465f52bae6b1de7e7db3156a3690703 ""
   "images/a47.png" 1747956609.27236 23284 1f3ce43297bbe09970dead3677093e4d ""
+  "images/a48.png" 1748199469.40051 24396 6681deb12fe35d378b0a555c1e1b80f0 ""
+  "images/a49.png" 1748199684.06318 13652 62c7a99d1572fd36cc8d0ba0a308c282 ""
   "images/a5.png" 1745702968.67315 17138 586a42e471b4214c07219aba63b38ff8 ""
+  "images/a50.png" 1748206670.88595 27256 9606f6bc8a70e0583ebd3fdad23c592d ""
+  "images/a51.png" 1748206826.36933 18163 77c241acc9c2c0390d1d315b7da42198 ""
+  "images/a52.png" 1748207895.86962 23681 f8f7d1d965b93c5f5260f7db37850d73 ""
+  "images/a53.png" 1748209872.86267 10978 bdce649de096b27fcc07c07a5e6a9e60 ""
   "images/a6.png" 1745946386.04462 19572 3daa0e4687103758bb4a429dde6c0b17 ""
   "images/a7.png" 1746058915.25779 21240 dbb5b84474fb1448477313ccfc03258e ""
   "images/a8.png" 1746081412.1619 19571 50f05db36ae80e9d1b9ccc3ad9476033 ""
   "images/a9.png" 1746312249.19598 7568 21bbfb32f3e8158c0e2282813ad2e2e4 ""
-  "oppenheim.aux" 1748197543.83458 3110 7de0500a61c7c687bc904ca11cd3b037 "pdflatex"
-  "oppenheim.tex" 1748197541.50653 89767 c41817fa0ac25e45ac330e53fc6e8aa2 ""
-  "oppenheim.toc" 1748197543.83458 1947 f46660ed609d7886b1e07d959e5ed96e "pdflatex"
+  "oppenheim.aux" 1748210237.3243 3223 aee3ee825a017fa3387d71f2d08d569c "pdflatex"
+  "oppenheim.tex" 1748210235.76757 94372 ad6ce8e55cb4e4df35a42cf8ee03666c ""
+  "oppenheim.toc" 1748210237.3243 2019 0ee87c65cd81d85338ed553b8502f12b "pdflatex"
   (generated)
   "oppenheim.aux"
   "oppenheim.log"

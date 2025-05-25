@@ -1985,6 +1985,109 @@ h[n]=\left(\frac{1}{2}\right)^nu[n]
 \newpage
 
 \section{Block diagram representations of first-order systems described by differential and difference equations}
+\textbf{Discrete-time}\\
+Consider the causal system described by the first-order difference equation
+\begin{equation*}
+y[n]+ay[n-1]=bx[n]
+\end{equation*}
+Note that the evaluation of $y[n]$ requires three basic operations: addition, multiplication by a coefficient, and a delay (to capture
+the relationship between $y[n]$ and $y[n-1]$). We define these three basic network elements as follows:
+\begin{center}
+\includegraphics[width=10cm]{a48}
+\end{center}
+Rewriting the equation in a form that directly suggests a recursive algorithm for computing successive values of $y[n]$:
+\begin{equation*}
+y[n]=-ay[n-1]+bx[n]
+\end{equation*}
+see that we can represent this algorithm using the basic elements as
+\begin{center}
+\includegraphics[width=10cm]{a49}
+\end{center}
+This is an example of a \textit{feedback} system (since the output is fed back after a delay and multiplication as an addition to the
+next input). See that the presence of feedback is a direct consequence of the recursive nature of the system. 
+The block diagram makes clear the required memory in this system and the consequent need for intial conditions 
+(the initial memory element).\\
+(next page)\newpage
+\noindent\textbf{Continuous-time}\\
+Consider next the causal continuous-time system described by a first-order differential equation:
+\begin{equation*}
+\frac{dy(t)}{dt}+ay(t)=bx(t)
+\end{equation*}
+which we can rewrite as 
+\begin{equation*}
+y(t)=-\frac{1}{a}\frac{dy(t)}{dt}+\frac{b}{a}x(t)
+\end{equation*}
+The three operations involved here are addition, multiplication by a coefficient, and differentiation. Therefore, if we define the 
+three network elements as follows
+\begin{center}
+\includegraphics[width=10cm]{a50}
+\end{center}
+we can consider representing the system as follows
+\begin{center}
+\includegraphics[width=10cm]{a51}
+\end{center}
+While such a configuration is a valid representation of the causal system as described, it not the representation that is most frequently
+or practically used, since differentiators are both difficult to
+implement and extremely sensitive to errors and noise.\\
+(next page)\newpage
+\noindent\textbf{Continuous-time cont.}\\
+The previously proposed representation of the system
+\begin{equation*}
+y(t)=-\frac{1}{a}\frac{dy(t)}{dt}+\frac{b}{a}x(t)
+\end{equation*}
+is valid but impractical, since differentiators are difficult to implement. 
+An alternative implementation that is much more widely used can be obtained by first rewriting the system as
+\begin{equation*}
+\frac{dy(t)}{dt}=bx(t)-ay(t)
+\end{equation*}
+and then \textit{integrating} from $-\infty$ to $t$. 
+Specifically, if we assume that the value of $y(-\infty)$ is zero, then the integral of $dy(t)/dt$ 
+from $-\infty$ to $t$ is precisely $y(t)$. Consequently, we obtain the equation
+\begin{equation*}
+y(t)=\int^t_{-\infty}[bx(\tau)-ay(\tau)]d\tau
+\end{equation*}
+In this form, see that this system can be implemented using the adder and coefficient multiplier as indicated earlier, together 
+with an \textit{integrator}:
+\begin{center}
+\includegraphics[width=10cm]{a52}
+\end{center}
+Integrators are much more readily implemented. In the continuous-time case it is the integrator that represents the memory storage
+element of the system. This is perhaps more readily seen if we consider integrating the rearranged equation from a finite point in time
+$t_0$:
+\begin{equation*}
+y(t)=y(t_0)+\int^t_{t_0}[bx(\tau)-ay(\tau)]d\tau
+\end{equation*}
+See that an initial condition $y(t_0)$ must be specified; this is the value that the integrator stores at time $t_0$.
+\newpage
+
+\section{Singularity functions}
+\textbf{The Unit impulse as an idealised short pulse}\\
+We know that the unit impulse $\delta(t)$ is the impulse response of the identity system. That is,
+\begin{equation*}
+x(t)=x(t)*\delta(t)
+\end{equation*}
+for any signal $x(t)$. Therefore if we take $x(t)=\delta(t)$, we have
+\begin{equation*}
+\delta(t)=\delta(t)*\delta(t)
+\end{equation*}
+This is a basic property of the unit impulse, and it also has a significant implication for our interpretation of the unit
+impulse as an idealised pulse. For instance, recall that we initially
+considered $\delta(t)$ to be the limiting form of a rectangular pulse $\delta_\Delta(t)$; now consider
+\begin{equation*}
+r_\Delta(t)=\delta_\Delta(t)*\delta_\Delta(t)
+\end{equation*}
+Then $r_\Delta(t)$ looks like
+\begin{center}
+\includegraphics[width=10cm]{a53}
+\end{center}
+See that it we wish to interpret $\delta(t)$ as the limit as $\Delta\to0$ of $\delta_\Delta(t)$, then by the second statement, the
+limit as $\Delta\to0$ of $r_\Delta(t)$ \textit{must also be the unit impulse}.\\
+\vspace{1mm}\\
+If so, we can also argue that the limits 
+
+
+
+
 
 
 
