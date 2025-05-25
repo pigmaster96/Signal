@@ -1799,7 +1799,7 @@ Therefore, the system is stable if it is \textit{absolutely integrable}:
 As with the discrete case this is actually a necessary condition for stability, as if it were unsatisfied, it would lead to unbounded 
 outputs.\\
 \vspace{1mm}\\
-\textbf{Stability examples}\\
+\textbf{Stability example 1---stable}\\
 Consider a system that is a pure time shift in either continuous or discrete time. Then in discrete time 
 \begin{equation*}
 \sum^{+\infty}_{n=-\infty}|h[n]|=
@@ -1811,9 +1811,33 @@ while in continuous time
 \int^{+\infty}_{-\infty}|\delta(\tau-t_0)|d\tau=1
 \end{equation*}
 and we can conclude both systems are stable.\\
-\vspace{1mm}\\
+(next page)\newpage
+\noindent\textbf{Stability example 2---unstable}\\
 Consider now the accumulator, with an impulse response equal to $u[n]$; see that the impulse response in this case is not absolutely
 summable:
+\begin{equation*}
+\sum^{\infty}_{n=-\infty}|u[n]|=\sum^{\infty}_{n=0}u[n]=\infty
+\end{equation*}
+Similarly consider the integrator (the continuous-tiem counterpart of the accumulator):
+\begin{equation*}
+y(t)=\int^t_{-\infty}x(\tau)d\tau
+\end{equation*}
+This is also an unstable system; see that the impulse response for the integrator is:
+\begin{equation*}
+h(t)=\int^t_{-\infty}\delta(\tau)d\tau=u(t)
+\end{equation*}
+and 
+\begin{equation*}
+\int^{+\infty}_{-\infty}|u(t)|d\tau=\int^{+\infty}_0|u(t)|d\tau=\infty
+\end{equation*}
+Since the impulse response is not absolutely integrable, the system is not stable.
+\newpage
+
+\section{The Unit Step Response of an LTI system}
+There is another signal that is also used quite often in describing the behaviour of LTI systems: the \textit{unit step response} $s[n]$
+or $s(t)$; as implied, it corresponds to the output when $x[n]=u[n]$ or $x(t)=u(t)$. From the convolution-sum
+
+
 
 
 
