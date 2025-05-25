@@ -16,5 +16,7 @@
 \contentsline {section}{\numberline {2.5}Properties of LTI systems 1}{54}{}%
 \contentsline {section}{\numberline {2.6}Properties of LTI systems 2}{58}{}%
 \contentsline {section}{\numberline {2.7}The Unit Step Response of an LTI system}{65}{}%
-\contentsline {chapter}{\numberline {A}Other proofs}{66}{}%
-\contentsline {section}{\numberline {A.1}Sum of geometric series}{66}{}%
+\contentsline {section}{\numberline {2.8}Causal LTI systems described by differential and difference equations}{66}{}%
+\contentsline {section}{\numberline {2.9}Block diagram representations of first-order systems described by differential and difference equations}{70}{}%
+\contentsline {chapter}{\numberline {A}Other proofs}{71}{}%
+\contentsline {section}{\numberline {A.1}Sum of geometric series}{71}{}%
