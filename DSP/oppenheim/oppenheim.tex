@@ -2119,12 +2119,27 @@ As such see that what we mean by `$\Delta$ small enough' differs depending on th
 \newpage
 
 \section{Defining the unit impulse through convolution}
-As
-
-
-
-
-
+As outlined previously, for $\Delta$ small enough, the signals $\delta_\Delta(t), r_\Delta(t), r_\Delta(t)*\delta_\Delta(t)$ and $ r_\Delta(t)*r_\Delta(t),$ all act like impulses when applied to an 
+LTI system (naturally there are an infinite number of signals for which this is true).\\
+\vspace{1mm}\\
+This suggests that we should think of the unit impulse as how an LTI system responds to it. While usually a function or signal is defined by what it is at each time point, the primary importance
+of the unit impulse is not that, but rather what it \textit{does under convolution}. As such we may alternatively define the unit impulse as the signal which, when applied to an LTI system, yields
+the impulse response. That is, we define $\delta(t)$ as the signal for which
+\begin{equation*}
+x(t)=x(t)*\delta(t)
+\end{equation*}
+for any $x(t)$. The signals that satisfy this property in the are all said to behave like a unit impulse.\\
+\vspace{1mm}\\
+All the previously mentioned properties of the unit impulse we need can be obtained from the \textit{operational definition} given above. For instance, should we let
+$x(t)=1$ for all $t$, then
+\begin{align*}
+1=x(t)&=x(t)*\delta(t)=\delta(t)*x(t)=\int^{+\infty}_{-\infty}\delta(\tau)x(t-\tau)d\tau\\
+&=\int^{+\infty}_{-\infty}\delta(\tau)d\tau
+\end{align*}
+showing that the unit impulse has unit area.\\
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+It is
 
 
 
