@@ -2060,8 +2060,7 @@ y(t)=y(t_0)+\int^t_{t_0}[bx(\tau)-ay(\tau)]d\tau
 See that an initial condition $y(t_0)$ must be specified; this is the value that the integrator stores at time $t_0$.
 \newpage
 
-\section{Singularity functions}
-\textbf{The Unit impulse as an idealised short pulse}\\
+\section{The Unit impulse as an idealised short\\pulse}
 We know that the unit impulse $\delta(t)$ is the impulse response of the identity system. That is,
 \begin{equation*}
 x(t)=x(t)*\delta(t)
@@ -2083,8 +2082,44 @@ Then $r_\Delta(t)$ looks like
 See that it we wish to interpret $\delta(t)$ as the limit as $\Delta\to0$ of $\delta_\Delta(t)$, then by the second statement, the
 limit as $\Delta\to0$ of $r_\Delta(t)$ \textit{must also be the unit impulse}.\\
 \vspace{1mm}\\
-If so, we can also argue that the limits 
+Since we can argue that the limits as $\Delta\to0$ for $r_\Delta(t)$ must also be a unit impulse, a similar argument can be made that as $\Delta\to0$, $r_\Delta(t)*r_\Delta(t)$ or 
+$r_\Delta(t)*\delta_\Delta(t)$ must also be unit impulses and so on.\\
+\vspace{1mm}\\
+Thus see that if we define the unit impulse as being the limiting form of some signal, there are an unlimited number of very dissimilar looking signals that all behave like an impulse in the limit.\\
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+We found that if we define the unit impulse as being the limiting form of some signal, there are an unlimited number of very dissimilar looking signals that all behave like an impulse in the limit.\\
+\vspace{1mm}\\
+The idea here is that they all `behave like an impulse', meaning that the response an LTI system to all of these signals is essentially identical as long as the pulse is `short enough', 
+meaning $\Delta$ is `small enough'.
+To illustrate this, consider an LTI system described by the first order differential equation
+\begin{equation*}
+\frac{dy(t)}{dt}+2y(t)=x(t)
+\end{equation*}
+assuming initial rest. The responses of this system to $\delta_\Delta(t),r_\Delta(t)*\delta_\Delta(t)$, and $r_\Delta(t)*r_\Delta(t)$ for several values are ilustrated here for several values of $\Delta$:
+\begin{center}
+\includegraphics[width=9.8cm]{a55}
+\end{center}
+See that for $\Delta$ large enough, the responses differ noticeably. However, for $\Delta$ sufficiently small, they all have a limiting form of $e^{-2t}u(t)$. The limit for each of these signals as $\Delta\to0$
+is the unit impulse, so we conclude that $e^{-2t}u(t)$ is the impulse response for this system.\\
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+One important point to be emphasised here is what we mean by `$\Delta$ small enough' depends on the particular LTI system to which the preceding pulses are applied. For instance consider instead
+the causal LTI system
+\begin{equation*}
+\frac{dy(t)}{dt}+20y(t)=x(t)
+\end{equation*}
+plotted as per the previous instance for different values of $\Delta$:
+\begin{center}
+\includegraphics[width=10cm]{a54}
+\end{center}
+In this case see that we need a smaller value of $\Delta$ for the responses to be indistinguishable from each other and from the impulse response $h(t)=e^{-20t}u(t)$ for the system.\\
+\vspace{1mm}\\
+As such see that what we mean by `$\Delta$ small enough' differs depending on the system. In that sense the unit impulse is the idealisation for a short pulse whose duration is short enough for \textit{all systems}.
+\newpage
 
+\section{Defining the unit impulse through convolution}
+As
 
 
 
