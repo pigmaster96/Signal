@@ -21,5 +21,5 @@
 \contentsline {section}{\numberline {2.10}The Unit impulse as an idealised short\\pulse}{73}{}%
 \contentsline {section}{\numberline {2.11}Defining the unit impulse through convolution}{76}{}%
 \contentsline {section}{\numberline {2.12}Utility of singularity functions}{78}{}%
-\contentsline {chapter}{\numberline {A}Other proofs}{80}{}%
-\contentsline {section}{\numberline {A.1}Sum of geometric series}{80}{}%
+\contentsline {chapter}{\numberline {A}Other proofs}{82}{}%
+\contentsline {section}{\numberline {A.1}Sum of geometric series}{82}{}%

@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1748434498 "oppenheim.tex" "oppenheim.pdf" "oppenheim" 1748434499
+["pdflatex"] 1748457753 "oppenheim.tex" "oppenheim.pdf" "oppenheim" 1748457754
   "/etc/texmf/web2c/texmf.cnf" 1718868312 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -53,6 +53,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1248133631 31764 459c573c03a4949a528c2cc7f557e217 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texlive/texmf-dist/tex/generic/ofs/a35.tex" 1137109563 3220 ae0b0fbeaa6f56561bd8a006ccbe3351 ""
   "/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty" 1591045760 12594 0d51ac3a545aaaa555021326ff22a6cc ""
@@ -137,13 +138,14 @@
   "images//a53.png" 1748254981 10978 bdce649de096b27fcc07c07a5e6a9e60 ""
   "images//a54.png" 1748346974 88984 d926ce7e3985dae6871359258593ac40 ""
   "images//a55.png" 1748344747 116561 bfb0ee9430b0d543448500af08b8b1c8 ""
+  "images//a56.png" 1748456065 10866 60e80dbd383e2016bac191d79217c48a ""
   "images//a6.png" 1748254981 19572 3daa0e4687103758bb4a429dde6c0b17 ""
   "images//a7.png" 1748254981 21240 dbb5b84474fb1448477313ccfc03258e ""
   "images//a8.png" 1748254981 19571 50f05db36ae80e9d1b9ccc3ad9476033 ""
   "images//a9.png" 1748254981 7568 21bbfb32f3e8158c0e2282813ad2e2e4 ""
-  "oppenheim.aux" 1748434499 3508 23fa61026d39bcae0e591de771f6c528 "pdflatex"
-  "oppenheim.tex" 1748434496 102220 a1d96b6b9030cc16e0a6b565e65ce844 ""
-  "oppenheim.toc" 1748434499 2222 928e9e06f3fe39ff42e0a9347143d00e "pdflatex"
+  "oppenheim.aux" 1748457754 3508 8df32507335c5754b8578831d315b77b "pdflatex"
+  "oppenheim.tex" 1748457752 104064 06defa1e25d4a458b8bf218ab43a9093 ""
+  "oppenheim.toc" 1748457754 2222 9cb0da34a87ba4e146e3003310204e8c "pdflatex"
   (generated)
   "oppenheim.aux"
   "oppenheim.log"

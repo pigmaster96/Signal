@@ -2179,6 +2179,7 @@ which is a property we derived earlier.
 \newpage
 
 \section{Utility of singularity functions}
+\textbf{Unit doublet as the impulse response for the differentiatior}\\
 The unit impulse is one of a class of signals known as \textit{singularity functions}, each of which can be defined operationally in terms of its behaviour under convolution. Consider the LTI system for
 which the output is the derivative of the input:
 \begin{equation*}
@@ -2208,11 +2209,41 @@ can be obtained as a cascade of $k$ differentiators, we have
 u_k(t)=\underbrace{u_1(t)*\cdots*u_1(t)}_{k\text{ times}}
 \end{equation*}
 (next page)\newpage
-\noindent\textbf{Properties of unit doublet}\\
+\noindent\textbf{Properties of the unit doublet}\\
 As with the unit impulse, each of these singularity functions has properties that can be derived from their operational definition. For example, if we consider the constant signal $x(t)=1$, we find
+\begin{align*}
+0=\frac{dx(t)}{dt}&=x(t)*u_1(t)=\int^{+\infty}_{-\infty}u_1(\tau)x(t-\tau)d\tau\\
+&=\int^{+\infty}_{-\infty}u_1(\tau)d\tau
+\end{align*}
+so that the unit doublet has zero area. Moreover, if we convolve the signal $g(-t)$ with $u_1(t)$, we obtain
 \begin{equation*}
-0=\frac{dx(t)}{dt}=x(t)*u_1(t)=\int^{+\infty}_{-\infty}u_1(\tau)x(t-\tau)d\tau
+\int^{+\infty}_{-\infty}g(\tau-t)u_1(\tau)d\tau=g(-t)*u(t)=\frac{dg(-t)}{dt}=-g'(-t)
 \end{equation*}
+which for $t=0$ yields
+\begin{equation*}
+-g'(0)=\int^{+\infty}_{-\infty}g(\tau)u_1(\tau)d\tau
+\end{equation*}
+In an analagous manner, we can derive related properties of $u_1(t)$ and higher order singularity functions.\\
+(next page)\newpage
+\noindent\textbf{Intuition}\\
+As with the unit impulse, each of these singularity functions can be informally related to short pulses. For instance, since the unit doublet is formally the derivative of the unit impulse, we can think 
+of it as the idealisation of the derivative of a short pulse with unit area. For instance, consider a
+short pulse $\delta_\Delta(t)$ as defined before; this pulse behaves like an impulse as $\Delta\to0$. Consequently, we would expect its derivative to behave like a doublet as $\Delta\to0$. Illustrated,
+\begin{center}
+\includegraphics[width=10cm]{a56}\\
+\end{center}
+It consists of a unit impulse at $t=0$ with area $+1/\Delta$, followed by another unit impulse of area $-1/\Delta$ at $t=\Delta$;
+\begin{equation*}
+\frac{d\delta_\Delta(t)}{dt}=\frac{1}{\Delta}[\delta(t)-\delta(t-\Delta)]
+\end{equation*}
+Consequently, using the fact that $x(t)*\delta(t-t_0)=x(t-t_0)$, we have
+\begin{equation*}
+x(t)*\frac{d\delta_\Delta(t)}{dt}=\frac{x(t)-x(t-\Delta)}{\Delta}\approxeq\frac{dx(t)}{dt}
+\end{equation*}
+where the approximation becomes increasingly accurate as $\Delta\to0$. See therefore that $d\delta_\Delta(t)/dt$ does indeed behave like a unit doublet as $\Delta\to0$.\\
+(next page)\newpage
+\noindent\textbf{Unit ramp as}
+
 
 
 
