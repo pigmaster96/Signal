@@ -2139,7 +2139,82 @@ $x(t)=1$ for all $t$, then
 showing that the unit impulse has unit area.\\
 (next page)\newpage
 \noindent\textbf{Cont.}\\
-It is
+It is sometimes useful to use another completely equivalent operational definition of $\delta(t)$. To obtain this alternative form, consider taking an arbitrary signal $g(t)$, reversing it
+in time to obtain $g(-t)$, and then convolving this with $\delta(t)$:
+\begin{equation*}
+g(-t)=g(-t)*\delta(t)=\int^{+\infty}_{-\infty}g(\tau-t)\delta(\tau)d\tau
+\end{equation*}
+which, for $t=0$, yields
+\begin{equation*}
+g(0)=\int^{+\infty}_{-\infty}g(\tau)\delta(\tau)d\tau
+\end{equation*}
+This is another operational definition of the unit impulse: the unit impulse is the signal which, when multiplied by a signal $g(t)$ and then integrated from $-\infty$ to $+\infty$, produces
+the value $g(0)$.\\
+\vspace{1mm}\\
+See that the first operational definition defines this second one. On the other hand, this second definition also defines the first. To see this, let $x(t)$ be a given signal, fix a time $t$, and define
+\begin{equation*}
+g(\tau)=x(t-\tau)
+\end{equation*}
+Then by the second definition we have
+\begin{equation*}
+x(t)=g(0)=\int^{+\infty}_{-\infty}g(\tau)\delta(\tau)d\tau
+=\int^{+\infty}_{-\infty}x(t-\tau)\delta(\tau)d\tau
+\end{equation*}
+which leads us back to the first operational definition. Therefore the second operational definition above is an equivalent operational definition of the unit impulse.\\
+\vspace{1mm}\\
+The second operational definition won't be used as frequently as the first, but it does have some use in determining some other properties of the unit impulse. For instance, consider that for some signal
+$f(t)$:
+\begin{equation*}
+\int^{+\infty}_{-\infty}g(\tau)f(\tau)\delta(\tau)d\tau=g(0)f(0)
+\end{equation*}
+On the other hand, also see that
+\begin{equation*}
+\int^{+\infty}_{-\infty}g(\tau)f(0)\delta(\tau)d\tau=g(0)f(0)
+\end{equation*}
+Consequently, we can conclude that
+\begin{equation*}
+f(t)\delta(t)=f(0)\delta(t)
+\end{equation*}
+which is a property we derived earlier.
+\newpage
+
+\section{Utility of singularity functions}
+The unit impulse is one of a class of signals known as \textit{singularity functions}, each of which can be defined operationally in terms of its behaviour under convolution. Consider the LTI system for
+which the output is the derivative of the input:
+\begin{equation*}
+y(t)=\frac{dx(t)}{dt}
+\end{equation*}
+The unit impulse response here is the derivative of the unit impulse, which is called the \textit{unit doublet} $u_1(t)$. See that when represented as a convolution, we have
+\begin{equation*}
+\frac{dx(t)}{dt}=x(t)*u_1(t)
+\end{equation*}
+for any signal $x(t)$. Just as we had an operational definition of $\delta(t)$, we take the above to be the operational definition of the unit doublet $u_1(t)$.\\
+\vspace{1mm}\\
+Similarly, we can define $u_2(t)$, the second derivative of $\delta(t)$, as the impulse response of an LTI system that takes the second derivative of the input:
+\begin{equation*}
+\frac{d^2x(t)}{dt^2}=x(t)*u_2(t)
+\end{equation*}
+Furthermore see that
+\begin{equation*}
+\frac{d^2x(t)}{dt^2}=\frac{d}{dt}\left(\frac{dx(t)}{dt}\right)=x(t)*u_1(t)*u_1(t)
+\end{equation*}
+and therefore that
+\begin{equation*}
+u_2(t)=u_1(t)*u_1(t)
+\end{equation*}
+See now that more generally, $u_k(t)$, $k>0$, is the $k$th derivative of $\delta(t)$ and thus is the impulse response of a system that takes the $k$th derivative of the input. Since this system
+can be obtained as a cascade of $k$ differentiators, we have
+\begin{equation*}
+u_k(t)=\underbrace{u_1(t)*\cdots*u_1(t)}_{k\text{ times}}
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Properties of unit doublet}\\
+As with the unit impulse, each of these singularity functions has properties that can be derived from their operational definition. For example, if we consider the constant signal $x(t)=1$, we find
+\begin{equation*}
+0=\frac{dx(t)}{dt}=x(t)*u_1(t)=\int^{+\infty}_{-\infty}u_1(\tau)x(t-\tau)d\tau
+\end{equation*}
+
+
 
 
 
