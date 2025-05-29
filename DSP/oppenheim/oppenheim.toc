@@ -1,25 +1,27 @@
-\contentsline {chapter}{\numberline {1}Introduction}{2}{}%
-\contentsline {section}{\numberline {1.1}Signal Energy and Power}{2}{}%
-\contentsline {section}{\numberline {1.2}Even and Odd signals}{5}{}%
-\contentsline {section}{\numberline {1.3}Differences between continuous and\\discrete periodic complex exponentials}{6}{}%
-\contentsline {section}{\numberline {1.4}Intuition for discrete-time periodicity}{10}{}%
-\contentsline {section}{\numberline {1.5}Difference in harmonic relations in discrete and\\continuous periodic exponentials}{12}{}%
-\contentsline {section}{\numberline {1.6}More on complex exponential and sinusoidal signals}{13}{}%
-\contentsline {section}{\numberline {1.7}Unit impulse and Unit step functions}{15}{}%
-\contentsline {section}{\numberline {1.8}Basic system properties 1}{21}{}%
-\contentsline {section}{\numberline {1.9}Basic system properties 2}{26}{}%
-\contentsline {chapter}{\numberline {2}Linear Time-Invariant Systems}{32}{}%
-\contentsline {section}{\numberline {2.1}Discrete-time convolution sum}{32}{}%
-\contentsline {section}{\numberline {2.2}Discrete-time convolution sum---examples}{37}{}%
-\contentsline {section}{\numberline {2.3}Continuous-time---the convolution integral}{45}{}%
-\contentsline {section}{\numberline {2.4}Convolution integral---examples}{49}{}%
-\contentsline {section}{\numberline {2.5}Properties of LTI systems 1}{54}{}%
-\contentsline {section}{\numberline {2.6}Properties of LTI systems 2}{58}{}%
-\contentsline {section}{\numberline {2.7}The Unit Step Response of an LTI system}{65}{}%
-\contentsline {section}{\numberline {2.8}Causal LTI systems described by differential and difference equations}{66}{}%
-\contentsline {section}{\numberline {2.9}Block diagram representations of first-order systems described by differential and difference equations}{70}{}%
-\contentsline {section}{\numberline {2.10}The Unit impulse as an idealised short\\pulse}{73}{}%
-\contentsline {section}{\numberline {2.11}Defining the unit impulse through convolution}{76}{}%
-\contentsline {section}{\numberline {2.12}Utility of singularity functions}{78}{}%
-\contentsline {chapter}{\numberline {A}Other proofs}{83}{}%
-\contentsline {section}{\numberline {A.1}Sum of geometric series}{83}{}%
+\contentsline {chapter}{\numberline {1}Introduction}{3}{}%
+\contentsline {section}{\numberline {1.1}Signal Energy and Power}{3}{}%
+\contentsline {section}{\numberline {1.2}Even and Odd signals}{6}{}%
+\contentsline {section}{\numberline {1.3}Differences between continuous and\\discrete periodic complex exponentials}{7}{}%
+\contentsline {section}{\numberline {1.4}Intuition for discrete-time periodicity}{11}{}%
+\contentsline {section}{\numberline {1.5}Difference in harmonic relations in discrete and\\continuous periodic exponentials}{13}{}%
+\contentsline {section}{\numberline {1.6}More on complex exponential and sinusoidal signals}{14}{}%
+\contentsline {section}{\numberline {1.7}Unit impulse and Unit step functions}{16}{}%
+\contentsline {section}{\numberline {1.8}Basic system properties 1}{22}{}%
+\contentsline {section}{\numberline {1.9}Basic system properties 2}{27}{}%
+\contentsline {chapter}{\numberline {2}Linear Time-Invariant Systems}{33}{}%
+\contentsline {section}{\numberline {2.1}Discrete-time convolution sum}{33}{}%
+\contentsline {section}{\numberline {2.2}Discrete-time convolution sum---examples}{38}{}%
+\contentsline {section}{\numberline {2.3}Continuous-time---the convolution integral}{46}{}%
+\contentsline {section}{\numberline {2.4}Convolution integral---examples}{50}{}%
+\contentsline {section}{\numberline {2.5}Properties of LTI systems 1}{55}{}%
+\contentsline {section}{\numberline {2.6}Properties of LTI systems 2}{59}{}%
+\contentsline {section}{\numberline {2.7}The Unit Step Response of an LTI system}{66}{}%
+\contentsline {section}{\numberline {2.8}Causal LTI systems described by differential and difference equations}{67}{}%
+\contentsline {section}{\numberline {2.9}Block diagram representations of first-order systems described by differential and difference equations}{71}{}%
+\contentsline {section}{\numberline {2.10}The Unit impulse as an idealised short\\pulse}{74}{}%
+\contentsline {section}{\numberline {2.11}Defining the unit impulse through convolution}{77}{}%
+\contentsline {section}{\numberline {2.12}Utility of singularity functions}{79}{}%
+\contentsline {chapter}{\numberline {3}Fourier series representation of periodic signals}{84}{}%
+\contentsline {section}{\numberline {3.1}The response of LTI systems to complex\\exponentials}{84}{}%
+\contentsline {chapter}{\numberline {A}Other proofs}{85}{}%
+\contentsline {section}{\numberline {A.1}Sum of geometric series}{85}{}%
