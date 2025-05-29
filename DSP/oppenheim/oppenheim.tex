@@ -2242,7 +2242,64 @@ x(t)*\frac{d\delta_\Delta(t)}{dt}=\frac{x(t)-x(t-\Delta)}{\Delta}\approxeq\frac{
 \end{equation*}
 where the approximation becomes increasingly accurate as $\Delta\to0$. See therefore that $d\delta_\Delta(t)/dt$ does indeed behave like a unit doublet as $\Delta\to0$.\\
 (next page)\newpage
-\noindent\textbf{Unit ramp as}
+\noindent\textbf{Unit step as the impulse response for the integrator}\\
+In addition to singularity functions that are derivatives of the unit impulse, we can also define signals that represent successive integrals of the unit impulse function. Recall that the
+unit step is the impulse response of an integrator, where we have:
+\begin{equation*}
+y(t)=\int^t_{-\infty}x(\tau)d\tau
+\end{equation*}
+so
+\begin{equation*}
+u(t)=\int^t_{-\infty}\delta(\tau)d\tau
+\end{equation*}
+and we therefore have the operational definition of $u(t)$:
+\begin{equation*}
+x(t)*u(t)=\int^t_{-\infty}x(\tau)d\tau
+\end{equation*}
+As with the differentiator, we can define a system that consists of a cascade of two integrators. Its impulse response is denoted by $u_{-2}(t)$, which is simply the convolution of $u(t)$ (the response 
+of one integrator) with itself:
+\begin{equation*}
+u_{-2}=u(t)*u(t)=\int^t_{-\infty}u(\tau)d\tau
+\end{equation*}
+Since $u(t)$ equals 0 for $t<0$ and 1 for $t>0$, it follows that
+\begin{equation*}
+u_{-2}=tu(t)
+\end{equation*}
+This signal is referred to as the \textit{unit ramp function}:
+\begin{center}
+\includegraphics[width=8cm]{a57}\\
+\end{center}
+We can obtain the operational definition for $u_{-2}(t)$ as
+\begin{align*}
+x(t)*u_{-2}(t)&=x(t)*u(t)*u(t)\\
+&=\left(\int^t_{-\infty}x(\sigma)d\sigma\right)*u(t)\\
+&=\int^t_{-\infty}\left(\int^\tau_{-\infty}x(\sigma)d\sigma\right)d\tau
+\end{align*}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+In an analagous fashion, we can define higher order integrals of $\delta(t)$ as the impulse responses of cascades of integrators:
+\begin{equation*}
+u_{-k}(t)=\underbrace{u(t)*\cdots*u(t)}_{k\text{ times}}=\int^t_{-\infty}u_{-(k-1)}(\tau)d\tau
+\end{equation*}
+The convolution of $x(t)$ with $u_{-3}(t),u_{-4}(t),\ldots$ generate correspondingly higher order integrals of $x(t)$. Also see that these functions can be evaluated directly to obtain
+\begin{equation*}
+u_{-k}(t)=\frac{t^{k-1}}{(k-1)!}u(t)
+\end{equation*}
+Unlike the derivatives of $\delta(t)$, the successive integrals of the unit impulse are functions that can be defined for each $T$, as well as their behaviour under convolution.\\
+\vspace{1mm}\\
+\textbf{Combined}\\
+It is useful to consider an alternative notation for $\delta(t)$ and $u(t)$, namely
+\begin{align*}
+\delta(t)&=u_0(t)\\
+u(t)&=u_{-1}(t)
+\end{align*}
+With this notation, $u_k(t)$ for $k>0$ denotes the impulse response of a cascade of $k$ differentiators, $u_0(t)$ is the impulse response for the identity system; and for $k<0$, $u_k(t)$ is the impulse
+response of a cascade of $|k|$ integrators. Furthermore, since a differentiator is the inverse system of an integrator,
+\begin{equation*}
+\end{equation*}
+
+
+
 
 
 
