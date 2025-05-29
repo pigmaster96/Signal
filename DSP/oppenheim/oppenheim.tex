@@ -2296,9 +2296,20 @@ u(t)&=u_{-1}(t)
 With this notation, $u_k(t)$ for $k>0$ denotes the impulse response of a cascade of $k$ differentiators, $u_0(t)$ is the impulse response for the identity system; and for $k<0$, $u_k(t)$ is the impulse
 response of a cascade of $|k|$ integrators. Furthermore, since a differentiator is the inverse system of an integrator,
 \begin{equation*}
+u_{-1}(t)*u_1(t)=u_0(t)
 \end{equation*}
-
-
+More generally, see that for any integers $k$ and $r$,
+\begin{equation*}
+u_k(t)*u_r(t)=u_{k+r}(t)
+\end{equation*}
+If $k$ and $r$ are both positive, it represents a cascade of $k$ differentiatiors followed by $r$ more differentiators, yielding an output that is the $(k+r)$th derivative of the input. Similarly, if $k$
+is negative and $r$ is negative, we have a cascade of $|k|$ integrators followed by another $r$ integrators.\\
+\vspace{1mm}\\
+If $k$ is negative and $r$ is positive, we have a cascade of $|k|$ integrators followed by $r$ differentiators, and the overall system will be equivalent to a cascade of $|k+r|$ integrators if $k+r<0$, a
+cascade of $k+r$ differentiators if $k+r>0$, or the identity system if $k+r=0$.\\
+\vspace{1mm}\\
+By defining singularity functions in terms of their behavior under convolution, we obtain a characerisation that allows us to manipulate them with relative ease and to interpret them directly in terms of
+their significance for LTI systems.
 
 
 
