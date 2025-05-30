@@ -2314,8 +2314,93 @@ their significance for LTI systems.
 
 \chapter{Fourier series representation of periodic signals}
 \section{The response of LTI systems to complex\\exponentials}
+Recall that complex exponential signals are represented as $e^{st}$ in continuous time and $z^n$ in discrete time, where $s$ and $z$ are complex numbers. 
+One motivation for their use in the study of LTI systems stems from the idea that the response of an LTI system to a complex exponential input is the \textit{same complex exponential with only a change
+in amplitude}; that is
+\begin{align*}
+\text{continuous time: }&e^{st}\to H(s)e^{st}\\
+\text{discrete time: }&z^n\to H(z)z^n
+\end{align*}
+Where the complex amplitude factor $H(s)$ or $H(z)$ will in general be a function of the complex variable $s$ or $z$.\\
+\vspace{1mm}\\
+A signal for which the system output is a (possibly complex) constant multiplied by the input is referred to as an \textit{eigenfunction} of the system, and the amplitude factor is referred to as the
+systen's \textit{eigenvalue}.\\
+(next page)\newpage
+\noindent\textbf{Intuition}\\
+To show that complex exponentials are indeed eigenfunctions of LTI systems, let us consider a continuous-time LTI system with impulse response $h(t)$. For an input $x(t)$, we can determine the output
+using the convoltution integral, where with $x(t)=e^{st}$:
+\begin{align*}
+y(t)&=\int^{+\infty}_{-\infty}h(\tau)x(t-\tau)d\tau\\
+&=\int^{+\infty}_{-\infty}h(\tau)e^{s(t-\tau)}d\tau
+\end{align*}
+See that this becomes
+\begin{equation*}
+y(t)=e^{st}\int^{+\infty}_{-\infty}h(\tau)e^{-s\tau}d\tau
+\end{equation*}
+Where the response to $e^{st}$ is of the form
+\begin{equation*}
+y(t)=H(s)e^{st},\quad H(s)=\int^{+\infty}_{-\infty}h(\tau)e^{-s\tau}d\tau
+\end{equation*}
+See that $H(s)$ is a complex constant whose value depends on $s$. The constant $H(s)$ is the eigenvalue associated with the eigenfunction $e^{st}$.\\
+\vspace{1mm}\\
+In the same way, we can show that complex exponential sequences are eigenfunctions of discrete-time LTI systems. Supposing an LTI system with impulse response $h[n]$ with input
+\begin{equation*}
+x[n]=z^n
+\end{equation*}
+where $z$ is a complex number. Then the output of the system can be determined from the convolution sym as
+\begin{align*}
+y[n]&=\sum^{+\infty}_{k=-\infty}h[k]x[n-k]\\
+&=\sum^{+\infty}_{k=-\infty}h[k]z^{n-k}=z^n\sum^{+\infty}_{k=-\infty}h[k]z^{-k}
+\end{align*}
+Assuming that the summation on the right-hand side converges, the output is the same complex exponential multiplied by a constant that depends on $z$, that is
+\begin{equation*}
+y[n]=H(z)z^n,\quad H(z)=\sum^{+\infty}_{k=-\infty}h[k]z^{-k}
+\end{equation*}
+The constant $H(z)$ for a specific value of $z$ is the eigenvalue associated with the eigenfunction
+$z^n$.\\
+(next page)\newpage
+\noindent\textbf{Utility}\\
+The usefulness of decomposing more general signals in terms of eigenfunctions can be seen from an example. Let $x(t)$ correspond to a 
+linear combination of three complex exponentials; that is
+\begin{equation*}
+x(t)=a_1e^{s_1t}+a_2e^{s_2t}+a_3e^{s_3t}
+\end{equation*}
+Due to the fact that complex exponentials act as eigenfunctions, the response to each separately is
+\begin{align*}
+a_1e^{s_1t}&\to a_1H(s_1)e^{s_1t}\\
+a_2e^{s_2t}&\to a_2H(s_2)e^{s_2t}\\
+a_3e^{s_3t}&\to a_3H(s_3)e^{s_3t}
+\end{align*}
+and by superposition, see that the response is
+\begin{equation*}
+y(t)=a_1H(s_1)e^{s_1t}+a_2H(s_2)e^{s_2t}+a_3H(s_3)e^{s_3t}
+\end{equation*}
+More generally, the eigenfunction property together with superposition implies that the representation of signals as a linear combination of complex exponentials leads
+to a convenient expression for the response of an LTI system. See that an input to a continuous-time LTI system represented as a linear combination of complex exponentials:
+\begin{equation*}
+x(t)=\sum_ka_ke^{s_kt}
+\end{equation*}
+will yield the output
+\begin{equation*}
+y(t)=\sum_ka_kH(s_k)e^{s_kt}
+\end{equation*}
+Similarly for discrete-time LTI systems, the input
+\begin{equation*}
+x[n]=\sum_ka_kz^n_k
+\end{equation*}
+will yield the output
+\begin{equation*}
+y[n]=\sum_ka_kH(z_k)z^n_k
+\end{equation*}
+In both continuous and discrete time, if the input to an LTI system is represented as a linear combination of complex exponentials, then the output can also be represented as a linear
+combination of \textit{the same exponential signals}; each coefficient in this representation of the output is obtained as the product of the corresponding coefficient $a_k$ of the input and the system's
+eigenvalue $H(s_k)$ or $H(z_k)$ associated with the eigenfunction $e^{s_kt}$ or $z_k^t$ respectively.\\
+\vspace{1mm}\\
+We will focus primarily on purely imaginary values of $s$, meaning $s=i\omega$, and therefore only complex exponentials of the form $e^{i\omega t}$. Similarly
+in discrete time we restrict $z$ to be of unit magnitude, meaning $z=e^{i\omega}$, and therefore only complex exponentials of the form $e^{i\omega n}$.
+\newpage
 
-
+\section{Fourier series representation of continuous-time periodic signals}
 
 
 
