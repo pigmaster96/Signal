@@ -2400,7 +2400,45 @@ We will focus primarily on purely imaginary values of $s$, meaning $s=i\omega$, 
 in discrete time we restrict $z$ to be of unit magnitude, meaning $z=e^{i\omega}$, and therefore only complex exponentials of the form $e^{i\omega n}$.
 \newpage
 
-\section{Fourier series representation of continuous-time periodic signals}
+\section{Linear combinations of harmonically related complex exponentials}
+As defined earlier, a signal is periodic if, for some positive value of $T$,
+\begin{equation*}
+x(t)=x(t+T)\quad\text{for all }t
+\end{equation*}
+Recall that the \textit{fundamental period} of $x(t)$ is the minimum positive, nonzero value of $T$ for which the above is satisfied, and therefore the value $\omega_0=2\pi/T$ is referred to as the
+\textit{fundamental frequency}.\\
+\vspace{1mm}\\
+Recall the sinusoidal signal
+\begin{equation*}
+x(t)=\cos\omega_0t
+\end{equation*}
+and the periodic complex exponential
+\begin{equation*}
+x(t)=e^{i\omega_0t}
+\end{equation*}
+See that both of these signals are periodic with fundamental frequency $\omega_0$ and fundamental period $T=2\pi/\omega_0$. Associated with the complex exponential is the set of 
+\textit{harmonically related} complex exponentials:
+\begin{equation*}
+\phi_k(t)=e^{ik\omega_0t}=e^{ik(2\pi/T)t},\quad k=0,\pm1,\pm2,\ldots
+\end{equation*}
+Each of these signals has a fundamental frequency that is a multiple of $\omega_0$, and threfore, each is periodic with period $T$ (see that for $|k|\geq2|$, the fundamental
+period of $\phi_k(t)$ is a fraction of $T$).\\
+\vspace{1mm}\\
+A linear combination of harmonically related complex exponentials is of the form
+\begin{equation*}
+x(t)=\sum^{+\infty}_{k=-\infty}a_ke^{ik\omega_0t}=\sum^{+\infty}_{k=-\infty}a_ke^{ik(2\pi/T)t}
+\end{equation*}
+See that this is \textit{also periodic with period $T$}. The term for $k=0$ is a constant.\\
+\vspace{1mm}\\
+The terms for $k=+1$ and $k=-1$ both have fundamental frequency equal to $\omega_0$ and are collectively referred to as the \textit{fundamental} or \textit{first harmonic components}. The terms for $k=+2$
+and $k=-2$ are periodic with half the period (or twice the frequency) of the fundamental components and are referred to as the \textit{second harmonic components}. More generally,
+the components for $k=+N$ and $k=-N$ are referred to as the $N$th harmonic components.\\
+\vspace{1mm}\\
+The representation of a periodic signal in this form is referred to as the \textit{Fourier series} representation.
+
+
+
+
 
 
 
