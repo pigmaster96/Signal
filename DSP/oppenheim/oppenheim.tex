@@ -2435,8 +2435,47 @@ and $k=-2$ are periodic with half the period (or twice the frequency) of the fun
 the components for $k=+N$ and $k=-N$ are referred to as the $N$th harmonic components.\\
 \vspace{1mm}\\
 The representation of a periodic signal in this form is referred to as the \textit{Fourier series} representation.
+\newpage
 
-
+\section{Fourier series representation of real periodic signals}
+Recall the \textit{fourier series representation}
+\begin{equation*}
+x(t)=\sum^{+\infty}_{k=-\infty}a_ke^{ik\omega_0t}=\sum^{+\infty}_{k=-\infty}a_ke^{ik(2\pi/T)t}
+\end{equation*}
+Suppose that $x(t)$ is real and and can be represented in the form of the fourier series as above
+(note that $a$ is complex by default). Then since $x^*(t)=x(t)$ (where $x^*$ refers to the complex conjugate), we obtain 
+\begin{equation*}
+x(t)=\sum^{+\infty}_{k=-\infty}a^*_ke^{-ik\omega_0t}
+\end{equation*}
+(we can show that $\left((a+bi)e^{i\omega_0t}\right)^*=(a+bi)^*e^{-i\omega_0t}$ by just working the formulas out)
+Replacing $k$ by $-k$ by summation, we have
+\begin{equation*}
+x(t)=\sum^{+\infty}_{k=-\infty}a^*_{-k}e^{ik\omega_0t}
+\end{equation*}
+which by comparison with the original fourier series representation, gives us the result $a^*_{-k}=a_k$, or equivalently, that
+\begin{equation*}
+a^*_{k}=a_{-k}
+\end{equation*}
+(see that if we were to force the coefficients $a$ to be real then we would just have $a_k=a_{-k}$, since the real parts are always equal)\\
+\vspace{1mm}\\
+In this case we can derive an alternate form of the fourier series; we can arrange the fourier series representation to
+\begin{equation*}
+x(t)=a_0+\sum^{\infty}_{k=1}[a_ke^{ik\omega_0t}+a_{-k}e^{-ik\omega_0t}]
+\end{equation*}
+and by substituting $a^*_{k}=a_{-k}$ we have
+\begin{equation*}
+x(t)=a_0+\sum^{\infty}_{k=1}[a_ke^{ik\omega_0t}+a^*_{k}e^{-ik\omega_0t}]
+\end{equation*}
+Since the two terms in the summation are complex conjugates of each other, this can be expressed as
+\begin{equation*}
+x(t)=a_0+\sum^\infty_{k=1}2\text{Re}\left\{a_ke^{ik\omega_0t}\right\}
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+We had an alternative representation for the fourier series representation of real periodic signals as
+\begin{equation*}
+x(t)=a_0+\sum^\infty_{k=1}2\text{Re}\left\{a_ke^{ik\omega_0t}\right\}
+\end{equation*}
 
 
 
