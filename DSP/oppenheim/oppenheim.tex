@@ -2476,10 +2476,79 @@ We had an alternative representation for the fourier series representation of re
 \begin{equation*}
 x(t)=a_0+\sum^\infty_{k=1}2\text{Re}\left\{a_ke^{ik\omega_0t}\right\}
 \end{equation*}
+If $a_k$ were to be expressed in polar form as
+\begin{equation*}
+a_k=A_ke^{i\theta_k}
+\end{equation*}
+then we have 
+\begin{equation*}
+x(t)=a_0+\sum^\infty_{k=1}2\text{Re}\left\{A_ke^{i(k\omega_0t+\theta_k)}\right\}
+\end{equation*}
+That is
+\begin{equation*}
+x(t)=a_0+2\sum^\infty_{k=1}A_k\cos(k\omega_0t+\theta_k)
+\end{equation*}
+This is a commonly encountered form for fourier series of real periodic signals in continuous time. 
+Another form can be obtained by writing $a_k$ in rectangular form as
+\begin{equation*}
+a_k=B_k+iC_k
+\end{equation*}
+where $B_k$and $C_k$ are both real. This leads to the form
+\begin{equation*}
+x(t)=a_0+2\sum^\infty_{k=1}[B_k\cos(k\omega_0t)-C_k\sin(k\omega_0t)]
+\end{equation*}
+\newpage
 
-
-
-
+\section{Determination of the fourier series\\representation of a continuous-time periodic signal}
+Assuming a signal can be represented as a fourier series
+\begin{equation*}
+x(t)=\sum^{+\infty}_{k=-\infty}a_ke^{ik\omega_0t}=\sum^{+\infty}_{k=-\infty}a_ke^{ik(2\pi/T)t}
+\end{equation*}
+We need a procedure for determining the coefficients $a_k$. Multiplying both sides by $e^{-in\omega_0t}$, we obtain 
+\begin{equation*}
+x(t)e^{-in\omega_0t}=\sum^{+\infty}_{k=-\infty}a_ke^{ik\omega_0t}e^{-in\omega_0t}
+\end{equation*}
+Integrating both sides from 0 to $T=2\pi/\omega_0$, we have
+\begin{equation*}
+\int^T_0x(t)e^{-in\omega_0t}dt=\int^T_0\sum^{+\infty}_{k=-\infty}a_ke^{ik\omega_0t}e^{-in\omega_0t}dt
+\end{equation*}
+Interchanging the order of integration and summation (distributivity of the integral) yields
+\begin{equation*}
+\int^T_0x(t)e^{-in\omega_0t}dt=\sum^{+\infty}_{k=-\infty}a_k\left[\int^T_0e^{i(k-n)\omega_0t}dt\right]
+\end{equation*}
+We want to evaluate the integral inside the square brackets. See that we have it set up so that $T$ is the fundamental period of $x(t)$, and we are consequently integrating over one period. 
+Rewriting the integral using Euler's formula we obtain
+\begin{equation*}
+\int^T_0e^{i(k-n)\omega_0t}dt=\int^T_0\cos((k-n)\omega_0t)dt+i\int^T_0\sin((k-n)\omega_0t)dt
+\end{equation*}
+See that for $k\neq n$, both $\cos((k-n)\omega_0t)$ and $\sin((k-n)\omega_0t)$ are periodic sinusoids with fundamental period $(T/|k-n|)$, 
+and that since we integrate over an interval that is a period for all the sinusoids, for $k\neq n$ both of the integrals on the right hand side are zero. For $k=n$, the integral evaluates to 1, so we
+end up with
+\begin{equation*}
+\int^T_0e^{i(k-n)\omega_0t}dt=\begin{cases}
+T,&k=n\\
+0,&k\neq n\end{cases}
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+We had
+\begin{equation*}
+\int^T_0x(t)e^{-in\omega_0t}dt=\sum^{+\infty}_{k=-\infty}a_k\left[\int^T_0e^{i(k-n)\omega_0t}dt\right]
+\end{equation*}
+and 
+\begin{equation*}
+\int^T_0e^{i(k-n)\omega_0t}dt=\begin{cases}
+T,&k=n\\
+0,&k\neq n\end{cases}
+\end{equation*}
+See that the first equation reduces to
+\begin{equation*}
+\int^T_0x(t)e^{-in\omega_0t}dt=a_nT
+\end{equation*}
+and so we have an equation for determining the coefficients as
+\begin{equation*}
+a_n=\frac{1}{T}\int^T_0x(t)e^{-in\omega_0t}dt
+\end{equation*}
 
 
 

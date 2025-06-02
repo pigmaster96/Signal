@@ -25,5 +25,6 @@
 \contentsline {section}{\numberline {3.1}The response of LTI systems to complex\\exponentials}{84}{}%
 \contentsline {section}{\numberline {3.2}Linear combinations of harmonically related complex exponentials}{87}{}%
 \contentsline {section}{\numberline {3.3}Fourier series representation of real periodic signals}{88}{}%
-\contentsline {chapter}{\numberline {A}Other proofs}{90}{}%
-\contentsline {section}{\numberline {A.1}Sum of geometric series}{90}{}%
+\contentsline {section}{\numberline {3.4}Determination of the fourier series\\representation of a continuous-time periodic signal}{90}{}%
+\contentsline {chapter}{\numberline {A}Other proofs}{92}{}%
+\contentsline {section}{\numberline {A.1}Sum of geometric series}{92}{}%
