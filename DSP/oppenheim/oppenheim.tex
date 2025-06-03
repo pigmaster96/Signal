@@ -2549,6 +2549,33 @@ and so we have an equation for determining the coefficients as
 \begin{equation*}
 a_n=\frac{1}{T}\int^T_0x(t)e^{-in\omega_0t}dt
 \end{equation*}
+Note that the only fact we used concerning the interval of integration was that we were integrating over an interval of length $T$, which is an integral number of periods of $\cos((k-n)\omega_0t)$ and
+$\sin((k-n)\omega_0t)$. See that we would obtain the same result if we integrate over \textit{any} interval of length $T$; that is, if denoted by $\int_T$, we have
+\begin{equation*}
+\int_Te^{i(k-n)\omega_0t}dt=\begin{cases}
+T,&k=n\\
+0,&k\neq n\end{cases}
+\end{equation*}
+and consequently
+\begin{equation*}
+a_n=\frac{1}{T}\int_Tx(t)e^{-in\omega_0t}dt
+\end{equation*}
+\textbf{Summary}\\
+To summarise, if $x(t)$ has a fourier series representation
+\begin{equation*}
+x(t)=\sum^{+\infty}_{k=-\infty}a_ke^{ik\omega_0t}=\sum^{+\infty}_{k=-\infty}a_ke^{ik(2\pi/T)t}
+\end{equation*}
+then the coefficients are given by
+\begin{equation*}
+a_k=\frac{1}{T}\int_Tx(t)e^{-ik\omega_0t}dt=\frac{1}{T}\int_Tx(t)e^{-ik(2\pi/T)t}dt
+\end{equation*}
+Here we have written equivalent expressions for the fourier series in terms of the fundamental frequency $\omega_0$ and the fundamental period $T$. The first equation is referred to as the 
+\textit{synthesis} equation and the second the \textit{analysis} equation. The set of coefficients
+$\{a_k\}$ are often called the \textit{fourier series coefficients} or \textit{spectral coefficients} of $x(t)$, measuring the portion of the signal $x(t)$ that is at each harmonic of the fundamental
+component.
+\newpage
+
+\section{}
 
 
 
