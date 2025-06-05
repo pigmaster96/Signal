@@ -2663,7 +2663,31 @@ of the signal on either side of the discontinuity.\\
 In this case the difference between the original signal and its fourier series representation contains
 no energy, and consequently the two can be thought of as being the same for all practical 
 purposes. Specifically, since the signals differ only at isolated points, the integrals of both signals over any interval \textit{are} identical. For this reason, the two signals behave identically under
-convolution and are consequently identical in the context of LTI system analysis.
+convolution and are consequently identical in the context of LTI system analysis.\\
+\vspace{1mm}\\
+Consider the example of the square wave, where the partial sum $x_N(t)$ for different $N$ are superimposed onto the original square wave.
+\begin{center}
+\includegraphics[width=5cm]{a61}
+\includegraphics[width=5cm]{a62}
+\end{center}
+Since the square wave satisfies the Dirichlet conditions, the limit as $N\to\infty$ at of $x_N$ at the discontinuities should be the the average value of the discontinuity. See that this is indeed the
+case, where for any $N$, $x_N$ has exactly that value at the discontinuities. Furthermore, for any value of $t$, we are gauranteed that
+\begin{equation*}
+\lim_{N\to\infty}x_N(t)=x(t)
+\end{equation*}
+However notice the behaviour of the partial sum in the vicinity of the discontinuity exhibits `ripples' that don't appear to decrease with increasing $N$. One must be careful to interpret this correctly; 
+for any \textit{fixed} $t$, the partial sums will converge to the correct value, and at the discontinuity they converge to half the sum of the values of the signal on either side of the discontinuity. 
+However, the closer $t$ is chosen to the point of discontinuity, the larger $N$ must be in order to reduce the error below a specified amount; as $N$ increases, the ripples must in the partal sums
+become compressed toward the discontinuity, but for \textit{any} finite value of of $N$, the peak amplitude of the ripples remains constant.\\
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+This behaviour is known as the \textit{Gibbs phenomenon}; a \textit{truncated} fourier series approximation $x_N(t)$ of a discontinuous signal $x(t)$ will in general exhibit high-frequency ripples and 
+overshoot $x(t)$ near the discontinuities. If such an approximation is used in practice, a large enough value of $N$ should be chosen so as to gaurantee that the total energy in these ripples is 
+insignificant. 
+\newpage
+
+\section{Properties of continuous-time fourier series}
+
 
 
 

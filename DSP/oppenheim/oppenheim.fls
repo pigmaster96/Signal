@@ -556,6 +556,14 @@ INPUT ./images//a60.png
 INPUT ./images//a60.png
 INPUT ./images//a60.png
 INPUT ./images//a60.png
+INPUT ./images//a61.png
+INPUT ./images//a61.png
+INPUT ./images//a61.png
+INPUT ./images//a61.png
+INPUT ./images//a62.png
+INPUT ./images//a62.png
+INPUT ./images//a62.png
+INPUT ./images//a62.png
 INPUT oppenheim.aux
 INPUT /usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
