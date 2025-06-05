@@ -2687,7 +2687,87 @@ insignificant.
 \newpage
 
 \section{Properties of continuous-time fourier series}
-
+We will find it convenient to use a shorthand notation to indicate the relationship between a periodic signal and its fourier series coefficients. Specifically,
+suppose that $x(t)$ is a periodic signal with period $T$ and fundamental frequency $\omega_0=2\pi/T$. Then if the fourier series coefficients of $x(t)$ are denoted by $a_k$, we will use the notation
+\begin{equation*}
+x(t)\xleftrightarrow[]{\text{FS}}a_k
+\end{equation*}
+To signify a pairing of a periodic signal with its fourier series coefficients.\\
+\vspace{1mm}\\
+\noindent\textbf{Linearity}\\
+Letting $x(t)$ and $y(t)$ denote two periodic signals of period $T$ with fourier series coefficients denoted by $a_k$ and $b_k$ respectively:
+\begin{align*}
+x(t)\xleftrightarrow[]{\text{FS}}a_k\\
+y(t)\xleftrightarrow[]{\text{FS}}b_k
+\end{align*}
+Since $x(t)$ and $y(t)$ have the same period $T$, any linear combination of the signals will also be periodic with period $T$. Further, see that the fourier series coefficients $c_k$ of the linear
+combination of $x(t)$ and $y(t)$, $z(t)=Ax(t)+By(t)$, are given by the same linear combination 
+of the fourier series coefficients for $x(t)$ and $y(t)$:
+\begin{equation*}
+z(t)=Ax(t)+By(t)\xleftrightarrow[]{\text{FS}}c_k=Aa_k+Bb_k
+\end{equation*}
+The proof of this follows directly from application of the fourier series coefficient formula. Note that this linearity property is easily extended to a linear combination of an arbitrary number
+of signals with period $T$.\\
+(next page)\newpage
+\noindent\textbf{Time shifting}\\
+When a time shift is applied to a periodic signal $x(t)$, the period $T$ of the signal is preserved. See that the fourier series coefficients $B_k$ of the resulting signal $y(t)=x(t-t_0)$ may be 
+expressed as
+\begin{equation*}
+b_k=\frac{1}{T}\int_Tx(t-t_0)e^{-ik\omega_0t}dt
+\end{equation*}
+Letting $\tau=t-t_0$ in the integral, and noting that the new variable $\tau$ will also range over an interval of duration $T$, we obtain
+\begin{align*}
+\frac{1}{T}\int_Tx(\tau)e^{-ik\omega_0(\tau+t_0)}d\tau&=
+e^{-ik\omega_0t_0}\frac{1}{T}\int_Tx(\tau)e^{-ik\omega_0\tau}d\tau\\
+=e^{-ik\omega_0t_0}a_k&=e^{-ik(2\pi/T)t_0}a_k
+\end{align*}
+where $a_k$ is the $k$th fourier series coefficient of $x(t)$. That is, if
+\begin{equation*}
+x(t)\xleftrightarrow[]{\text{FS}}a_k
+\end{equation*}
+then
+\begin{equation*}
+x(t-t_0)\xleftrightarrow[]{\text{FS}}e^{-ik\omega_0t_0}a_k=e^{-ik(2\pi/T)t_0}a_k
+\end{equation*}
+See that time shifting a periodic signal doesn't alter the \textit{magnitudes} of its fourier series coefficients, as $|b_k|=|a_k|$.\\
+\vspace{1mm}\\
+\textbf{Time Reversal}\\
+The period $T$ of a periodic $x(t)$ also remains unchanged when the signal undergoes a time reversal. To determine the fourier series of $y(t)=x(-t)$, consider the effect of the time reversal
+on the synthesis equation
+\begin{equation*}
+x(-t)=\sum^\infty_{k=-\infty}a_ke^{-ik2\pi t/T}
+\end{equation*}
+Making the substitution $k=-m$, we obtain
+\begin{equation*}
+y(t)=x(-t)=\sum^\infty_{m=-\infty}a_{-m}e^{im2\pi t/T}
+\end{equation*}
+we observe that the right-hand side of this equation has the form of a fourier series synthesis equation, and therefore that the fourier series coefficients $b_k$ are
+\begin{equation*}
+b_k\xleftrightarrow[]{\text{FS}}a_{-k}
+\end{equation*}
+that is, if 
+\begin{equation*}
+x(t)\xleftrightarrow[]{\text{FS}}a_k
+\end{equation*}
+then
+\begin{equation*}
+x(-t)=y(t)\xleftrightarrow[]{\text{FS}}b_k=a_{-k}
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+we had
+\begin{equation*}
+x(-t)=y(t)\xleftrightarrow[]{\text{FS}}b_k=a_{-k}
+\end{equation*}
+In other words, time reversal applied to a continuous-time signal results in a time reversal of the corresponding sequence of fourier series coefficients.\\
+\vspace{1mm}\\
+An interesting consequence of this is that
+if $x(t)$ is even, meaning $x(-t)=x(t)$, then its fourier series coefficients are also even, so
+$a_{-k}=a_k$. Similarly, if $x(t)$ is odd, meaning $x(-t)=-x(t)$, then its fourier series coefficients are also odd, so $a_{-k}=-a_k$.\\
+\vspace{1mm}\\
+\textbf{Time Scaling}\\
+Time scaling, in general, changes the period of the underlying signal.
+Specifically,
 
 
 
