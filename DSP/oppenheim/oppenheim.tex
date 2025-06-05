@@ -2767,8 +2767,15 @@ $a_{-k}=a_k$. Similarly, if $x(t)$ is odd, meaning $x(-t)=-x(t)$, then its fouri
 \vspace{1mm}\\
 \textbf{Time Scaling}\\
 Time scaling, in general, changes the period of the underlying signal.
-Specifically,
-
+Specifically, if $x(t)$ is periodic with period $T$ and fundamental frequency $\omega_0=2\pi/T$, then
+$x(\alpha t)$, where $\alpha$ is a positive real number, is periodic with period $T/\alpha$ and fundamental frequency $\alpha\omega_0$.\\
+\vspace{1mm}\\
+Since the time-scaling operation applies directly to each of he harmonic components of $x(t)$, we can conclude that the fourier coefficients remain the same, and so
+\begin{equation*}
+x(\alpha t)=\sum^{+\infty}_{k=-\infty}a_ke^{ik(\alpha\omega_0)t}
+\end{equation*}
+is the fourier series representation $x(\alpha t)$. Note that although the fourier coefficients have not changed, the fourier series representation \textit{has changed} because of the change
+in fundamental frequency.
 
 
 
