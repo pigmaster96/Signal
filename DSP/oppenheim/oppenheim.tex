@@ -2686,7 +2686,7 @@ overshoot $x(t)$ near the discontinuities. If such an approximation is used in p
 insignificant. 
 \newpage
 
-\section{Properties of continuous-time fourier series}
+\section{Properties of continuous-time fourier series 1}
 We will find it convenient to use a shorthand notation to indicate the relationship between a periodic signal and its fourier series coefficients. Specifically,
 suppose that $x(t)$ is a periodic signal with period $T$ and fundamental frequency $\omega_0=2\pi/T$. Then if the fourier series coefficients of $x(t)$ are denoted by $a_k$, we will use the notation
 \begin{equation*}
@@ -2776,6 +2776,81 @@ x(\alpha t)=\sum^{+\infty}_{k=-\infty}a_ke^{ik(\alpha\omega_0)t}
 \end{equation*}
 is the fourier series representation $x(\alpha t)$. Note that although the fourier coefficients have not changed, the fourier series representation \textit{has changed} because of the change
 in fundamental frequency.
+\newpage
+
+\section{Properties of continuous-time fourier series 2}
+\textbf{Multiplication}\\
+Supposing that $x(t)$ and $y(t)$ are both periodic with period $T$ and that 
+\begin{align*}
+x(t)\xleftrightarrow[]{\text{FS}}a_k\\
+y(t)\xleftrightarrow[]{\text{FS}}b_k
+\end{align*}
+Since the product $x(t)y(t)$ is also periodic with period $T$, we can expand it in a fourier series with fourier coefficients expressed in terms of those of $x(t)$ and $y(t)$. The result is
+\begin{equation*}
+x(t)y(t)\xleftrightarrow[]{\text{FS}}h_k=\sum^\infty_{n=-\infty}a_nb_{k-n}
+\end{equation*}
+We can show this. See that $x(t)(y(t)$ is given by
+\begin{equation*}
+x(t)y(t)=\sum^\infty_{n=-\infty}\sum^\infty_{l=-\infty}a_ne^{in\omega_0t}b_le^{il\omega_0t}
+=\sum_n\sum_la_nb_le^{i(n+l)\omega_0t}
+\end{equation*}
+see that the $k$th fourier coefficient of the product is given by
+\begin{align*}
+&\frac{1}{T}\int_T\sum_n\sum_la_nb_le^{i(n+l)\omega_0t}e^{-ik\omega_0t}dt\\
+=&\frac{1}{T}\sum_n\sum_la_nb_l\int_Te^{i(n+l-k)\omega_0t}dt
+\end{align*}
+See that the integral part of this equation, over the range of a period, is easily solved as
+\begin{equation*}
+\int_Te^{i(n+l-k)\omega_0t}dt=\begin{cases}
+T,&\text{if }n+l-k=0\\
+0,&\text{otherwise}\end{cases}
+\end{equation*}
+and so the expression for the $k$th fourier coefficient can be rewritten as
+\begin{align*}
+&\frac{1}{T}\sum_n\sum_la_nb_l(T\delta(n+l-k))\\
+=&\sum_n\sum_la_nb_l\delta(n+l-k)
+\end{align*}
+Consider fixing $n$, and see that for fixed $n$ and $k$, there is only one $l$ in the second summation that would yield a nonzero term. (only one specific value of $l$, $l=k-n$, would make the delta
+function argument zero and yield a nonzero term) In that sense, we can simplify the expression to only when the delta function is nonzero (so for any given $n$, $l$ can just be replaced by
+$k-n$), giving us the $k$th term as
+\begin{equation*}
+\sum^\infty_{n=-\infty}a_nb_{k-n}
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Conjugation and Conjugate Symmetry}\\
+Taking the complex conjugate of a periodic signal $x(t)$ has the effect of complex conjugation and time reversal on the corresponding fourier series coefficients. That is, if
+\begin{equation*}
+x(t)\xleftrightarrow[]{\text{FS}}a_k
+\end{equation*}
+then
+\begin{equation*}
+x^*(t)\xleftrightarrow[]{\text{FS}}a^*_{-k}
+\end{equation*}
+To show this, see that if we have $x(t)$
+\begin{equation*}
+x(t)=\sum^\infty_{k=-\infty}a_ke^{ik\omega_0t}
+\end{equation*}
+Taking the complex conjugate on both sides we have
+\begin{equation*}
+x^*(t)=\sum^\infty_{k=-\infty}a^*_ke^{-ik\omega_0t}
+\end{equation*}
+(we can show that $\left((a+bi)e^{i\omega_0t}\right)^*=(a+bi)^*e^{-i\omega_0t}$ by just working the formulas out) Substituting $k$ for $-k$, we then have
+\begin{equation*}
+x^*(t)=\sum^\infty_{k=-\infty}a^*_{-k}e^{ik\omega_0t}
+\end{equation*}
+which proves the property.\\
+\vspace{1mm}\\
+Recall that an interesting consequence of this property may be derived for real $x(t)$, since that implies $x(t)=x^*(t)$; the fourier series coefficients will be \textit{conjugate symmetric}:
+\begin{equation*}
+a_{-k}=a^*_k
+\end{equation*}
+which also implies
+\begin{equation*}
+a_{k}=a^*_{-k}
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Parseval's Relation for Continuous-time Periodic Signals}\\
+Parseval's relation for continuous-time periodic signals is
 
 
 
