@@ -29,5 +29,7 @@
 \contentsline {section}{\numberline {3.5}Convergence of fourier series}{92}{}%
 \contentsline {section}{\numberline {3.6}Properties of continuous-time fourier series 1}{97}{}%
 \contentsline {section}{\numberline {3.7}Properties of continuous-time fourier series 2}{100}{}%
-\contentsline {chapter}{\numberline {A}Other proofs}{103}{}%
-\contentsline {section}{\numberline {A.1}Sum of geometric series}{103}{}%
+\contentsline {section}{\numberline {3.8}Summary of properties}{105}{}%
+\contentsline {section}{\numberline {3.9}}{106}{}%
+\contentsline {chapter}{\numberline {A}Other proofs}{107}{}%
+\contentsline {section}{\numberline {A.1}Sum of geometric series}{107}{}%

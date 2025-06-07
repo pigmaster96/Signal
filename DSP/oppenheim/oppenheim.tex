@@ -2851,10 +2851,102 @@ a_{k}=a^*_{-k}
 (next page)\newpage
 \noindent\textbf{Parseval's Relation for Continuous-time Periodic Signals}\\
 Parseval's relation for continuous-time periodic signals is
+\begin{equation*}
+\frac{1}{T}\int_T|x(t)|^2dt=\sum^{+\infty}_{k=-\infty}|a_k|^2
+\end{equation*}
+where the $a_k$ are the fourier series coefficients of $x(t)$ and $T$ is the period of the signal.\\
+\vspace{1mm}\\
+\textbf{Intuition}\\
+This can be proved by finding the fourier coefficients of the product $x(t)x^*(t)=|x(t)|^2$, should we have the fourier series representations of the following as
+\begin{align*}
+x(t)&=\sum^\infty_{l=-\infty}a_le^{il\omega_0t}dt\\
+x^*(t)&=\sum^\infty_{n=-\infty}a^*_ne^{-in\omega_0t}dt
+\end{align*}
+we have their product as
+\begin{equation*}
+x(t)x^*(t)=\sum_l\sum_na_la^*_ne^{i(l-n)\omega_0t}
+\end{equation*}
+We obtain the fourier coefficients of this product $c_k$ in a similar manner to how we derived the multiplication property
+\begin{align*}
+c_k&=\frac{1}{T}\int_T\sum_l\sum_na_la^*_ne^{i(l-n)\omega_0t}e^{-ik\omega_0t}dt\\
+&=\frac{1}{T}\sum_l\sum_na_la^*_n\underbrace{\int_Te^{i(l-n-k)\omega_0t}dt}_{=\begin{cases}
+T,&l-n-k=0\\
+0,&\text{otherwise}\end{cases}}
+\end{align*}
+so this simplifies to
+\begin{equation*}
+\sum_l\sum_na_la^*_n\delta(l-n-k)=\sum_na_{n+k}a^*_n
+\end{equation*}
+so we have
+\begin{equation*}
+c_k=\frac{1}{T}\int_T|x(t)|^2e^{-ik\omega_0t}dt=\sum_na_{n+k}a^*_n
+\end{equation*}
+and setting $k=0$ we have
+\begin{equation*}
+\frac{1}{T}\int_T|x(t)|^2dt=\sum_na_{n}a^*_n=\sum_n|a_{n}|^2
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+We have parseval's relation for continuous-time periodoc signals as
+\begin{equation*}
+\frac{1}{T}\int_T|x(t)|^2dt=\sum^{+\infty}_{k=-\infty}|a_k|^2
+\end{equation*}
+Note that the left hand side of the equation is the average power (energy per unit time) in one period of the periodic signal $x(t)$. Also,
+\begin{equation*}
+\frac{1}{T}\int_T\left|a_ke^{ik\omega_0t}\right|^2dt=\frac{1}{T}\int_T|a_k|^2dt=|a_k|^2
+\end{equation*}
+see that $|a_k|^2$ is the average power of the $k$th harmonic component of $x(t)$. Thus, what Parseval's relation states is that the total average power in a periodic signal equals the sum
+of the average powers in all of its harmonic components.\\
+\vspace{1mm}\\
+\textbf{Periodic convolution}\\
+We can show that for
+\begin{align*}
+x(t)=\sum^{+\infty}_{n=-\infty}a_ne^{in\omega_0t},&\quad x(t)\xleftrightarrow[]{\text{FS}}a_k\\
+y(t)=\sum^{+\infty}_{l=-\infty}b_le^{il\omega_0t},&\quad y(t)\xleftrightarrow[]{\text{FS}}b_k
+\end{align*}
+that
+\begin{equation*}
+z(t)=\int_Tx(\tau)y(t-\tau)d\tau\xleftrightarrow[]{\text{FS}}Ta_kb_k
+\end{equation*}
+To show this, see that
+\begin{align*}
+\int_Tx(\tau)&y(t-\tau)d\tau=\int_T\sum_{n}a_ne^{in\omega_0\tau}
+\sum_{l}b_le^{il\omega_0(t-\tau)}d\tau\\
+&=\int_T\sum_n\sum_la_nb_le^{i(n-l)\omega_0\tau}e^{il\omega_0t}d\tau\\
+&=\sum_n\sum_la_nb_le^{il\omega_0t}\int_Te^{i(n-l)\omega_0\tau}d\tau\\
+&=\sum_n\sum_la_nb_le^{il\omega_0t}(T\delta(n-l))\\
+&=\sum_nTa_nb_ne^{in\omega_0t}
+\end{align*}
+which proves our expression.\\
+(next page)\newpage
+\noindent\textbf{Frequency shifting}\\
+We can show that for
+\begin{equation*}
+x(t)=\sum^{+\infty}_{n=-\infty}a_ne^{in\omega_0t},\quad x(t)\xleftrightarrow[]{\text{fs}}a_k
+\end{equation*}
+we have
+\begin{equation*}
+x(t)e^{iM\omega_0t}\xleftrightarrow[]{\text{fs}}a_{k-M}
+\end{equation*}
+Showing this is simple:
+\begin{align*}
+x(t)e^{iM\omega_0t}&=\sum^{+\infty}_{n=-\infty}a_ne^{in\omega_0t}e^{iM\omega_0t}\\
+&=\sum^{+\infty}_{n=-\infty}a_ne^{i(n+M)\omega_0t}
+\end{align*}
+substituting $k=n+M$ gives us
+\begin{equation*}
+\sum^{+\infty}_{k=-\infty}a_{k-M}e^{ik\omega_0t}
+\end{equation*}
+which proves our expression.
+\newpage
 
+\section{Summary of properties}
+\begin{center}
+\includegraphics[width=10cm]{a63}
+\end{center}
+\newpage
 
-
-
+\section{}
 
 
 
