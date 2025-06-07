@@ -2940,13 +2940,50 @@ substituting $k=n+M$ gives us
 which proves our expression.
 \newpage
 
-\section{Summary of properties}
+\section{Summary of properties (continuous)}
 \begin{center}
 \includegraphics[width=10cm]{a63}
 \end{center}
 \newpage
 
-\section{}
+\section{Linear combinations of harmonically related complex exponentials (discrete)}
+As defined before, a discrete-time signal $x[n]$ is periodic with period $N$ if
+\begin{equation*}
+x[n]=x[n+N]
+\end{equation*}
+Where the fundamental period is the smallest positive integer $N$ for which the equation holds, and $\omega_0=2\pi/N$ is the fundamental frequency. The set of all discrete-time complex exponential 
+signals that are periodic with period $N$ is given by
+\begin{equation*}
+\phi_k[n]=e^{ik\omega_0n}=e^{ik(2\pi/N)n},\quad k=0,\pm1,\pm2,\ldots
+\end{equation*}
+All of these signals have fundamental frequencies that are multiples of $2\pi/N$ and thus are harmonically related.\\
+\vspace{1mm}\\
+However, recall that there are only $N$ distinct signals in the $\phi$, since discrete-time complex exponentials which differ in frequency by a multiple of $2\pi$ are identical. For instance
+$\phi_0[n]=\phi_N[n]$ and $\phi_1[n]=\phi_{N+1}[n]$; more generally
+\begin{equation*}
+\phi_k[n]=\phi_{k+rN}[n]
+\end{equation*}
+That is, when $k$ is changed by any integer multiple of $N$, an identical sequence is generated. This differs from the situation in continuous time in which the higher harmonics are all different from
+one another.\\
+\vspace{1mm}\\
+We want to consider the representation of more general periodic sequences in terms of linear combinations of the sequences $\phi_k[n]$. Such a linear combination has the form
+\begin{equation*}
+x[n]=\sum_ka_k\phi_k[n]=\sum_ka_ke^{ik\omega_0n}=\sum_ka_ke^{ik(2\pi/N)n}
+\end{equation*}
+See that since the harmonics $\phi_k[n]$ are distinct only over a range of $N$ sucessive values of $k$, the summation need only include terms over this range. Thus $k$ varies over a range of $N$ 
+successive integers, beginning with any $k$. This is indicated by expressing the limits of the summation as $k=\langle N\rangle$. That is
+\begin{equation*}
+x[n]=\sum_{k=\langle N\rangle}a_k\phi_k[n]=\sum_{k=\langle N\rangle}a_ke^{ik\omega_0n}=\sum_{k=\langle N\rangle}a_ke^{ik(2\pi/N)n}
+\end{equation*}
+(for example, $k$ could range from $0,1,\ldots,N-1$, or $3,4,\ldots,N+2$---as long as there are $N$ successive integers for $N$ distinct harmonics---this is sufficient to incorporate all the harmonics
+into the summation.) This equation is referred to as the \textit{discrete-time Fourier series} and the coefficients $a_k$ as the \textit{Fourier series coefficients}.
+\newpage
+
+\section{Determination of the fourier series\\representation of a discrete-time periodic signal}
+
+
+
+
 
 
 

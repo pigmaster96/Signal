@@ -29,7 +29,8 @@
 \contentsline {section}{\numberline {3.5}Convergence of fourier series}{92}{}%
 \contentsline {section}{\numberline {3.6}Properties of continuous-time fourier series 1}{97}{}%
 \contentsline {section}{\numberline {3.7}Properties of continuous-time fourier series 2}{100}{}%
-\contentsline {section}{\numberline {3.8}Summary of properties}{105}{}%
-\contentsline {section}{\numberline {3.9}}{106}{}%
-\contentsline {chapter}{\numberline {A}Other proofs}{107}{}%
-\contentsline {section}{\numberline {A.1}Sum of geometric series}{107}{}%
+\contentsline {section}{\numberline {3.8}Summary of properties (continuous)}{105}{}%
+\contentsline {section}{\numberline {3.9}Linear combinations of harmonically related complex exponentials (discrete)}{106}{}%
+\contentsline {section}{\numberline {3.10}Determination of the fourier series\\representation of a discrete-time periodic signal}{107}{}%
+\contentsline {chapter}{\numberline {A}Other proofs}{108}{}%
+\contentsline {section}{\numberline {A.1}Sum of geometric series}{108}{}%
