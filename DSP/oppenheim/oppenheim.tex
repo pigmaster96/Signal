@@ -2984,7 +2984,68 @@ Suppose that we are given a sequence $x[n]$ that is periodic with fundamental pe
 \begin{equation*}
 x[n]=\sum_{k=\langle N\rangle}a_k\phi_k[n]=\sum_{k=\langle N\rangle}a_ke^{ik\omega_0n}=\sum_{k=\langle N\rangle}a_ke^{ik(2\pi/N)n}
 \end{equation*}
-Another way of solving for the fourier coefficients may be by finding a solution fo a set of linear equations
+By following steps parallel to those used in continuous time, it is possible to obtain a closed-form expression for the coefficients $a_k$ in terms of the values of the sequence $x[n]$. First see that
+\begin{equation*}
+\sum_{n=\langle N\rangle}e^{ik(2\pi/N)n}=\begin{cases}
+N,\quad k=0,\pm N,\pm 2N,\ldots\\
+0,\quad \text{otherwise}
+\end{cases}
+\end{equation*}
+Which states that the sum over one period of the values of a periodic constant exponential is zero, unless that complex exponential is a constant.\\
+\vspace{1mm}\\
+Consider the fourier series representation, multiplying both sides by $e^{-ir(2\pi/N)n}$ and summing over $N$ terms, we obtain 
+\begin{equation*}
+\sum_{n=\langle N\rangle}x[n]e^{-ir(2\pi/N)n}=\sum_{n=\langle N\rangle}\sum_{k=\langle N\rangle}a_ke^{ik(2\pi/N)n}e^{-ir(2\pi/N)n}
+\end{equation*}
+which simplifies to
+\begin{equation*}
+\sum_{n=\langle N\rangle}x[n]e^{-ir(2\pi/N)n}=\sum_{k=\langle N\rangle}a_k\sum_{n=\langle N\rangle}e^{i(k-r)(2\pi/N)n}
+\end{equation*}
+Consider the innermost sum over $n$ on the right-hand side. It is zero unless $k-r$ is zero or an integer multiple of $N$. Therefore, if we choose values for $r$ over the same range as that over which
+$k$ varies in the outer summation, the innermost sum on the right-hand side equals $N$ if $k=r$ and 0 for $k\neq r$. See that this reduces to
+\begin{equation*}
+\sum_{n=\langle N\rangle}x[n]e^{-ir(2\pi/N)n}=a_rN
+\end{equation*}
+and so
+\begin{equation*}
+a_r=\frac{1}{N}\sum_{n=\langle N\rangle}x[n]e^{-ir(2\pi/N)n}
+\end{equation*}
+This provides a closed-from expression for the coefficients.\\
+(next page)\newpage
+\noindent\textbf{Summary}\\
+To summarise,
+\begin{align*}
+x[n]=\sum_{k=\langle N\rangle}a_ke^{ik\omega_0n}&=\sum_{k=\langle N\rangle}a_ke^{ik(2\pi/N)n}\\
+a_k=\frac{1}{N}\sum_{n=\langle N\rangle}x[n]e^{-ik\omega_0n}&=
+\frac{1}{N}\sum_{n=\langle N\rangle}x[n]e^{-ik(2\pi/N)n}
+\end{align*}
+Tne first equation is the \textit{synthesis} equation and second the \textit{analysis} equation. As in continuous time, the discrete-time fourier coefficients $a_k$ are often referred to as
+the \textit{spectral coefficients} of $x[n]$, specifying a decomposition of $x[n]$ into a sum of $N$ harmonically related complex exponentials.\\
+\vspace{1mm}\\
+\textbf{Fourier coefficients repeat periodically}\\
+See that if we take $k$ in the range from 0 to $N-1$ we have
+\begin{equation*}
+x[n]=a_0\phi_0[n]+a_1\phi_1[n]+\ldots+a_{N-1}\phi_{N-1}[n]
+\end{equation*}
+Similarly, if $k$ ranges from 1 to $N$, we obtain
+\begin{equation*}
+x[n]=a_1\phi_1[n]+a_{2}\phi_{2}[n]+\ldots+a_{N}\phi_{N}[n]
+\end{equation*}
+We know that $\phi_0[n]=\phi_N[n]$, and therefore we can conclude that $a_0=a_N$. Similarly. by letting $k$ range over any set of $N$ consecutive integers, we can conclude that
+\begin{equation*}
+a_k=a_{k+N}
+\end{equation*}
+If we consider more than $N$ sequential values of $k$, the values $a_k$ repeat periodically with period $N$. It is important to interpret this carefully; since there are only $N$ distinct complex
+exponentials that are periodic with period $N$, the discrete-time fourier series representation is a finite series with $N$ terms.\\
+\vspace{1mm}\\
+If we fix the $N$ consecutive values of $k$ over which we define the fourier series, we will obtain a set of exactly $N$ fourier coefficients. However, at times one might find it convenient to use
+different sets of $N$ values of $k$; as such it is sometimes convenient to think of $a_k$ as a sequence defined for all $k$, 
+\textit{but where only $N$ successive elements in the sequence will be used in the 
+fourier series representation}.\\
+(next page)
+\newpage
+\noindent\textbf{An alternate method}\\
+Another way of solving for the fourier coefficients may be by finding a solution for a set of linear equations
 
 
 
