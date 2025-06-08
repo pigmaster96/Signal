@@ -2980,8 +2980,11 @@ into the summation.) This equation is referred to as the \textit{discrete-time F
 \newpage
 
 \section{Determination of the fourier series\\representation of a discrete-time periodic signal}
-
-
+Suppose that we are given a sequence $x[n]$ that is periodic with fundamental period $N$. We want to determine the values of the fourier coefficients in the discrete-time fourier series representation
+\begin{equation*}
+x[n]=\sum_{k=\langle N\rangle}a_k\phi_k[n]=\sum_{k=\langle N\rangle}a_ke^{ik\omega_0n}=\sum_{k=\langle N\rangle}a_ke^{ik(2\pi/N)n}
+\end{equation*}
+Another way of solving for the fourier coefficients may be by finding a solution fo a set of linear equations
 
 
 
