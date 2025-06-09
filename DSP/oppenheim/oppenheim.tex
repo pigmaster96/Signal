@@ -3045,9 +3045,61 @@ fourier series representation}.\\
 (next page)
 \newpage
 \noindent\textbf{An alternate method}\\
-Another way of solving for the fourier coefficients may be by finding a solution for a set of linear equations
+Another way of solving for the fourier coefficients may be by finding a solution for a set of linear equations. Specifically, if we evaluate the fourier series representation
+\begin{equation*}
+x(t)=\sum_{k=\langle N\rangle}a_ke^{ik(2\pi/N)n}
+\end{equation*}
+for $N$ successive values of $n$ corresponding to one period of $x[n]$, we obtain
+\begin{align*}
+x[0]=&\sum_{k=\langle N\rangle}a_k\\
+x[1]=&\sum_{k=\langle N\rangle}a_ke^{ik(2\pi/N)}\\
+\vdots&\\
+x[N-1]=&\sum_{k=\langle N\rangle}a_ke^{ik(2\pi/N)(N-1)}
+\end{align*}
+Then we have a set of $N$ lienar equations for $N$ unknown coefficients $a_k$ as $k$ ranges over a set of $N$ successive integers. It can be shown that this set of equations
+is linearly independent and consequently can be solved to obtain the coefficients $a_k$ in terms of the given values of $x[n]$.
+\newpage
 
+\section{Convergence in discrete-time\\representation}
+In discussing the convergence of the continuous-time fourier series before, we considere the example of a symmetric square wave and observed how the finite sum converged to the square wave as the number
+of terms approached infinity.\\
+\vspace{1mm}\\
+In particular, we observed the Gibbs phenomenon in the discontinuity, where as the number of terms increased, the ripples in the partial sum became compressed toward the discontinuity, with the peak
+amplitude of the rupples remaining constant independently of the number of terms in the partIal sum.\\
+\vspace{1mm}\\
+Let us consider the analagous sequence of partial sums for the discrete-time square wavel, where for convenience, we will assume has an odd period $N$; we have depicted the signals
+\begin{equation*}
+\hat{x}[n]=\sum^M_{k=-M}a_ke^{ik(2\pi/N)n}
+\end{equation*}
+for several values of $M$ (so partial sums):
+\begin{center}
+\includegraphics[width=10cm]{a64}
+\end{center}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+See as per the graphs on the previous page, there is in contrast to the continuous-time case, there are no convergence issues and there is no Gibbs phenomenon.\\
+\vspace{1mm}\\
+Fact is that there are no convergence issues with the discrete-time fourier series in general. This stems from the fact that any discrete-time periodic sequence $x[n]$ is completely specified
+by a \textit{finite} number of parameters, namely, the values of the sequence over one period.\\
+\vspace{1mm}\\
+The fourier series analysis equation simply transforms this set of $N$ parameters into an equivalent set---the values of $N$ fourier coefficients---and the synthesis equation tells us how to recover the
+original sequence in terms of a \textit{finite} series.\\
+\vspace{1mm}\\
+If $N$ is odd and we take $M=(N-1)/2$ as per
+\begin{equation*}
+\hat{x}[n]=\sum^M_{k=-M}a_ke^{ik(2\pi/N)n}
+\end{equation*}
+the sum includes exactly $N$ terms and we will have $\hat{x}[n]=x[n]$. Similarly if $N$ is even and we let
+\begin{equation*}
+\hat{x}[n]=\sum^M_{k=-M+1}a_ke^{ik(2\pi/N)n}
+\end{equation*}
+then with $M=N/2$ this sum consists of $N$ terms and we can conclude that $\hat{x}[n]=x[n]$.\\
+\vspace{1mm}\\
+The main idea here is that a continuous-time periodic signal takes on a continuum of values over a single period, and thus an infinite number of fourier coefficients are required to represent it. As such
+\textit{none} of the finite partial continuous fourier series representations yield exactly $x(t)$, leading to convergence issues.
+\newpage
 
+\section{Properties of discrete-time fourier series}
 
 
 
