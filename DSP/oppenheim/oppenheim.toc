@@ -34,5 +34,6 @@
 \contentsline {section}{\numberline {3.10}Determination of the fourier series\\representation of a discrete-time periodic signal}{107}{}%
 \contentsline {section}{\numberline {3.11}Convergence in discrete-time\\representation}{110}{}%
 \contentsline {section}{\numberline {3.12}Properties of discrete-time fourier series}{112}{}%
-\contentsline {chapter}{\numberline {A}Other proofs}{114}{}%
-\contentsline {section}{\numberline {A.1}Sum of geometric series}{114}{}%
+\contentsline {section}{\numberline {3.13}Fourier series and LTI systems}{115}{}%
+\contentsline {chapter}{\numberline {A}Other proofs}{116}{}%
+\contentsline {section}{\numberline {A.1}Sum of geometric series}{116}{}%

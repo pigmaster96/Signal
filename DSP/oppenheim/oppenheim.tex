@@ -3146,7 +3146,60 @@ finally, by noting that both $a_k$ and $b_k$ are periodic with period $N$, we ha
 c_l=\sum_{k=\langle N\rangle}a_kb_{l-k}
 \end{equation*}
 \textbf{First Difference}\\
-The discrete time p
+The discrete time parallel of the differentiation property of the continuous case involved the use of the first-difference operation. defined as $x[n]-x[n-1]$. Where for
+\begin{equation*}
+x[n]\xleftrightarrow[]{\text{FS}}a_k
+\end{equation*}
+then
+\begin{equation*}
+x[n]-x[n-1]\xleftrightarrow[]{\text{FS}}(1-e^{-ik\omega_0})a_k
+\end{equation*}
+This can be easily derived by applying the time-shifting and linearity properties, which are proved in a manner analagous to their continuous-time counterparts.\\
+(next page)\newpage
+\noindent\textbf{Parseval's relation for Discrete-time periodic signals}\\
+Parseval's relation for discrete-time periodic signals is given by
+\begin{equation*}
+\frac{1}{N}\sum_{n=\langle N\rangle}|x[n]|^2=\sum_{k=\langle N\rangle}|a_k|^2
+\end{equation*}
+where the $a_k$ are the fourier series coefficients of $x[n]$ and $N$ is the period. As in the continuous-time case, this states that the average power in a periodic signal equals the sum of the average
+powers in all its harmonic components. In discrete time there are only $N$ distinct harmonic components, and since the $a_k$ are periodic with period $N$, the sum of the right-hand
+side can be taken over any $N$ consecutive values of $k$.\\
+\vspace{1mm}\\
+Showing this comes from finding the fourier coefficients of $x[n]x^*[n]=|x[n]|^2$. Using the analysis equation, the $k$th fourier coefficient $c_k$ is given by
+\begin{equation*}
+c_k=\frac{1}{N}\sum_{n=\langle N\rangle}x[n]x^*[n]e^{-ik\omega_0n}=
+\frac{1}{N}\sum_{n=\langle N\rangle}|x[n]|^2e^{-ik\omega_0n}
+\end{equation*}
+for $k=0$ we have
+\begin{equation*}
+=\frac{1}{N}\sum_{n=\langle N\rangle}|x[n]|^2
+\end{equation*}
+See that we have
+\begin{align*}
+x[n]&\xleftrightarrow[]{\text{FS}}a_k\\
+x^*[n]&\xleftrightarrow[]{\text{FS}}a^*_{-k}
+\end{align*}
+Now from the multiplication property, where
+\begin{equation*}
+x[n]y[n]\xleftrightarrow[]{\text{FS}}\sum_{l=\langle N\rangle}a_lb_{k-l}
+\end{equation*}
+we have
+\begin{equation*}
+x[n]x^*[n]\xleftrightarrow[]{\text{FS}}\sum_{l=\langle N\rangle}a_la^*_{l-k}
+\end{equation*}
+(think of the fourier coefficient of the conjugate signal that scaled the $k-l$th harmonic) where for
+$k=0$ we have
+\begin{equation*}
+x[n]x^*[n]\xleftrightarrow[]{\text{FS}}\sum_{l=\langle N\rangle}a_la^*_{l}=\sum_{k=\langle N\rangle}|a_k|^2
+\end{equation*}
+and so this proves the expression
+\begin{equation*}
+\frac{1}{N}\sum_{n=\langle N\rangle}|x[n]|^2
+=\sum_{k=\langle N\rangle}|a_k|^2
+\end{equation*}
+\newpage
+
+\section{Fourier series and LTI systems}
 
 
 
