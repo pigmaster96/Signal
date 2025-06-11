@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1749499227 "oppenheim.tex" "oppenheim.pdf" "oppenheim" 1749499228
+["pdflatex"] 1749613926 "oppenheim.tex" "oppenheim.pdf" "oppenheim" 1749613927
   "/etc/texmf/web2c/texmf.cnf" 1718868312 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -51,6 +51,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1248133631 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb" 1248133631 30457 bc0868ebece724ed7c3d37e3d9bff7bd ""
@@ -153,9 +154,9 @@
   "images//a7.png" 1748254981 21240 dbb5b84474fb1448477313ccfc03258e ""
   "images//a8.png" 1748254981 19571 50f05db36ae80e9d1b9ccc3ad9476033 ""
   "images//a9.png" 1748254981 7568 21bbfb32f3e8158c0e2282813ad2e2e4 ""
-  "oppenheim.aux" 1749499228 5486 605b96ff9137a9d3b627692f244afc8a "pdflatex"
-  "oppenheim.tex" 1749499224 150010 4b158902a890dfcc861676021c1cb9d8 ""
-  "oppenheim.toc" 1749499228 3590 6b28434dadf39a0d95ec13c78a8c09bb "pdflatex"
+  "oppenheim.aux" 1749613927 5486 870a85bb4afe1710dce31a770106fd9f "pdflatex"
+  "oppenheim.tex" 1749613926 152320 4a804bc012b1177ef483ae368596c1ce ""
+  "oppenheim.toc" 1749613927 3590 1696fe5435a2b097ab132ef30e701f50 "pdflatex"
   (generated)
   "oppenheim.aux"
   "oppenheim.log"

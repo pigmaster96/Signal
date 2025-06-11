@@ -3100,6 +3100,53 @@ The main idea here is that a continuous-time periodic signal takes on a continuu
 \newpage
 
 \section{Properties of discrete-time fourier series}
+Recall we had the synthesis and analysis equations of the discrete-time fourier series as
+\begin{align*}
+x[n]=\sum_{k=\langle N\rangle}a_ke^{ik\omega_0n}&=\sum_{k=\langle N\rangle}a_ke^{ik(2\pi/N)n}\\
+a_k=\frac{1}{N}\sum_{n=\langle N\rangle}x[n]e^{-ik\omega_0n}&=
+\frac{1}{N}\sum_{n=\langle N\rangle}x[n]e^{-ik(2\pi/N)n}
+\end{align*}
+The derivations of many properties are similar to those of the continuous-time counterpart. We use a shorthand notation to indicate the relationship between a periodic signal and its fourier
+series coefficients; specifically, if $x[n]$ is a periodic signal with period $N$ and fourier series coefficients denoted by $a_k$, we write
+\begin{equation*}
+x[n]\xleftrightarrow[]{\text{FS}}a_k
+\end{equation*}
+\textbf{Multiplication}\\
+The multiplication property differs slightly in this case. For 
+\begin{align*}
+x[n]\xleftrightarrow[]{\text{FS}}a_k\\
+y[n]\xleftrightarrow[]{\text{FS}}b_k
+\end{align*}
+both periodic with period $N$, the product $x[n]y[n]$ is also periodic with period $N$, with fourier coefficients $c_k$ given by
+\begin{equation*}
+x[n]y[n]\xleftrightarrow[]{\text{FS}}c_k=\sum_{l=\langle N\rangle}a_lb_{k-l}
+\end{equation*}
+which is analagous to the continuous time case except that the summation is now restricted to an interval of $N$ consecuitive samples. Due to the periodic nature of discrete-time fourier coefficients
+this can be taken over any set of $N$ consecutive values of $l$.\\
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+Showing this is fairly simple; see that (first considering an $N$ length interval from 0 to $N-1$)
+\begin{equation*}
+x[n]y[n]=\sum^{N-1}_{k=0}\sum^{N-1}_{l=0}a_kb_le^{i(k+l)\omega_0n}
+\end{equation*}
+substituting $l'=k+l$
+\begin{equation*}
+x[n]y[n]=\sum^{N-1}_{k=0}\sum^{k+N-1}_{l'=k}a_kb_{l'-k}e^{il'\omega_0n}
+\end{equation*}
+Since both $b_{l'-k}$ and $e^{il'\omega_0n}$ are periodic with period $N$ we can rewrite this as
+\begin{equation*}
+=\sum^{N-1}_{k=0}\sum^{N-1}_{l'=0}a_kb_{l'-k}e^{il'\omega_0n}=\sum^{N-1}_{l=0}\left[\sum^{N-1}_{k=0}a_kb_{l-k}\right]e^{il\omega_0n}
+\end{equation*}
+therefore
+\begin{equation*}
+c_l=\sum^{N-1}_{k=0}a_kb_{l-k}
+\end{equation*}
+finally, by noting that both $a_k$ and $b_k$ are periodic with period $N$, we have
+\begin{equation*}
+c_l=\sum_{k=\langle N\rangle}a_kb_{l-k}
+\end{equation*}
+\textbf{First Difference}\\
+The discrete time p
 
 
 
