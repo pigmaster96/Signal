@@ -37,6 +37,6 @@
 \contentsline {section}{\numberline {3.12}Properties of discrete-time fourier series}{113}{}%
 \contentsline {section}{\numberline {3.13}Summary of properties (discrete)}{116}{}%
 \contentsline {section}{\numberline {3.14}Fourier series and LTI systems}{117}{}%
-\contentsline {section}{\numberline {3.15}}{118}{}%
-\contentsline {chapter}{\numberline {A}Other proofs}{119}{}%
-\contentsline {section}{\numberline {A.1}Sum of geometric series}{119}{}%
+\contentsline {section}{\numberline {3.15}Frequency-selective filters}{119}{}%
+\contentsline {chapter}{\numberline {A}Other proofs}{120}{}%
+\contentsline {section}{\numberline {A.1}Sum of geometric series}{120}{}%

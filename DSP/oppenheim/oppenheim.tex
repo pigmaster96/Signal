@@ -3236,6 +3236,18 @@ H(z)=\sum^{+\infty}_{k=-\infty}h[k]z^{-k}
 \end{equation*}
 where $h[n]$ is the impulse response of the LTI system.\\
 \vspace{1mm}\\
+\textbf{Frequency response}\\
+When $s$ or $z$ are general complex numbers, $H(s)$ and $H(z)$ are referred to as the \textit{system functions} of the corresponding systems. The system function of the form $H(i\omega_0)$, viewed as a
+function of $\omega_0$, is referred to as the \textit{frequency response} of the system
+\begin{equation*}
+H(i\omega_0)=\int^{+\infty}_{-\infty}h(\tau)e^{-i\omega_0\tau}d\tau
+\end{equation*}
+Similarly in the discrete case, the system function $H(e^{i\omega_0})$ is also referred to as the frequency response of the system
+\begin{equation*}
+H(e^{i\omega_0})=\sum^{+\infty}_{k=-\infty}h[k]e^{-i\omega_0k}
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
 As a result of the superposition property of LTI systems, supposing a periodic input $x(t)$ given by
 \begin{equation*}
 x(t)=\sum^{+\infty}_{k=-\infty}a_ke^{ik\omega_0t}
@@ -3245,10 +3257,23 @@ is applied to an LTI system with impulse response $h(t)$, then since each comple
 y(t)=\sum^{+\infty}_{k=-\infty}a_kH(ik\omega_0)e^{ik\omega_0t}
 \end{equation*}
 Thus $y(t)$ is also periodic with the same fundamental frequency as $x(t)$. Furthermore, see that if $\{a_k\}$ is the set of fourier coefficients for the input $x(t)$, then $\{a_kH(ik\omega_0)\}$ is the
-set of coefficients for the output $y(t)$. All the LTI system does is modify each coefficient.
+set of coefficients for the output $y(t)$. All the LTI system does is modify each coefficient via multiplication with the frequency response.\\
+\vspace{1mm}\\
+Similarly in discrete time, for periodic input $x[n]$:
+\begin{equation*}
+x[n]=\sum_{k=\langle N\rangle}a_ke^{ik\omega_0 n}
+\end{equation*}
+to an LTI system with impulse response $h[n]$, then the output is
+\begin{equation*}
+y[n]=\sum_{k=\langle N\rangle}a_kH(e^{ik\omega_0})e^{ik\omega_0 n}
+\end{equation*}
+The $k$th fourier coefficient of $y[n]$ is the $k$th fourier coefficient of the input multiplied by the frequency response $H(e^{ik\omega_0})$ for that corresponding frequency.
 \newpage
 
-\section{}
+\section{Frequency-selective filters}
+
+
+
 
 
 
