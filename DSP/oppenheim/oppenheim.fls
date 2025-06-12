@@ -321,6 +321,10 @@ INPUT ./images//a2.png
 INPUT ./images//a2.png
 INPUT ./images//a2.png
 INPUT ./images//a2.png
+INPUT ./images//a66.png
+INPUT ./images//a66.png
+INPUT ./images//a66.png
+INPUT ./images//a66.png
 INPUT ./images//a3.png
 INPUT ./images//a3.png
 INPUT ./images//a3.png
@@ -572,6 +576,10 @@ INPUT ./images//a64.png
 INPUT ./images//a64.png
 INPUT ./images//a64.png
 INPUT ./images//a64.png
+INPUT ./images//a65.png
+INPUT ./images//a65.png
+INPUT ./images//a65.png
+INPUT ./images//a65.png
 INPUT oppenheim.aux
 INPUT /usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb

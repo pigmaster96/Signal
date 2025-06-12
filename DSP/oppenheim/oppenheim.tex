@@ -257,6 +257,23 @@ To summarize
 \end{center}
 \newpage
 
+\section{A note on Discrete-time complex\\ exponential frequencies}
+See that the discrete exponential 
+$e^{i\omega_0n}$ does \textit{not} have a continually 
+increasing rate of oscillation as $\omega_0$ increases in magnitude; the signals will oscillate faster until we 
+reach $\omega_0=\pi$, after which the rate of oscillation decreases until we reach $\omega_0=2\pi$, at which 
+the same constant sequence as $\omega_0=0$ is produced.
+\begin{center}
+\includegraphics[width=10cm]{a66}
+\end{center}
+(See that integer multiples of $\omega_0=\pi$ are the `fastest' to reach some integer multple of $2/\pi$, while something else like $\omega_0=15\pi/8$ would take much longer.
+When plotted in continuous time, the higher $\omega_0$ would correspond to a higher frequency, however the continuous graph only completes an oscillation at an \textit{integer value of $x$} at $x=16$.)\\
+\vspace{1mm}\\
+Even though $\omega_0$ is higher, the fact that its integer multiples can only match a higher integer multiple of $2\pi$ means that its fundamental frequency is low (since $N$ is higher).\\
+\vspace{1mm}\\
+As such, low frequencies for discrete time complex exponentials occur near $\omega=0,\pm2\pi,\pm4\pi,\ldots$ and high frequencies near $\omega=\pm\pi,\pm3\pi,\ldots$.
+\newpage
+
 \section{Intuition for discrete-time periodicity}
 Consider the sequence $x[n]=\cos(2\pi n/12)$:
 \begin{center}
@@ -3199,7 +3216,41 @@ and so this proves the expression
 \end{equation*}
 \newpage
 
+\section{Summary of properties (discrete)}
+\begin{center}
+\includegraphics[width=10cm]{a65}
+\end{center}
+\newpage
+
 \section{Fourier series and LTI systems}
+Recall that the response of an LTI system to a linear combination of complex exponentials takes a particularly simple form. In continuous time, if $x(t)=e^{st}$
+(where $s$ is complex) is the input to a continuous-time LTI
+system, then the output is given by $y(t)=H(s)e^{st}$, where
+\begin{equation*}
+H(s)=\int^{+\infty}_{-\infty}h(\tau)e^{-s\tau}d\tau
+\end{equation*}
+in which $h(t)$ is the impulse response of the LTI system. Similarly, if $x[n]=z^n$ (where $z$ is complex) is the input to a discrete-time LTI system, then the output is given by
+$y[n]=H(z)z^n$, where
+\begin{equation*}
+H(z)=\sum^{+\infty}_{k=-\infty}h[k]z^{-k}
+\end{equation*}
+where $h[n]$ is the impulse response of the LTI system.\\
+\vspace{1mm}\\
+As a result of the superposition property of LTI systems, supposing a periodic input $x(t)$ given by
+\begin{equation*}
+x(t)=\sum^{+\infty}_{k=-\infty}a_ke^{ik\omega_0t}
+\end{equation*}
+is applied to an LTI system with impulse response $h(t)$, then since each complex exponential is an eigenfunction of the system it follows that the output is
+\begin{equation*}
+y(t)=\sum^{+\infty}_{k=-\infty}a_kH(ik\omega_0)e^{ik\omega_0t}
+\end{equation*}
+Thus $y(t)$ is also periodic with the same fundamental frequency as $x(t)$. Furthermore, see that if $\{a_k\}$ is the set of fourier coefficients for the input $x(t)$, then $\{a_kH(ik\omega_0)\}$ is the
+set of coefficients for the output $y(t)$. All the LTI system does is modify each coefficient.
+\newpage
+
+\section{}
+
+
 
 
 
