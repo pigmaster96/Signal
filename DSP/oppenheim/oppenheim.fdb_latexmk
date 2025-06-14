@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1749759413 "oppenheim.tex" "oppenheim.pdf" "oppenheim" 1749759414
+["pdflatex"] 1749904236 "oppenheim.tex" "oppenheim.pdf" "oppenheim" 1749904237
   "/etc/texmf/web2c/texmf.cnf" 1718868312 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -153,12 +153,15 @@
   "images//a64.png" 1749498080 44584 8a63ca1a063fda8d54c52048c93ecddc ""
   "images//a65.png" 1749719840 81477 4dd28bcdccbfa737bc6066f5dc543e61 ""
   "images//a66.png" 1749732450 104413 31671e6f6779dbf4e24ee231f6091e80 ""
+  "images//a67.png" 1749897484 6598 cd22021ea465a69277fa0f50d67779bd ""
+  "images//a68.png" 1749897685 11643 dd8bba5236c609d1d00cf82c558ba55a ""
+  "images//a69.png" 1749901989 13323 bed8a509d4c1bc4b33386544f0ff7e22 ""
   "images//a7.png" 1748254981 21240 dbb5b84474fb1448477313ccfc03258e ""
   "images//a8.png" 1748254981 19571 50f05db36ae80e9d1b9ccc3ad9476033 ""
   "images//a9.png" 1748254981 7568 21bbfb32f3e8158c0e2282813ad2e2e4 ""
-  "oppenheim.aux" 1749759414 6003 233b911ef36f5e6f95e1d3a3bea80223 "pdflatex"
-  "oppenheim.tex" 1749759413 159005 23f0cf4d9dbd596c29ea6b15c90e9d29 ""
-  "oppenheim.toc" 1749759414 3943 25cecc3aca17d418048017b1ea5e6e62 "pdflatex"
+  "oppenheim.aux" 1749904236 6373 99c1aa8dfd4016f7c02bf9bfb37910fb "pdflatex"
+  "oppenheim.tex" 1749904228 162153 0ed7046d075877836ad4b0eec7c62927 ""
+  "oppenheim.toc" 1749904236 4155 e86d6fef89d35d52312b3a1019733afb "pdflatex"
   (generated)
   "oppenheim.aux"
   "oppenheim.log"

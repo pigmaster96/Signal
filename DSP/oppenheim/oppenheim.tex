@@ -3273,8 +3273,68 @@ The $k$th fourier coefficient of $y[n]$ is the $k$th fourier coefficient of the 
 \section{Frequency-selective filters}
 
 
+\newpage
 
-
+\chapter{The continuous-time fourier transform}
+\section{Development of the fourier transform\\representation of an aperiodic signal}
+We can think of an aperiodic signal as the limit of a periodc signal as the period becomes arbitrarily large; by analysing the fourier series representation for this signal we develop a representation for
+aperiodic signals.\\
+\vspace{1mm}\\
+Consider a signal $x(t)$ that is of finite duration; that is, for some number $T_1$, $x(t)=0$ if $|t|>T_1$, as illustrated
+\begin{center}
+\includegraphics[width=10cm]{a67}
+\end{center}
+From this aperiodic signal, we can construct a periodic signal $\tilde{x}(t)$ for which $x(t)$ is one period:
+\begin{center}
+\includegraphics[width=10cm]{a68}
+\end{center}
+See that as we choose the period $T$ to be larger, $\tilde{x}(t)$ becomes identical to $x(t)$ over a longer interval, and as $T\to\infty$, $\tilde{x}(t)$ is equal to $x(t)$ for any finite $t$.\\
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+Now consider the fourier representation of $\tilde{x}(t)$. Recall the synthesis and analyis equations; with integral carried out over the interval $-T/2\leq t\leq T/2$, we have
+\begin{align*}
+\tilde{x}(t)&=\sum^{+\infty}_{k=-\infty}a_ke^{ik\omega_0t}\\
+a_k=\frac{1}{T}&\int^{T/2}_{-T/2}\tilde{x}(t)e^{-ik\omega_0t}dt
+\end{align*}
+where $\omega_0=2\pi/T$. Since $\tilde{x}(t)=x(t)$ for $|t|<T/2$, and since $x(t)=0$ outside this interval, we can rewrite the analysis equation as
+\begin{equation*}
+a_k=\frac{1}{T}\int^{T/2}_{-T/2}x(t)e^{-ik\omega_0t}dt=\frac{1}{T}\int^{+\infty}_{-\infty}x(t)e^{-ik\omega_0t}dt
+\end{equation*}
+Defining the \textit{envelope} $X(i\omega)$ of $Ta_k$ as
+\begin{equation*}
+X(i\omega)=\int^{+\infty}_{-\infty}x(t)e^{-i\omega t}dt
+\end{equation*}
+we have, for the coefficients $a_k$,
+\begin{equation*}
+a_k=\frac{1}{T}X(ik\omega_0)
+\end{equation*}
+Now see that we can express $\tilde x(t)$ in terms of $X(i\omega)$ as
+\begin{equation*}
+\tilde{x}(t)=\sum^{+\infty}_{k=-\infty}\frac{1}{T}X(ik\omega_0)e^{ik\omega_0t}=
+\frac{1}{2\pi}\sum^{+\infty}_{k=-\infty}X(ik\omega_0)e^{ik\omega_0t}\omega_0
+\end{equation*}
+As $T\to\infty$, $\tilde x(t)$ approaches $x(t)$ and consequently in the limit becomes a representation of $x(t)$. Additionally, $\omega_0\to0$ as $T\to\infty$, and the right-hand side of 
+the equation becomes an integral:
+\begin{equation*}
+x(t)=\frac{1}{2\pi}\int^{+\infty}_{-\infty}X(i\omega)e^{i\omega t}d\omega
+\end{equation*}
+\begin{center}
+\includegraphics[width=10cm]{a69}
+\end{center}
+(next page)\newpage
+\noindent\textbf{Fourier Transform}\\
+To summarise, we have a representation for an aperiodic $x(t)$ as
+\begin{equation*}
+x(t)=\frac{1}{2\pi}\int^{+\infty}_{-\infty}X(i\omega)e^{i\omega t}d\omega
+\end{equation*}
+where
+\begin{equation*}
+X(i\omega)=\int^{+\infty}_{-\infty}x(t)e^{-i\omega t}dt
+\end{equation*}
+These two equations are referred to as the \textit{Fourier transform pair}, with the function $X(i\omega)$ referred to as the \textit{Fourier transform} or \textit{Fourier integral} of $x(t)$ and the
+other the \textit{inverse fourier transform} (or the \textit{synthesis equation}).\\
+\vspace{1mm}\\
+For periodic
 
 
 

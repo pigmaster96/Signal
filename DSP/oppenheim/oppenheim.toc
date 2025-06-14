@@ -38,5 +38,7 @@
 \contentsline {section}{\numberline {3.13}Summary of properties (discrete)}{116}{}%
 \contentsline {section}{\numberline {3.14}Fourier series and LTI systems}{117}{}%
 \contentsline {section}{\numberline {3.15}Frequency-selective filters}{119}{}%
-\contentsline {chapter}{\numberline {A}Other proofs}{120}{}%
-\contentsline {section}{\numberline {A.1}Sum of geometric series}{120}{}%
+\contentsline {chapter}{\numberline {4}The continuous-time fourier transform}{120}{}%
+\contentsline {section}{\numberline {4.1}Development of the fourier transform\\representation of an aperiodic signal}{120}{}%
+\contentsline {chapter}{\numberline {A}Other proofs}{123}{}%
+\contentsline {section}{\numberline {A.1}Sum of geometric series}{123}{}%
