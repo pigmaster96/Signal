@@ -40,5 +40,6 @@
 \contentsline {section}{\numberline {3.15}Frequency-selective filters}{119}{}%
 \contentsline {chapter}{\numberline {4}The continuous-time fourier transform}{120}{}%
 \contentsline {section}{\numberline {4.1}Development of the fourier transform\\representation of an aperiodic signal}{120}{}%
-\contentsline {chapter}{\numberline {A}Other proofs}{123}{}%
-\contentsline {section}{\numberline {A.1}Sum of geometric series}{123}{}%
+\contentsline {section}{\numberline {4.2}Convergence of fourier transforms}{123}{}%
+\contentsline {chapter}{\numberline {A}Other proofs}{124}{}%
+\contentsline {section}{\numberline {A.1}Sum of geometric series}{124}{}%

@@ -3334,7 +3334,35 @@ X(i\omega)=\int^{+\infty}_{-\infty}x(t)e^{-i\omega t}dt
 These two equations are referred to as the \textit{Fourier transform pair}, with the function $X(i\omega)$ referred to as the \textit{Fourier transform} or \textit{Fourier integral} of $x(t)$ and the
 other the \textit{inverse fourier transform} (or the \textit{synthesis equation}).\\
 \vspace{1mm}\\
-For periodic
+For periodic signals, these complex expontials have amplitudes $\{a_k\}$ occuring at a discrete set of harmonically related frequencies $k\omega_0$, $k=0,\pm1,\pm2.\ldots$. For aperiodic
+signals, the complex exponentials occur instead at a continuum of frequencies, with `amplitude' $X(iw)(d\omega/2\pi)$.\\
+\vspace{1mm}\\ 
+The transform $X(iw)$ of an aperiodic signal $x(t)$ is also commonly 
+referred to as the \textit{spectrum} of $x(t)$, since it provides the information needed to describe $x(t)$ as a linear combination (an integral) of sinusoidal signals at different frequencies.\\
+\vspace{1mm}\\
+\textbf{Fourier coefficients intuition}\\
+We also note that the fourier coefficients $a_k$ of a periodic signal $\tilde x(t)$ can be expressed in terms of equally spaced \textit{samples} of the fourier transform of one period of $\tilde x(t)$.\\
+\vspace{1mm}\\
+Suppose that $\tilde x(t)$ is a periodic signal with period $T$ and fourier coefficients $a_k$. Let $x(t)$ be a finite-duration signal that is equal to $\tilde x(t)$ over exactly one period---say for $s
+\leq t\leq s+T$ for some value of $s$---and is zero otherwise. Then we can write
+\begin{equation*}
+a_k=\frac{1}{T}\int^{s+T}_{s}\tilde x(t)e^{-ik\omega_0t}dt
+=\frac{1}{T}\int^{s+T}_{s}x(t)e^{-ik\omega_0t}dt
+\end{equation*}
+since $x(t)$ is zero outside the range $s\leq t\leq s+T$ we can write
+\begin{equation*}
+a_k=\frac{1}{T}\int^{+\infty}_{-\infty}x(t)e^{-ik\omega_0t}dt
+\end{equation*}
+we can then rewrite this as
+\begin{equation*}
+\left.a_k=\frac{1}{T}X(i\omega)\right|_{\omega=k\omega_0}
+\end{equation*}
+Where $X(i\omega)$ is the fourier transform of $x(t)$. This equation thus states that the fourier coefficients of $\tilde x(t)$ are proportional to the \textit{samples of the fourier transform of one
+period of $\tilde x(t)$}.
+\newpage
+
+\section{Convergence of fourier transforms}
+
 
 
 
